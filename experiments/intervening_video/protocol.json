@@ -1,0 +1,313 @@
+{
+  "orders": {
+    "chronological": [
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        6
+      ]
+    ],
+    "delayed": [
+      [
+        0
+      ],
+      [
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        1
+      ],
+      [
+        6
+      ]
+    ],
+    "together": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    ]
+  },
+  "packets": [
+    {
+      "id": 0,
+      "capture_start": 60,
+      "capture_end": 64,
+      "frames": [
+        {
+          "path": "packets/table_0_0.png",
+          "source_time": 60.0118661750892,
+          "source_frame_index": 1797,
+          "sha256": "dfbae4cc5651409c1541107d686c08e6b4bfcfa869de85dc492dcb2429b6a881"
+        },
+        {
+          "path": "packets/table_0_1.png",
+          "source_time": 61.31429398857194,
+          "source_frame_index": 1836,
+          "sha256": "d02de80b697520078289b19e0c288129192adc534ceab8a6d38c15ff9e08b40a"
+        },
+        {
+          "path": "packets/table_0_2.png",
+          "source_time": 62.61672180205468,
+          "source_frame_index": 1875,
+          "sha256": "4c0c2e6181b9006d7e82440753fab974505420cfbff88c1b375f760126844d0b"
+        },
+        {
+          "path": "packets/table_0_3.png",
+          "source_time": 63.919149615537414,
+          "source_frame_index": 1914,
+          "sha256": "84dcb5ac6f3f8b69d3ea325df0bddb9323bd8d494878a7507b3918001170fd50"
+        }
+      ],
+      "source_fps": 29.944077972131634,
+      "total_source_frames": 3645,
+      "encoded_video": "hosted/media/table_0.mp4",
+      "encoded_sha256": "779d475a212bffef55002ae4eec55d2a44a87ac5d026dfc98e7c5ffec993dbc1"
+    },
+    {
+      "id": 1,
+      "capture_start": 64,
+      "capture_end": 76,
+      "frames": [
+        {
+          "path": "packets/table_1_0.png",
+          "source_time": 64.0193363704207,
+          "source_frame_index": 1917,
+          "sha256": "ca6087b5827c8ddc12e51d8095585ef679c2fa762e68c1aa86d5208f0365b761"
+        },
+        {
+          "path": "packets/table_1_1.png",
+          "source_time": 67.9934109807911,
+          "source_frame_index": 2036,
+          "sha256": "f029cad15bb67d9917ac8a51ac9f5361c51c09d45599f5b4657d524af4d5bb3a"
+        },
+        {
+          "path": "packets/table_1_2.png",
+          "source_time": 71.9340900062004,
+          "source_frame_index": 2154,
+          "sha256": "9b588fd3e062e3f44764da090b88a0d1a13a303b6836d4029dcebf5b9a4af8bc"
+        },
+        {
+          "path": "packets/table_1_3.png",
+          "source_time": 75.90816461657082,
+          "source_frame_index": 2273,
+          "sha256": "e4f131e2a6b0818aadf28a108cc82acf2d53d6bff150e64ec31cc3c4e8f76de0"
+        }
+      ],
+      "source_fps": 29.944077972131634,
+      "total_source_frames": 3645,
+      "encoded_video": "hosted/media/table_1.mp4",
+      "encoded_sha256": "6cfc5b3de6172fe0e78b71ea1fbde9835f48630c735e8113b525be9eb5a614f2"
+    },
+    {
+      "id": 2,
+      "capture_start": 76,
+      "capture_end": 88,
+      "frames": [
+        {
+          "path": "packets/table_2_0.png",
+          "source_time": 76.0083513714541,
+          "source_frame_index": 2276,
+          "sha256": "b4b56e18a9ab31257acf1e6522b0583deb5180b519da43518eff8fcbb26d346c"
+        },
+        {
+          "path": "packets/table_2_1.png",
+          "source_time": 79.9824259818245,
+          "source_frame_index": 2395,
+          "sha256": "c09712fbd24de0c3155dbe7d05d49649cc127c71a4ccc4fef7daf5412743216f"
+        },
+        {
+          "path": "packets/table_2_2.png",
+          "source_time": 83.95650059219491,
+          "source_frame_index": 2514,
+          "sha256": "2dec587e41c9adaf7896a9e8582e36e867ab145c44790587ab11d1cc7055de8a"
+        },
+        {
+          "path": "packets/table_2_3.png",
+          "source_time": 87.93057520256531,
+          "source_frame_index": 2633,
+          "sha256": "2659a169fbe3cb24269e189b60c62bfc15d7551bc825168b064508e40c2af255"
+        }
+      ],
+      "source_fps": 29.944077972131634,
+      "total_source_frames": 3645,
+      "encoded_video": "hosted/media/table_2.mp4",
+      "encoded_sha256": "fa79e094b0a679a94f96efeeecfe0e63a0f989d5119e702a3def7bfee504cfa3"
+    },
+    {
+      "id": 3,
+      "capture_start": 88,
+      "capture_end": 100,
+      "frames": [
+        {
+          "path": "packets/table_3_0.png",
+          "source_time": 88.0307619574486,
+          "source_frame_index": 2636,
+          "sha256": "1a50782a840a37b391051b32a2353898754e7c84dcc6f1157806fb5e8408f0ff"
+        },
+        {
+          "path": "packets/table_3_1.png",
+          "source_time": 91.97144098285791,
+          "source_frame_index": 2754,
+          "sha256": "bc6eedd6f3bc12276cbb3f2d83664e577d73bc700f90adc299be4739c3f30e9b"
+        },
+        {
+          "path": "packets/table_3_2.png",
+          "source_time": 95.94551559322831,
+          "source_frame_index": 2873,
+          "sha256": "c373eefcdc8ce684ef3db5fe9836fdfd8f6f345317e40cc0fc0eec408133d5dc"
+        },
+        {
+          "path": "packets/table_3_3.png",
+          "source_time": 99.91959020359872,
+          "source_frame_index": 2992,
+          "sha256": "ce46dbb03b9844b24a1e23abdf5572f289b03d162bb4a5020f381a1e889bbf69"
+        }
+      ],
+      "source_fps": 29.944077972131634,
+      "total_source_frames": 3645,
+      "encoded_video": "hosted/media/table_3.mp4",
+      "encoded_sha256": "68425094caae3cd7c33af79e79fe73dc3c97f04a959d04d53fc0e961e15ecbeb"
+    },
+    {
+      "id": 4,
+      "capture_start": 100,
+      "capture_end": 112,
+      "frames": [
+        {
+          "path": "packets/table_4_0.png",
+          "source_time": 100.019776958482,
+          "source_frame_index": 2995,
+          "sha256": "8a4589201e6da0fbe991c518b780dc4723ade52a00856faa0b7a5275608f8b60"
+        },
+        {
+          "path": "packets/table_4_1.png",
+          "source_time": 103.9938515688524,
+          "source_frame_index": 3114,
+          "sha256": "cec61cb736cb56ed8291326eb17bd32de8670f3b231babe870adbfab16ea417c"
+        },
+        {
+          "path": "packets/table_4_2.png",
+          "source_time": 107.93453059426172,
+          "source_frame_index": 3232,
+          "sha256": "b1b3603253c41c42956fdd06c2dda99a3b98737271da94d329f8a3a6a91c488c"
+        },
+        {
+          "path": "packets/table_4_3.png",
+          "source_time": 111.90860520463211,
+          "source_frame_index": 3351,
+          "sha256": "bbc920013f2dbf80e9f569f29c502aad19fd1970f6694e6dbed39f311dbe7d3a"
+        }
+      ],
+      "source_fps": 29.944077972131634,
+      "total_source_frames": 3645,
+      "encoded_video": "hosted/media/table_4.mp4",
+      "encoded_sha256": "bcd77d7fabf3713cf05909db4ce22feda5b07011d61770dffcd16fdc38b49254"
+    },
+    {
+      "id": 5,
+      "capture_start": 112,
+      "capture_end": 120,
+      "frames": [
+        {
+          "path": "packets/table_5_0.png",
+          "source_time": 112.0087919595154,
+          "source_frame_index": 3354,
+          "sha256": "904c3229d09a118095688c9d30b4ad52432ac00b5bc6c131c8d637a05943cce4"
+        },
+        {
+          "path": "packets/table_5_1.png",
+          "source_time": 114.64704317144198,
+          "source_frame_index": 3433,
+          "sha256": "f25545b209bdf80284e102a726fffcc8a2968ea2929b92ab11d5d72f019a6778"
+        },
+        {
+          "path": "packets/table_5_2.png",
+          "source_time": 117.28529438336854,
+          "source_frame_index": 3512,
+          "sha256": "206d602217ecd6c6a000b56c12f0d493519148a9a565db0c7f0aa1024c4afafe"
+        },
+        {
+          "path": "packets/table_5_3.png",
+          "source_time": 119.92354559529511,
+          "source_frame_index": 3591,
+          "sha256": "9403b3ed5dcc6f58fcf532ef00adff4d8372bee20709ea9ee14ca130f3574b8d"
+        }
+      ],
+      "source_fps": 29.944077972131634,
+      "total_source_frames": 3645,
+      "encoded_video": "hosted/media/table_5.mp4",
+      "encoded_sha256": "aeb549803cbf17a33183f9a59cd9cdb546f7a35f67e38953f65f7e6afa6af599"
+    },
+    {
+      "id": 6,
+      "capture_start": 120,
+      "capture_end": 121,
+      "frames": [
+        {
+          "path": "packets/table_6_0.png",
+          "source_time": 120.0237323501784,
+          "source_frame_index": 3594,
+          "sha256": "9a892958400a616bf00d6657d6d3825584e4128ce1aa5bd3ccb3dfae4104ca9d"
+        },
+        {
+          "path": "packets/table_6_1.png",
+          "source_time": 120.32429261482827,
+          "source_frame_index": 3603,
+          "sha256": "58210fc177010a3aced7a63484103051817170130a2db1094b7598c91fd3cdd4"
+        },
+        {
+          "path": "packets/table_6_2.png",
+          "source_time": 120.62485287947813,
+          "source_frame_index": 3612,
+          "sha256": "f8826ec653b4cec55c45e156f1f2fa073d07878343bad6dcb570be81ed284cf6"
+        },
+        {
+          "path": "packets/table_6_3.png",
+          "source_time": 120.92541314412799,
+          "source_frame_index": 3621,
+          "sha256": "9c8d3ebaca7651e12efd7c9449a237bcf56aef536ab53f230d4f3999910d91f4"
+        }
+      ],
+      "source_fps": 29.944077972131634,
+      "total_source_frames": 3645,
+      "encoded_video": "hosted/media/table_6.mp4",
+      "encoded_sha256": "b9116e86857e4688e58f0ba79f2abceda1d956cc7e968c75649551eebd4bfb87"
+    }
+  ],
+  "instructions": "You are observing a video stream delivered in packets. Use only evidence received so far and the supplied memory. Distinguish arrival time from capture time. A packet may depict an earlier event. Treat supplied capture timestamps as authoritative. Update historical facts only when supported. Do not treat older footage as the latest physical state. Preserve supported facts that incoming evidence does not change. Retain uncertainty when evidence is insufficient.",
+  "task": "Track the large round tray and the table frame.\nearlier: Was the tray resting on the frame around original capture time 72 seconds?\nlatest: Was the tray resting on the frame at the latest capture time received?\nAn open frame is not the solid tray. Do not infer the earlier state solely from later footage. Use unknown when the relevant evidence has not been received.\nReturn only one JSON object with exactly two keys, earlier and latest; values must be yes, no, or unknown.",
+  "host": "https://qwen-qwen3-vl-235b-a22b-instruct-demo.hf.space",
+  "declared_model": "Qwen3-VL-235B-A22B-Instruct",
+  "expected_at_join_and_continuation": {
+    "earlier": "no",
+    "latest": "yes"
+  },
+  "limits": [
+    "One HoloAssist episode",
+    "Four sampled frames per packet",
+    "Grouped intervening footage",
+    "Supplied capture times",
+    "External two-field model-generated memory",
+    "Uncontrolled public backend decoding",
+    "Instructions prepended to user message: no system-role endpoint"
+  ],
+  "execution": "Independent conditions concurrent; steps sequential within condition. Fresh client/session per call. No retries. 300 second endpoint timeout."
+}
