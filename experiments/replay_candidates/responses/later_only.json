@@ -1,0 +1,14 @@
+{
+  "condition": "later_only",
+  "prompt": "Inspect the supplied footage.\nIdentify the contact near the ball during the contested rebound between green and white uniforms. Did the white-uniformed player's reaching hand contact the green-uniformed player's hand holding the ball, or contact the ball directly? Report only what the visible evidence supports, not basketball rules or a remembered game. Use unknown if the view does not resolve the distinction. Return JSON: {\"contact\":\"hand|direct_ball|unknown\",\"green_uniform_present\":true,\"distinct_rebound_events\":1,\"visual_evidence\":\"brief explanation\"}. The displayed values are a schema example, not supplied answers: set the boolean and count from the footage. Count physical rebound events, not camera views.",
+  "utc": "2026-10-09T14:32:48.678795+00:00",
+  "inputs": [
+    {
+      "file": "later.mp4",
+      "sha256": "53726dfd6d8aa7099e1acd034f44f61f747c191e279a5a2b97b04a4018ddb12a"
+    }
+  ],
+  "status": "error",
+  "error": "AppError('The upstream Gradio app has raised an exception but has not enabled verbose error reporting. To enable, set show_error=True in launch().')",
+  "seconds": 82.25245950899989
+}

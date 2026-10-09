@@ -1,0 +1,70 @@
+{
+  "rows": [
+    {
+      "condition": "prefix",
+      "prompt": "This is the footage available so far.\nIdentify the contact near the ball during the contested rebound between green and white uniforms. Did the white-uniformed player's reaching hand contact the green-uniformed player's hand holding the ball, or contact the ball directly? Report only what the visible evidence supports, not basketball rules or a remembered game. Use unknown if the view does not resolve the distinction. Return JSON: {\"contact\":\"hand|direct_ball|unknown\",\"green_uniform_present\":true,\"distinct_rebound_events\":1,\"visual_evidence\":\"brief explanation\"}. The displayed values are a schema example, not supplied answers: set the boolean and count from the footage. Count physical rebound events, not camera views.",
+      "utc": "2026-10-09T14:32:48.678097+00:00",
+      "inputs": [
+        {
+          "file": "initial.mp4",
+          "sha256": "5367e4340020e2269bc72cbbcc61c532870257ce82015715607779e2592358c1"
+        }
+      ],
+      "status": "completed",
+      "response": "{\n  \"contact\": \"hand\",\n  \"green_uniform_present\": true,\n  \"distinct_rebound_events\": 1,\n  \"visual_evidence\": \"The white-uniformed player's hand makes clear contact with the green-uniformed player's hand as it is gripping the ball during the rebound attempt, not directly with the ball itself.\"\n}",
+      "parsed": {
+        "contact": "hand",
+        "green_uniform_present": true,
+        "distinct_rebound_events": 1,
+        "visual_evidence": "The white-uniformed player's hand makes clear contact with the green-uniformed player's hand as it is gripping the ball during the rebound attempt, not directly with the ball itself."
+      },
+      "seconds": 202.83458707
+    },
+    {
+      "condition": "later_only",
+      "prompt": "Inspect the supplied footage.\nIdentify the contact near the ball during the contested rebound between green and white uniforms. Did the white-uniformed player's reaching hand contact the green-uniformed player's hand holding the ball, or contact the ball directly? Report only what the visible evidence supports, not basketball rules or a remembered game. Use unknown if the view does not resolve the distinction. Return JSON: {\"contact\":\"hand|direct_ball|unknown\",\"green_uniform_present\":true,\"distinct_rebound_events\":1,\"visual_evidence\":\"brief explanation\"}. The displayed values are a schema example, not supplied answers: set the boolean and count from the footage. Count physical rebound events, not camera views.",
+      "utc": "2026-10-09T14:32:48.678795+00:00",
+      "inputs": [
+        {
+          "file": "later.mp4",
+          "sha256": "53726dfd6d8aa7099e1acd034f44f61f747c191e279a5a2b97b04a4018ddb12a"
+        }
+      ],
+      "status": "error",
+      "error": "AppError('The upstream Gradio app has raised an exception but has not enabled verbose error reporting. To enable, set show_error=True in launch().')",
+      "seconds": 82.25245950899989
+    },
+    {
+      "condition": "together",
+      "prompt": "The two supplied segments are in arrival order. Describe the contested rebound using all available evidence.\nIdentify the contact near the ball during the contested rebound between green and white uniforms. Did the white-uniformed player's reaching hand contact the green-uniformed player's hand holding the ball, or contact the ball directly? Report only what the visible evidence supports, not basketball rules or a remembered game. Use unknown if the view does not resolve the distinction. Return JSON: {\"contact\":\"hand|direct_ball|unknown\",\"green_uniform_present\":true,\"distinct_rebound_events\":1,\"visual_evidence\":\"brief explanation\"}. The displayed values are a schema example, not supplied answers: set the boolean and count from the footage. Count physical rebound events, not camera views.",
+      "utc": "2026-10-09T14:36:11.516393+00:00",
+      "inputs": [
+        {
+          "file": "initial.mp4",
+          "sha256": "5367e4340020e2269bc72cbbcc61c532870257ce82015715607779e2592358c1"
+        },
+        {
+          "file": "later.mp4",
+          "sha256": "53726dfd6d8aa7099e1acd034f44f61f747c191e279a5a2b97b04a4018ddb12a"
+        }
+      ],
+      "status": "error",
+      "error": "AppError('The upstream Gradio app has raised an exception but has not enabled verbose error reporting. To enable, set show_error=True in launch().')",
+      "seconds": 200.99771244500016
+    },
+    {
+      "condition": "update",
+      "prompt": "Additional footage has now arrived. Your earlier observation is below. Determine whether it shows a new event or another view of the earlier event, and revise the earlier contact description only if justified. Earlier observation:\n{\n  \"contact\": \"hand\",\n  \"green_uniform_present\": true,\n  \"distinct_rebound_events\": 1,\n  \"visual_evidence\": \"The white-uniformed player's hand makes clear contact with the green-uniformed player's hand as it is gripping the ball during the rebound attempt, not directly with the ball itself.\"\n}\nIdentify the contact near the ball during the contested rebound between green and white uniforms. Did the white-uniformed player's reaching hand contact the green-uniformed player's hand holding the ball, or contact the ball directly? Report only what the visible evidence supports, not basketball rules or a remembered game. Use unknown if the view does not resolve the distinction. Return JSON: {\"contact\":\"hand|direct_ball|unknown\",\"green_uniform_present\":true,\"distinct_rebound_events\":1,\"visual_evidence\":\"brief explanation\"}. The displayed values are a schema example, not supplied answers: set the boolean and count from the footage. Count physical rebound events, not camera views.",
+      "utc": "2026-10-09T14:36:11.516495+00:00",
+      "inputs": [
+        {
+          "file": "later.mp4",
+          "sha256": "53726dfd6d8aa7099e1acd034f44f61f747c191e279a5a2b97b04a4018ddb12a"
+        }
+      ],
+      "status": "error",
+      "error": "AppError('The upstream Gradio app has raised an exception but has not enabled verbose error reporting. To enable, set show_error=True in launch().')",
+      "seconds": 82.00090152499979
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "host": "https://qwen-qwen3-vl-235b-a22b-instruct-demo.hf.space",
+  "maximum_calls": 4,
+  "retries": 0,
+  "source": "https://videorulebook.nba.com/archive/out-of-bounds-violation-hand-as-part-of-the-ball-on-an-out-of-bounds-play/",
+  "intervals_seconds": {
+    "initial": [
+      0,
+      9
+    ],
+    "later": [
+      39,
+      47
+    ]
+  },
+  "source_sha256": "35404db4a0ee0758e8c213495336475ece23bae31fd08064b225abd6e6aa19a3",
+  "reference_contact": "hand",
+  "reference_basis": "Official NBA description; assistant visual review. No independent annotators.",
+  "decision_rule": "Interpret updating only if later-only and together contact controls both return hand. A streaming-specific signal additionally requires an initial unknown/wrong contact and an update that remains wrong/unknown. Successful updating does not support a failure claim.",
+  "limitations": [
+    "One selected edited replay case, not a natural-stream prevalence sample",
+    "Model sees separate video uploads and explicit external response memory, not a native continuous stream",
+    "Provider sampling and decoding unverified; prefix ambiguity not independently annotated",
+    "No new-event, distractor, wrong-event, or matched-information controls; no novelty conclusion"
+  ]
+}

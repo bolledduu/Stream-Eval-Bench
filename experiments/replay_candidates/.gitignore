@@ -1,0 +1,9 @@
+*.mp4
+*.part
+*.ytdl
+*.html
+*_frames/
+*_sheet*.jpg
+*_metadata.json
+*_download_info.json
+inputs/
