@@ -1,0 +1,30 @@
+{
+  "cases": [
+    [
+      "camera",
+      "Is the cylindrical lens visibly mounted on the camera body, rather than held separately? Ignore the front lens cap.",
+      "yes"
+    ],
+    [
+      "table",
+      "Is the large round tray resting on the table frame? An open frame is not the solid tray.",
+      "no"
+    ],
+    [
+      "printer",
+      "Is the large central LCD displaying an illuminated interface? Ignore the small illuminated buttons and indicator lights.",
+      "no"
+    ]
+  ],
+  "host": "https://qwen-qwen3-vl-235b-a22b-instruct-demo.hf.space",
+  "calls": 6,
+  "retry_policy": "none",
+  "purpose": "Endpoint recognition controls. Images show only endpoints, videos also contain preceding frames; differences cannot uniquely identify provider ingestion failures.",
+  "limits": [
+    "Not original-event association",
+    "No native continuous stream",
+    "Labels visually checked by assistant only",
+    "Public backend sampling and decoding unverified"
+  ],
+  "scoring": "One JSON scalar, case-normalized; boolean normalized. Exact schema separately reported."
+}

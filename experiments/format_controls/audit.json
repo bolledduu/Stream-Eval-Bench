@@ -1,0 +1,8 @@
+{
+  "six_distinct_calls_completed": true,
+  "all_six_expected_answers_correct": true,
+  "input_hashes_verified": true,
+  "python_syntax_valid": true,
+  "exact_schema_count": 0,
+  "no_streaming_specific_inference": true
+}

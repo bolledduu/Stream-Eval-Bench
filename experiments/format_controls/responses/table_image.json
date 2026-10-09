@@ -1,0 +1,19 @@
+{
+  "id": "table_image",
+  "case": "table",
+  "kind": "image",
+  "input": "inputs/table.png",
+  "sha256": "e4f131e2a6b0818aadf28a108cc82acf2d53d6bff150e64ec31cc3c4e8f76de0",
+  "prompt": "Inspect the supplied image. Is the large round tray resting on the table frame? An open frame is not the solid tray. Return only JSON with key value and value yes, no, or unknown.",
+  "expected": "no",
+  "utc": "2026-10-09T08:37:46.655841+00:00",
+  "status": "completed",
+  "response": "{\n  \"is_resting_on_frame\": \"no\"\n}",
+  "parsed": {
+    "is_resting_on_frame": "no"
+  },
+  "semantic_value": "no",
+  "correct": true,
+  "exact_schema": false,
+  "seconds": 54.08588729100029
+}

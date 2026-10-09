@@ -1,0 +1,19 @@
+{
+  "id": "printer_video",
+  "case": "printer",
+  "kind": "video",
+  "input": "inputs/printer.mp4",
+  "sha256": "5e0e8d862d6cb30d6d5935ca266d1a3581de798e0faecefb9e752ee60a009290",
+  "prompt": "Inspect the END of the supplied video. Answer for the final visible frame, not an earlier state. Is the large central LCD displaying an illuminated interface? Ignore the small illuminated buttons and indicator lights. Return only JSON with key value and value yes, no, or unknown.",
+  "expected": "no",
+  "utc": "2026-10-09T08:38:49.701978+00:00",
+  "status": "completed",
+  "response": "{\"display_illuminated\": \"no\"}",
+  "parsed": {
+    "display_illuminated": "no"
+  },
+  "semantic_value": "no",
+  "correct": true,
+  "exact_schema": false,
+  "seconds": 56.41443747099993
+}

@@ -1,0 +1,13 @@
+STARTSTART camera_video camera_image
+
+DONE camera_image yes
+START table_image
+DONE camera_video yes
+START table_video
+DONE table_image no
+START printer_image
+DONE table_video no
+START printer_video
+DONE printer_image no
+DONE printer_video no
+COMPLETE

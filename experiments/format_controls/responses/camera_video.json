@@ -1,0 +1,19 @@
+{
+  "id": "camera_video",
+  "case": "camera",
+  "kind": "video",
+  "input": "inputs/camera.mp4",
+  "sha256": "fa06a78022320853510d3c6cc562be2bfc0902c9f7bf5a57681b31194f491893",
+  "prompt": "Inspect the END of the supplied video. Answer for the final visible frame, not an earlier state. Is the cylindrical lens visibly mounted on the camera body, rather than held separately? Ignore the front lens cap. Return only JSON with key value and value yes, no, or unknown.",
+  "expected": "yes",
+  "utc": "2026-10-09T08:36:51.774590+00:00",
+  "status": "completed",
+  "response": "{\"mounted\": \"yes\"}",
+  "parsed": {
+    "mounted": "yes"
+  },
+  "semantic_value": "yes",
+  "correct": true,
+  "exact_schema": false,
+  "seconds": 61.848610392999944
+}

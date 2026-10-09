@@ -1,0 +1,19 @@
+{
+  "id": "table_video",
+  "case": "table",
+  "kind": "video",
+  "input": "inputs/table.mp4",
+  "sha256": "6cfc5b3de6172fe0e78b71ea1fbde9835f48630c735e8113b525be9eb5a614f2",
+  "prompt": "Inspect the END of the supplied video. Answer for the final visible frame, not an earlier state. Is the large round tray resting on the table frame? An open frame is not the solid tray. Return only JSON with key value and value yes, no, or unknown.",
+  "expected": "no",
+  "utc": "2026-10-09T08:37:53.624329+00:00",
+  "status": "completed",
+  "response": "{\n  \"is_tray_resting_on_frame\": \"no\"\n}",
+  "parsed": {
+    "is_tray_resting_on_frame": "no"
+  },
+  "semantic_value": "no",
+  "correct": true,
+  "exact_schema": false,
+  "seconds": 56.0768873359998
+}

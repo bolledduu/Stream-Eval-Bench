@@ -1,0 +1,120 @@
+{
+  "rows": [
+    {
+      "id": "camera_image",
+      "case": "camera",
+      "kind": "image",
+      "input": "inputs/camera.png",
+      "sha256": "9ba953fe78e93704cb39d5252b8e01ffed2937e875e5945fad41bc0f14f64427",
+      "prompt": "Inspect the supplied image. Is the cylindrical lens visibly mounted on the camera body, rather than held separately? Ignore the front lens cap. Return only JSON with key value and value yes, no, or unknown.",
+      "expected": "yes",
+      "utc": "2026-10-09T08:36:51.774549+00:00",
+      "status": "completed",
+      "response": "{\n  \"is_mounted\": \"yes\"\n}",
+      "parsed": {
+        "is_mounted": "yes"
+      },
+      "semantic_value": "yes",
+      "correct": true,
+      "exact_schema": false,
+      "seconds": 54.880613320000066
+    },
+    {
+      "id": "camera_video",
+      "case": "camera",
+      "kind": "video",
+      "input": "inputs/camera.mp4",
+      "sha256": "fa06a78022320853510d3c6cc562be2bfc0902c9f7bf5a57681b31194f491893",
+      "prompt": "Inspect the END of the supplied video. Answer for the final visible frame, not an earlier state. Is the cylindrical lens visibly mounted on the camera body, rather than held separately? Ignore the front lens cap. Return only JSON with key value and value yes, no, or unknown.",
+      "expected": "yes",
+      "utc": "2026-10-09T08:36:51.774590+00:00",
+      "status": "completed",
+      "response": "{\"mounted\": \"yes\"}",
+      "parsed": {
+        "mounted": "yes"
+      },
+      "semantic_value": "yes",
+      "correct": true,
+      "exact_schema": false,
+      "seconds": 61.848610392999944
+    },
+    {
+      "id": "table_image",
+      "case": "table",
+      "kind": "image",
+      "input": "inputs/table.png",
+      "sha256": "e4f131e2a6b0818aadf28a108cc82acf2d53d6bff150e64ec31cc3c4e8f76de0",
+      "prompt": "Inspect the supplied image. Is the large round tray resting on the table frame? An open frame is not the solid tray. Return only JSON with key value and value yes, no, or unknown.",
+      "expected": "no",
+      "utc": "2026-10-09T08:37:46.655841+00:00",
+      "status": "completed",
+      "response": "{\n  \"is_resting_on_frame\": \"no\"\n}",
+      "parsed": {
+        "is_resting_on_frame": "no"
+      },
+      "semantic_value": "no",
+      "correct": true,
+      "exact_schema": false,
+      "seconds": 54.08588729100029
+    },
+    {
+      "id": "table_video",
+      "case": "table",
+      "kind": "video",
+      "input": "inputs/table.mp4",
+      "sha256": "6cfc5b3de6172fe0e78b71ea1fbde9835f48630c735e8113b525be9eb5a614f2",
+      "prompt": "Inspect the END of the supplied video. Answer for the final visible frame, not an earlier state. Is the large round tray resting on the table frame? An open frame is not the solid tray. Return only JSON with key value and value yes, no, or unknown.",
+      "expected": "no",
+      "utc": "2026-10-09T08:37:53.624329+00:00",
+      "status": "completed",
+      "response": "{\n  \"is_tray_resting_on_frame\": \"no\"\n}",
+      "parsed": {
+        "is_tray_resting_on_frame": "no"
+      },
+      "semantic_value": "no",
+      "correct": true,
+      "exact_schema": false,
+      "seconds": 56.0768873359998
+    },
+    {
+      "id": "printer_image",
+      "case": "printer",
+      "kind": "image",
+      "input": "inputs/printer.png",
+      "sha256": "54e75f4d81482af5bb9cd2a46ded794aec4f74db46854b45c6ccc2ea530f5b9d",
+      "prompt": "Inspect the supplied image. Is the large central LCD displaying an illuminated interface? Ignore the small illuminated buttons and indicator lights. Return only JSON with key value and value yes, no, or unknown.",
+      "expected": "no",
+      "utc": "2026-10-09T08:38:40.742860+00:00",
+      "status": "completed",
+      "response": "{\n  \"is_illuminated\": \"no\"\n}",
+      "parsed": {
+        "is_illuminated": "no"
+      },
+      "semantic_value": "no",
+      "correct": true,
+      "exact_schema": false,
+      "seconds": 53.708145572000376
+    },
+    {
+      "id": "printer_video",
+      "case": "printer",
+      "kind": "video",
+      "input": "inputs/printer.mp4",
+      "sha256": "5e0e8d862d6cb30d6d5935ca266d1a3581de798e0faecefb9e752ee60a009290",
+      "prompt": "Inspect the END of the supplied video. Answer for the final visible frame, not an earlier state. Is the large central LCD displaying an illuminated interface? Ignore the small illuminated buttons and indicator lights. Return only JSON with key value and value yes, no, or unknown.",
+      "expected": "no",
+      "utc": "2026-10-09T08:38:49.701978+00:00",
+      "status": "completed",
+      "response": "{\"display_illuminated\": \"no\"}",
+      "parsed": {
+        "display_illuminated": "no"
+      },
+      "semantic_value": "no",
+      "correct": true,
+      "exact_schema": false,
+      "seconds": 56.41443747099993
+    }
+  ],
+  "completed": 6,
+  "correct": 6
+}

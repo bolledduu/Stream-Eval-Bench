@@ -1,0 +1,42 @@
+[
+  {
+    "id": "holo_1",
+    "session": "z176-sep-05-22-dslr",
+    "url": "https://huggingface.co/datasets/lmms-lab/EgoIT-99K/resolve/a57f1f2078a7b01ea87014050fdb3afe169e54f1/HoloAssist/video/z176-sep-05-22-dslr.mp4",
+    "sha256": "3eead3bbf2fe8ebb48a1888b99d0fd55385fd13ebc3ebd361d77597ab86c86cc",
+    "duration": 68.096252,
+    "sampled_frames": 68,
+    "review_pages": [
+      "holo_1_page1.jpg",
+      "holo_1_page2.jpg"
+    ],
+    "method": "1 fps contact sheets; labels approximate ffmpeg fps sampling bins, not frame-exact event annotations."
+  },
+  {
+    "id": "holo_2",
+    "session": "R071-19July-BigPrinter",
+    "url": "https://huggingface.co/datasets/lmms-lab/EgoIT-99K/resolve/a57f1f2078a7b01ea87014050fdb3afe169e54f1/HoloAssist/video/R071-19July-BigPrinter.mp4",
+    "sha256": "455ce3d7c3af6e48bbbc703fe58d50448708913fba94a6cc393d07c2c95bd4f5",
+    "duration": 76.06286,
+    "sampled_frames": 76,
+    "review_pages": [
+      "holo_2_page1.jpg",
+      "holo_2_page2.jpg"
+    ],
+    "method": "1 fps contact sheets; labels approximate ffmpeg fps sampling bins, not frame-exact event annotations."
+  },
+  {
+    "id": "holo_3",
+    "session": "z060-june-28-22-gladom_assemble",
+    "url": "https://huggingface.co/datasets/lmms-lab/EgoIT-99K/resolve/a57f1f2078a7b01ea87014050fdb3afe169e54f1/HoloAssist/video/z060-june-28-22-gladom_assemble.mp4",
+    "sha256": "0f45226c0138d890cfb474fea4f387e865c6731acc083bf32147dc93da8a3b39",
+    "duration": 121.769,
+    "sampled_frames": 122,
+    "review_pages": [
+      "holo_3_page1.jpg",
+      "holo_3_page2.jpg",
+      "holo_3_page3.jpg"
+    ],
+    "method": "1 fps contact sheets; labels approximate ffmpeg fps sampling bins, not frame-exact event annotations."
+  }
+]

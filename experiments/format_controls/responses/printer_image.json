@@ -1,0 +1,19 @@
+{
+  "id": "printer_image",
+  "case": "printer",
+  "kind": "image",
+  "input": "inputs/printer.png",
+  "sha256": "54e75f4d81482af5bb9cd2a46ded794aec4f74db46854b45c6ccc2ea530f5b9d",
+  "prompt": "Inspect the supplied image. Is the large central LCD displaying an illuminated interface? Ignore the small illuminated buttons and indicator lights. Return only JSON with key value and value yes, no, or unknown.",
+  "expected": "no",
+  "utc": "2026-10-09T08:38:40.742860+00:00",
+  "status": "completed",
+  "response": "{\n  \"is_illuminated\": \"no\"\n}",
+  "parsed": {
+    "is_illuminated": "no"
+  },
+  "semantic_value": "no",
+  "correct": true,
+  "exact_schema": false,
+  "seconds": 53.708145572000376
+}
