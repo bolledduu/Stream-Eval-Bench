@@ -1,0 +1,15 @@
+STARTSTART delayed_0
+ chronological_0START together_0
+
+DONE chronological_0 {'earlier': 'unknown', 'latest': 'unknown'} 56.2
+START chronological_1
+DONE delayed_0 {'earlier': 'unknown', 'latest': 'unknown'} 57.0
+START delayed_1
+DONE chronological_1 AppError('The upstream Gradio app has raised an exception but has not enabled verbose error reporting. To enable, set show_error=True in launch().') 45.0
+DONE delayed_1 {'earlier': 'unknown', 'latest': 'yes'} 107.5
+START delayed_2
+DONE together_0 {'earlier': 'unknown', 'latest': 'yes'} 174.3
+DONE delayed_2 {'earlier': 'unknown', 'latest': 'yes'} 52.3
+START delayed_3
+DONE delayed_3 {'earlier': 'unknown', 'latest': 'yes'} 57.0
+VERDICT incomplete

@@ -1,0 +1,3 @@
+START chronological_1
+DONE chronological_1 AppError('The upstream Gradio app has raised an exception but has not enabled verbose error reporting. To enable, set show_error=True in launch().') 64.3
+VERDICT incomplete
