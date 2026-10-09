@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "frozen_hash_camera_complete.png": true,
+    "frozen_hash_camera_prefix.png": true,
+    "frozen_hash_camera_recognition.png": true,
+    "frozen_hash_printer_complete.png": true,
+    "frozen_hash_printer_prefix.png": true,
+    "frozen_hash_printer_recognition.png": true,
+    "camera_prefix_preserved": true,
+    "camera_reveal_is_original_frame": true,
+    "camera_reference_matches_source_annotation": true,
+    "printer_prefix_preserved": true,
+    "printer_reveal_is_original_frame": true,
+    "printer_reference_matches_source_annotation": true
+  },
+  "all_passed": true,
+  "scorer_unit_tests_passed": 4,
+  "model_inference_completed": false
+}

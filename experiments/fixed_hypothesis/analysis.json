@@ -1,0 +1,24 @@
+{
+  "camera": {
+    "scores": {
+      "prefix": "unavailable",
+      "recognition": "unavailable",
+      "joint": "unavailable",
+      "update": "unavailable",
+      "withheld": "unavailable"
+    },
+    "qualified": false,
+    "decision": "Not qualified for attributing an update failure; inspect the failed/missing gate."
+  },
+  "printer": {
+    "scores": {
+      "prefix": "unavailable",
+      "recognition": "unavailable",
+      "joint": "unavailable",
+      "update": "unavailable",
+      "withheld": "unavailable"
+    },
+    "qualified": false,
+    "decision": "Not qualified for attributing an update failure; inspect the failed/missing gate."
+  }
+}

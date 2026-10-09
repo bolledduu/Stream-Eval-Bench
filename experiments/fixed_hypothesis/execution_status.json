@@ -1,0 +1,9 @@
+{
+  "status": "blocked_by_automatic_approval_review",
+  "scientific_result": "No model responses saved for this experiment. Do not score as a model failure or success.",
+  "blocked_action": "Upload HoloAssist-derived image panels and experimental prompts to the public Qwen Hugging Face inference demo",
+  "destination": "https://qwen-qwen3-vl-235b-a22b-instruct-demo.hf.space",
+  "review_reason": "Explicit authorization for the payload and external destination is required by automatic approval review.",
+  "scope_requested_for_approval": "Six image files derived from two public HoloAssist recordings, task prompts, and model-generated prior answers across at most ten requests. No credentials, repository contents, or other local files.",
+  "action_after_rejection": "No rerouting or repeat upload attempted. Continue local validation only."
+}

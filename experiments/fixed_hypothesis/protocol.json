@@ -1,0 +1,82 @@
+{
+  "central_question": "Can later evidence resolve an earlier unknown observation while preserving unrelated historical facts and the latest capture identity?",
+  "tested_hypothesis": "With equal final visual evidence, having issued an earlier answer can impair selective retrospective updating relative to joint answering.",
+  "design": "Two real HoloAssist sources, controlled masks and delayed full frames. Frame-based diagnostic; not native video streaming.",
+  "model_declared_by_public_app": "qwen3-vl-235b-a22b-instruct",
+  "host": "https://qwen-qwen3-vl-235b-a22b-instruct-demo.hf.space",
+  "planned_conditions": [
+    "prefix",
+    "recognition",
+    "joint",
+    "update",
+    "withheld"
+  ],
+  "maximum_initial_calls": 10,
+  "retry_policy": "No automatic retries; preserve all errors.",
+  "source_count": 2,
+  "target_counterbalance": {
+    "camera": "E1",
+    "printer": "E2"
+  },
+  "expected": {
+    "camera": {
+      "prefix": {
+        "E1": "unknown",
+        "E2": "unknown",
+        "matched_record": "none",
+        "latest_record": "E2"
+      },
+      "recognition": {
+        "value": "lens"
+      },
+      "joint_and_update": {
+        "E1": "lens",
+        "E2": "unknown",
+        "matched_record": "E1",
+        "latest_record": "E2"
+      }
+    },
+    "printer": {
+      "prefix": {
+        "E1": "unknown",
+        "E2": "unknown",
+        "matched_record": "none",
+        "latest_record": "E2"
+      },
+      "recognition": {
+        "value": "dark"
+      },
+      "joint_and_update": {
+        "E1": "unknown",
+        "E2": "dark",
+        "matched_record": "E2",
+        "latest_record": "E2"
+      }
+    }
+  },
+  "decision_rules": [
+    "Backend errors and malformed answers are reported separately; neither is a demonstrated semantic failure.",
+    "Qualification requires prefix unknown/unknown, full-view recognition correct, and joint selective update correct.",
+    "For a qualified case, update failure is an exploratory history-conditioned failure; repeat on independent runs before claiming reproducibility.",
+    "For a qualified case, update success is a pass, never relabelled as an irrelevant experiment.",
+    "Withheld condition must retain unknown/unknown; otherwise report unsupported inference.",
+    "No universal conclusion or novelty claim from two cases. Natural delayed evidence, autonomous replay detection and real-time latency are not tested."
+  ],
+  "fairness": "Joint and update use byte-identical image inputs and common task instructions. Update additionally receives its own earlier answer. Visual context is retained; this isolates decision-history conditioning, not memory compression.",
+  "given_information": "Replay status and E1/E2 capture order are supplied, target identity and value are not. Latest-record output tests instruction compliance only.",
+  "hashes": {
+    "camera_complete.png": "aeef8d688e9dd95e2ce8794ed2b66764c0be40f99e24ecf33906ae50683abae1",
+    "camera_prefix.png": "83593aeed6ae41ee06a95af13ca0b35cda47badca0e76e9d9271a1f264be7148",
+    "camera_recognition.png": "ab74870c8d66a34d0a098626a53d7b942ab1f33d49f0e27f8767890869382d8d",
+    "printer_complete.png": "4cf95a490e1aa6e7ed58893cda6b73e7f504165b822c16ee9a67ce40da79c517",
+    "printer_prefix.png": "9f61cea7d2d98e2f6b682cd19baa27de7ef430fc3ccf9922572ab3976f9743a3",
+    "printer_recognition.png": "6c8a0934ca57aae964a7797b10cb9ca34072ba7973ba5dc6b803cad3f5903d96"
+  },
+  "limitations": [
+    "Artificial occlusion and delayed frame delivery; natural case prevalence unknown",
+    "Single sampled frame per observation; no temporal-action understanding claim",
+    "Assistant-only labels; no independent annotation",
+    "Provider sampling, decoding and exact weights not controlled",
+    "One run per condition initially; no statistical inference"
+  ]
+}

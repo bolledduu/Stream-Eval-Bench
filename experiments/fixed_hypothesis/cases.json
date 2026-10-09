@@ -1,0 +1,82 @@
+[
+  {
+    "id": "camera",
+    "target": "E1",
+    "question": "What detached camera part is held separately in the right hand? lens means the cylindrical lens assembly; cap means the flat circular lens cover.",
+    "choices": [
+      "lens",
+      "cap",
+      "unknown"
+    ],
+    "expected_value": "lens",
+    "source": "holo_1",
+    "records": [
+      {
+        "id": "E1",
+        "source_time": 10.0142,
+        "full": "inputs/camera_E1_full.png",
+        "partial": "inputs/camera_E1_partial.png",
+        "source_frame_sha256": "102cac74f630c3b486220679f5a6b8fc15fde1e41926533b82bfef5270e29882",
+        "full_sha256": "c821a79feb7a03878e8d0a125678b90bb499a5410f6afd14db709a9f37d223a0",
+        "partial_sha256": "8681414b8f8bfd0e73ffb9630e9b5fc3f114964556e163b5e838610e876a46ed",
+        "value": "lens"
+      },
+      {
+        "id": "E2",
+        "source_time": 17.0241,
+        "full": "inputs/camera_E2_full.png",
+        "partial": "inputs/camera_E2_partial.png",
+        "source_frame_sha256": "1c083d02bbd1972577be92bf952386cac258d815feea713b72d82284a8fcbec0",
+        "full_sha256": "911e918ffa4f407353128b89fb8da988ee33b144e133fa5cda5ca8e6e4ea2253",
+        "partial_sha256": "13021309507adf909460384ff537260f812a241f51690412f64de2352f8e31d2",
+        "value": "cap"
+      }
+    ],
+    "mask": [
+      80,
+      55,
+      460,
+      288
+    ]
+  },
+  {
+    "id": "printer",
+    "target": "E2",
+    "question": "Is the central rectangular printer display illuminated or dark? Ignore small indicator LEDs.",
+    "choices": [
+      "illuminated",
+      "dark",
+      "unknown"
+    ],
+    "expected_value": "dark",
+    "source": "holo_2",
+    "records": [
+      {
+        "id": "E1",
+        "source_time": 19.2864,
+        "full": "inputs/printer_E1_full.png",
+        "partial": "inputs/printer_E1_partial.png",
+        "source_frame_sha256": "949d51366e03071df3ebcc8e96e48193ecd70dfbe82ac0e6c8bab3fe0ca3d9aa",
+        "full_sha256": "cabda3562fc5c9a7247cb903ed444c67e00732c66b9813169d0fe3f46f830e62",
+        "partial_sha256": "8e6ccff1bf52755211f9def9bce5db8c417686893b21fa2ebfa009e073930cf3",
+        "value": "illuminated"
+      },
+      {
+        "id": "E2",
+        "source_time": 42.6331,
+        "full": "inputs/printer_E2_full.png",
+        "partial": "inputs/printer_E2_partial.png",
+        "source_frame_sha256": "72ac1689baed5e41c1181e60d9e854c354287b6f988a8e22e69cd5367be2987d",
+        "full_sha256": "a5133b668ac20ececdb00d88c00ec3f14be19d34a20d160088242a2c2c29ae15",
+        "partial_sha256": "9c2392a7665d229233d36ca4fb5b6492bbc510f6c20f8f8f9fac6e1b31ead2ec",
+        "value": "dark"
+      }
+    ],
+    "mask": [
+      100,
+      40,
+      450,
+      230
+    ]
+  }
+]
