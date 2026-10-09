@@ -1,0 +1,7 @@
+START chronological_1
+DONE chronological_1 {'earlier': 'unknown', 'latest': 'yes'} 49.1
+START chronological_2
+DONE chronological_2 {'earlier': 'unknown', 'latest': 'yes'} 116.2
+START chronological_3
+DONE chronological_3 {'earlier': 'unknown', 'latest': 'yes'} 53.9
+VERDICT Full-evidence control failed; streaming-specific inference not justified.

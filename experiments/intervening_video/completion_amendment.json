@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-09T08:23:38.504161+00:00",
+  "reason": "User requested completion after the partial run. Resume only the infrastructure-interrupted chronological branch, sequentially.",
+  "scope": "One further attempt at chronological_1, then its two dependent steps. No successful model response replaced. Original inputs, prompts and scoring unchanged.",
+  "limit": "If a further service error occurs, retain it and stop. This is an additional explicit deviation from the original no-retry protocol."
+}

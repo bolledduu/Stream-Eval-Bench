@@ -1,0 +1,29 @@
+{
+  "id": "chronological_3",
+  "condition": "chronological",
+  "step": 3,
+  "packets": [
+    6
+  ],
+  "arrived": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "input_memory": "{\n  \"earlier\": \"unknown\",\n  \"latest\": \"yes\"\n}",
+  "prompt": "You are observing a video stream delivered in packets. Use only evidence received so far and the supplied memory. Distinguish arrival time from capture time. A packet may depict an earlier event. Treat supplied capture timestamps as authoritative. Update historical facts only when supported. Do not treat older footage as the latest physical state. Preserve supported facts that incoming evidence does not change. Retain uncertainty when evidence is insufficient.\nINCOMING VIDEO PACKETS\nUploaded video 1, packet 6: original capture timestamps [120.024, 120.324, 120.625, 120.925]\nPlayback time within each file is local, not the original capture clock.\nLATEST CAPTURE TIME RECEIVED: 120.925\nPREVIOUS MODEL-PRODUCED MEMORY:\n{\n  \"earlier\": \"unknown\",\n  \"latest\": \"yes\"\n}\nTrack the large round tray and the table frame.\nearlier: Was the tray resting on the frame around original capture time 72 seconds?\nlatest: Was the tray resting on the frame at the latest capture time received?\nAn open frame is not the solid tray. Do not infer the earlier state solely from later footage. Use unknown when the relevant evidence has not been received.\nReturn only one JSON object with exactly two keys, earlier and latest; values must be yes, no, or unknown.",
+  "latest_capture_time": 120.92541314412799,
+  "utc": "2026-10-09T08:26:23.800511+00:00",
+  "status": "completed",
+  "response": "{\n  \"earlier\": \"unknown\",\n  \"latest\": \"yes\"\n}",
+  "parsed": {
+    "earlier": "unknown",
+    "latest": "yes"
+  },
+  "schema_valid": true,
+  "seconds": 53.91320739599996
+}

@@ -1,35 +1,43 @@
-# Intervening-footage experiment: partial execution, inconclusive mechanism
+# Completed intervening-footage prototype
 
-## Outcome
+**Decision: do not scale to a full benchmark on the current evidence.** The proposed delayed-arrival-specific failure was not established. This is a no-go for scaling this claim, not proof that the broader question has no value.
 
-Six of nine planned model calls completed. One chronological request failed twice with an upstream Gradio AppError; no model answer was returned. Its two downstream calls were not executed because their required model-produced memory did not exist. Total attempts: eight (six responses and two service errors). Errors are not scored as incorrect model answers.
+## Execution
 
-Model: public demo declaring Qwen3-VL-235B-A22B-Instruct. One HoloAssist table-assembly episode, seven existing four-frame video packets. No model weights or decoding settings independently pinned.
+All nine planned calls now have model responses. There were eleven total attempts: nine responses and two preserved infrastructure errors. The interrupted chronological branch was resumed under the documented completion amendment. No successful response was rerun or replaced. The resumption used identical prompts, packets, and model-produced predecessor memory.
 
-| Condition / step | Earlier | Latest | Interpretation |
+Backend: official public demo declaring Qwen3-VL-235B-A22B-Instruct. Live weights/decoding settings unverified. Data: one HoloAssist table-assembly episode, seven existing four-frame MP4 packets. This is not three-video replication.
+
+## Observed answers
+
+| Condition / step | Earlier | Latest | Expected earlier / latest |
 |---|---|---|---|
-| Chronological: packet 0 | unknown | unknown | Historical unknown appropriate; latest should be no |
-| Chronological: packet 1 | — | — | Service error, including one retry |
-| Chronological: packets 2–5 | — | — | Not run: upstream request failed |
-| Chronological: continuation | — | — | Not run: upstream request failed |
-| Delayed: packet 0 | unknown | unknown | Historical unknown appropriate; latest should be no |
-| Delayed: packets 2–5 | unknown | yes | Correct: historical evidence not yet received |
-| Delayed: historical packet 1 | unknown | yes | Historical answer should be no; latest yes is correct |
-| Delayed: continuation | unknown | yes | Historical answer should be no; latest yes is correct |
-| Together: packets 0–5 | unknown | yes | Historical answer should be no; latest yes is correct |
+| Chronological: packet 0 | unknown | unknown | unknown / no |
+| Chronological: packet 1 | unknown | yes | no / no |
+| Chronological: matched checkpoint | unknown | yes | no / yes |
+| Chronological: continuation | unknown | yes | no / yes |
+| Delayed: packet 0 | unknown | unknown | unknown / no |
+| Delayed: packets 2–5 | unknown | yes | unknown / yes |
+| Delayed: historical packet 1 | unknown | yes | no / yes |
+| Delayed: continuation | unknown | yes | no / yes |
+| Together: packets 0–5 | unknown | yes | no / yes |
 
-## What this means
+## Interpretation
 
-The delayed sequence did not resolve the historical field after the older evidence arrived, and retained unknown through the continuation. However, the together control also returned historical unknown with all relevant packets available. Thus this is not evidence that arrival order caused the failure. Incomplete chronological execution is a second reason causal attribution is unavailable.
+At the matched checkpoint, chronological, delayed, and together conditions all returned historical unknown and current yes. Both streaming continuations retained that answer. The historical answer should have been no. Thus the historical question failed in all conditions; there is no observed delayed-specific difference at these checkpoints. Shared failure can conceal additional mechanisms, so this does not rule out arrival-order effects in general.
 
-The preceding two-clip diagnostic succeeded. This extension differs in footage quantity/grouping and prompt wording, and the hosted generation settings are uncontrolled. Their difference cannot establish a causal effect of stream length.
+The chronological earlier-only packet also returned historical unknown and latest yes (both incorrect), providing an additional warning against attributing the later error specifically to memory or delay. The failure could involve visual interpretation, time-to-frame grounding, task instructions, hosted video processing, or combinations; this run does not isolate these causes.
 
-## Execution integrity
+The earlier two-clip pilot succeeded, while this extension did not. They differ in prompt wording, amount/grouping of footage, and uncontrolled hosted execution. Their difference is not a clean causal effect of duration, distractors, or memory load.
 
-The protocol was saved before inference. Completed outputs were never replaced. Conditions used isolated sessions; steps within each stream were sequential. Media hashes and matched packet sets were checked. The full delayed memory chain used previous raw model outputs verbatim. Six returned objects passed the JSON schema. One explicit, recorded infrastructure-only retry amended the initial no-retry protocol; it also failed. See retry_amendment.json and infrastructure_errors/.
+## Prototype conclusion
 
-## Decision
+Completed: a matched comparison with raw response preservation and both exact memory-chain audits. Not established: a streaming-specific limitation, a novel method, a population failure rate, or confidence adequate for a full benchmark. No benchmark-scale data collection or method claim is justified by this prototype alone. The current hypothesis is unsupported by this pilot, not disproven universally.
 
-Do not use this run to claim a streaming-specific gap or strong confidence. No additional models or videos were searched to force a positive result. Before further inference, validate that each short packet supports its labeled endpoint and use a reliable backend with controllable settings. A complete chronological comparison and successful evidence-understanding controls are still required.
+## Audit and limitations
 
-Files: run.py, retry_infrastructure.py, protocol.json, results.json, responses/, infrastructure_errors/, audit.json, run.log, retry.log. Media remain in the previously committed sibling streaming_trial directory. This run did not test camera or printer episodes, event association, or replay-versus-new-action discrimination.
+All nine responses parsed into the requested schema. Packet sets matched at both comparison points. Media hashes were verified before inference. All seven local videos contain four decodable frames. That audit cannot establish the hosted provider sampling policy or prove which visual information the model used.
+
+Other limitations: one source episode, one completion per condition, supplied capture times, explicitly instructed preservation, external two-field text memory, grouped intervening packets, uncontrolled service settings, and a later resumption of the chronological condition. Labels are researcher-screened, not independently annotated. No statistical confidence interval or model-wide conclusion is warranted.
+
+Infrastructure errors and deviations are recorded in infrastructure_errors/, retry_amendment.json and completion_amendment.json. PARTIAL_RESULTS.md is the superseded partial-run report. The authoritative current files are this report, results.json and audit.json.

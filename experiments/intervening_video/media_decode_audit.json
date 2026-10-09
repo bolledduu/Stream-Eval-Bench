@@ -1,0 +1,83 @@
+{
+  "all_seven_packets_have_four_decodable_frames": true,
+  "limitation": "Checks local encoded inputs only; does not reveal hosted provider resampling or prove model attention.",
+  "packets": [
+    {
+      "packet": 0,
+      "encoded_video": "hosted/media/table_0.mp4",
+      "probe": {
+        "codec_name": "h264",
+        "width": 512,
+        "height": 288,
+        "duration": "4.000000",
+        "nb_read_frames": "4"
+      }
+    },
+    {
+      "packet": 1,
+      "encoded_video": "hosted/media/table_1.mp4",
+      "probe": {
+        "codec_name": "h264",
+        "width": 512,
+        "height": 288,
+        "duration": "4.000000",
+        "nb_read_frames": "4"
+      }
+    },
+    {
+      "packet": 2,
+      "encoded_video": "hosted/media/table_2.mp4",
+      "probe": {
+        "codec_name": "h264",
+        "width": 512,
+        "height": 288,
+        "duration": "4.000000",
+        "nb_read_frames": "4"
+      }
+    },
+    {
+      "packet": 3,
+      "encoded_video": "hosted/media/table_3.mp4",
+      "probe": {
+        "codec_name": "h264",
+        "width": 512,
+        "height": 288,
+        "duration": "4.000000",
+        "nb_read_frames": "4"
+      }
+    },
+    {
+      "packet": 4,
+      "encoded_video": "hosted/media/table_4.mp4",
+      "probe": {
+        "codec_name": "h264",
+        "width": 512,
+        "height": 288,
+        "duration": "4.000000",
+        "nb_read_frames": "4"
+      }
+    },
+    {
+      "packet": 5,
+      "encoded_video": "hosted/media/table_5.mp4",
+      "probe": {
+        "codec_name": "h264",
+        "width": 512,
+        "height": 288,
+        "duration": "4.000000",
+        "nb_read_frames": "4"
+      }
+    },
+    {
+      "packet": 6,
+      "encoded_video": "hosted/media/table_6.mp4",
+      "probe": {
+        "codec_name": "h264",
+        "width": 512,
+        "height": 288,
+        "duration": "4.000000",
+        "nb_read_frames": "4"
+      }
+    }
+  ]
+}

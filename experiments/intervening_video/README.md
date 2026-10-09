@@ -40,3 +40,7 @@ Read every intermediate response; final-answer accuracy can hide earlier errors.
 ## Observed infrastructure amendment
 
 One explicit infrastructure-only retry of chronological_1 was authorized after the first upstream AppError; both error records are retained. The retry failed too. Six calls completed and two downstream calls remain blocked. See RESULTS.md. Do not interpret the initial no-automatic-retry setting as evidence that no manual retry occurred.
+
+## Completed status (supersedes partial status above)
+
+All nine calls completed after an additional user-requested infrastructure resumption, recorded in completion_amendment.json. Eleven attempts total, including two archived service errors. No completed model answer was replaced. All three matched conditions returned historical unknown/current yes. See RESULTS.md for the no-go decision on scaling the current claim.

@@ -1,14 +1,10 @@
 {
-  "completed_model_responses": 6,
-  "planned_calls": 9,
-  "failed_service_attempts": 2,
-  "blocked_downstream_calls": [
-    "chronological_2",
-    "chronological_3"
-  ],
-  "matched_packet_sets_at_join_and_continuation": true,
-  "delayed_memory_chain_exact": true,
-  "media_hashes_verified_at_run_start": true,
-  "python_syntax_valid": true,
-  "limitation": "Chronological comparison incomplete. Together control failed the historical field; no delayed-specific attribution."
+  "all_nine_planned_calls_completed": true,
+  "total_attempts": 11,
+  "infrastructure_errors": 2,
+  "schema_valid_responses": 9,
+  "both_memory_chains_exact": true,
+  "matched_packet_sets_at_comparison_points": true,
+  "local_video_decode_audit": "media_decode_audit.json",
+  "decision": "No-go for full benchmark on current evidence; proposed delayed-arrival-specific failure not established."
 }

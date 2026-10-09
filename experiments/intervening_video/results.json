@@ -1,10 +1,12 @@
 {
-  "complete": false,
-  "completed_calls": 6,
-  "verdict": "incomplete",
+  "complete": true,
+  "completed_calls": 9,
+  "verdict": "Full-evidence control failed; streaming-specific inference not justified.",
   "checkpoint_matches": {
     "together_0": false,
+    "chronological_2": false,
     "delayed_2": false,
+    "chronological_3": false,
     "delayed_3": false
   },
   "protocol_sha256": "3e9706efbc8dcf944c3375657aa53d170981253556d85d3c7368ba72a5a555be",
@@ -46,10 +48,75 @@
       "input_memory": "{\n  \"earlier\": \"unknown\",\n  \"latest\": \"unknown\"\n}",
       "prompt": "You are observing a video stream delivered in packets. Use only evidence received so far and the supplied memory. Distinguish arrival time from capture time. A packet may depict an earlier event. Treat supplied capture timestamps as authoritative. Update historical facts only when supported. Do not treat older footage as the latest physical state. Preserve supported facts that incoming evidence does not change. Retain uncertainty when evidence is insufficient.\nINCOMING VIDEO PACKETS\nUploaded video 1, packet 1: original capture timestamps [64.019, 67.993, 71.934, 75.908]\nPlayback time within each file is local, not the original capture clock.\nLATEST CAPTURE TIME RECEIVED: 75.908\nPREVIOUS MODEL-PRODUCED MEMORY:\n{\n  \"earlier\": \"unknown\",\n  \"latest\": \"unknown\"\n}\nTrack the large round tray and the table frame.\nearlier: Was the tray resting on the frame around original capture time 72 seconds?\nlatest: Was the tray resting on the frame at the latest capture time received?\nAn open frame is not the solid tray. Do not infer the earlier state solely from later footage. Use unknown when the relevant evidence has not been received.\nReturn only one JSON object with exactly two keys, earlier and latest; values must be yes, no, or unknown.",
       "latest_capture_time": 75.90816461657082,
-      "utc": "2026-10-09T08:07:40.082456+00:00",
-      "status": "error",
-      "error": "AppError('The upstream Gradio app has raised an exception but has not enabled verbose error reporting. To enable, set show_error=True in launch().')",
-      "seconds": 64.28322450999997
+      "utc": "2026-10-09T08:23:38.505880+00:00",
+      "status": "completed",
+      "response": "{\n  \"earlier\": \"unknown\",\n  \"latest\": \"yes\"\n}",
+      "parsed": {
+        "earlier": "unknown",
+        "latest": "yes"
+      },
+      "schema_valid": true,
+      "seconds": 49.12369711600013
+    },
+    {
+      "id": "chronological_2",
+      "condition": "chronological",
+      "step": 2,
+      "packets": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "arrived": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "input_memory": "{\n  \"earlier\": \"unknown\",\n  \"latest\": \"yes\"\n}",
+      "prompt": "You are observing a video stream delivered in packets. Use only evidence received so far and the supplied memory. Distinguish arrival time from capture time. A packet may depict an earlier event. Treat supplied capture timestamps as authoritative. Update historical facts only when supported. Do not treat older footage as the latest physical state. Preserve supported facts that incoming evidence does not change. Retain uncertainty when evidence is insufficient.\nINCOMING VIDEO PACKETS\nUploaded video 1, packet 2: original capture timestamps [76.008, 79.982, 83.957, 87.931]\nUploaded video 2, packet 3: original capture timestamps [88.031, 91.971, 95.946, 99.92]\nUploaded video 3, packet 4: original capture timestamps [100.02, 103.994, 107.935, 111.909]\nUploaded video 4, packet 5: original capture timestamps [112.009, 114.647, 117.285, 119.924]\nPlayback time within each file is local, not the original capture clock.\nLATEST CAPTURE TIME RECEIVED: 119.924\nPREVIOUS MODEL-PRODUCED MEMORY:\n{\n  \"earlier\": \"unknown\",\n  \"latest\": \"yes\"\n}\nTrack the large round tray and the table frame.\nearlier: Was the tray resting on the frame around original capture time 72 seconds?\nlatest: Was the tray resting on the frame at the latest capture time received?\nAn open frame is not the solid tray. Do not infer the earlier state solely from later footage. Use unknown when the relevant evidence has not been received.\nReturn only one JSON object with exactly two keys, earlier and latest; values must be yes, no, or unknown.",
+      "latest_capture_time": 119.92354559529511,
+      "utc": "2026-10-09T08:24:27.630096+00:00",
+      "status": "completed",
+      "response": "{\n  \"earlier\": \"unknown\",\n  \"latest\": \"yes\"\n}",
+      "parsed": {
+        "earlier": "unknown",
+        "latest": "yes"
+      },
+      "schema_valid": true,
+      "seconds": 116.1698908159999
+    },
+    {
+      "id": "chronological_3",
+      "condition": "chronological",
+      "step": 3,
+      "packets": [
+        6
+      ],
+      "arrived": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "input_memory": "{\n  \"earlier\": \"unknown\",\n  \"latest\": \"yes\"\n}",
+      "prompt": "You are observing a video stream delivered in packets. Use only evidence received so far and the supplied memory. Distinguish arrival time from capture time. A packet may depict an earlier event. Treat supplied capture timestamps as authoritative. Update historical facts only when supported. Do not treat older footage as the latest physical state. Preserve supported facts that incoming evidence does not change. Retain uncertainty when evidence is insufficient.\nINCOMING VIDEO PACKETS\nUploaded video 1, packet 6: original capture timestamps [120.024, 120.324, 120.625, 120.925]\nPlayback time within each file is local, not the original capture clock.\nLATEST CAPTURE TIME RECEIVED: 120.925\nPREVIOUS MODEL-PRODUCED MEMORY:\n{\n  \"earlier\": \"unknown\",\n  \"latest\": \"yes\"\n}\nTrack the large round tray and the table frame.\nearlier: Was the tray resting on the frame around original capture time 72 seconds?\nlatest: Was the tray resting on the frame at the latest capture time received?\nAn open frame is not the solid tray. Do not infer the earlier state solely from later footage. Use unknown when the relevant evidence has not been received.\nReturn only one JSON object with exactly two keys, earlier and latest; values must be yes, no, or unknown.",
+      "latest_capture_time": 120.92541314412799,
+      "utc": "2026-10-09T08:26:23.800511+00:00",
+      "status": "completed",
+      "response": "{\n  \"earlier\": \"unknown\",\n  \"latest\": \"yes\"\n}",
+      "parsed": {
+        "earlier": "unknown",
+        "latest": "yes"
+      },
+      "schema_valid": true,
+      "seconds": 53.91320739599996
     },
     {
       "id": "delayed_0",
