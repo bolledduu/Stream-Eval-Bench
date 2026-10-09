@@ -1,0 +1,19 @@
+{
+  "id": "printer_joint",
+  "case": "printer",
+  "condition": "joint",
+  "image": "printer_complete.png",
+  "sha256": "4cf95a490e1aa6e7ed58893cda6b73e7f504165b822c16ee9a67ce40da79c517",
+  "prompt": "The panels labelled E1 and E2 are two historical observations in capture order. Gray rectangles hide visual evidence. Do not guess hidden details or transfer a fact between records. Record E2 is the latest capture. A fuller view of an old observation does not create a new observation. Is the central rectangular printer display illuminated or dark? Ignore small indicator LEDs. Allowed values for each record: illuminated, dark, unknown. Return only JSON containing: E1 and E2 (their respective answers); matched_record (E1, E2, or none, indicating which historical panel the newly available fuller view matches; none if no fuller view is present); latest_record (the most recent observation by capture order); reason (brief visible evidence for any association). The rightmost panel is newly available footage: a fuller view of exactly one earlier observation. Identify that observation from the unmasked visual context, update only the fact it establishes, and leave the other observation unknown unless its own evidence establishes its fact.",
+  "utc": "2026-10-09T20:06:40.199801+00:00",
+  "status": "completed",
+  "response": "{\n  \"E1\": \"unknown\",\n  \"E2\": \"dark\",\n  \"matched_record\": \"E2\",\n  \"latest_record\": \"E2\",\n  \"reason\": \"The newly available fuller view matches E2\u2019s spatial layout and angle, confirming the central display is dark. E1 remains unknown as no direct visual evidence from its own panel establishes display state.\"\n}",
+  "parsed": {
+    "E1": "unknown",
+    "E2": "dark",
+    "matched_record": "E2",
+    "latest_record": "E2",
+    "reason": "The newly available fuller view matches E2\u2019s spatial layout and angle, confirming the central display is dark. E1 remains unknown as no direct visual evidence from its own panel establishes display state."
+  },
+  "seconds": 56.481107382000005
+}

@@ -1,0 +1,17 @@
+{
+  "reason": "The camera prefix returned an upstream service exception, so its two dependent conditions could not run. User requests completion of every prototype step.",
+  "scope": "Retry camera prefix once with unchanged prompt and image, then run the two originally planned dependent conditions if a valid prefix response arrives.",
+  "unchanged": [
+    "case selection",
+    "media",
+    "questions",
+    "reference answers",
+    "joint results",
+    "recognition results",
+    "scoring rules"
+  ],
+  "request_accounting": "Ten planned scientific conditions; at most eleven requests including the failed prefix attempt. No repeat of a completed model answer.",
+  "retry_limit": 1,
+  "original_error_preserved": "attempts/camera_prefix_attempt1.json",
+  "not_a_replication": "This recovers missing data after infrastructure failure; it does not test model-answer variability."
+}

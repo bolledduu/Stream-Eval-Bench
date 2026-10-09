@@ -1,22 +1,22 @@
 {
   "camera": {
     "scores": {
-      "prefix": "unavailable",
-      "recognition": "unavailable",
-      "joint": "unavailable",
-      "update": "unavailable",
-      "withheld": "unavailable"
+      "prefix": "pass",
+      "recognition": "schema_error",
+      "joint": "fail",
+      "update": "fail",
+      "withheld": "pass"
     },
     "qualified": false,
     "decision": "Not qualified for attributing an update failure; inspect the failed/missing gate."
   },
   "printer": {
     "scores": {
-      "prefix": "unavailable",
-      "recognition": "unavailable",
-      "joint": "unavailable",
-      "update": "unavailable",
-      "withheld": "unavailable"
+      "prefix": "fail",
+      "recognition": "schema_error",
+      "joint": "pass",
+      "update": "fail",
+      "withheld": "fail"
     },
     "qualified": false,
     "decision": "Not qualified for attributing an update failure; inspect the failed/missing gate."

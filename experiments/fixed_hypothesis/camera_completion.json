@@ -1,0 +1,93 @@
+[
+  {
+    "id": "camera_prefix",
+    "case": "camera",
+    "condition": "prefix",
+    "image": "camera_prefix.png",
+    "sha256": "83593aeed6ae41ee06a95af13ca0b35cda47badca0e76e9d9271a1f264be7148",
+    "prompt": "The panels labelled E1 and E2 are two historical observations in capture order. Gray rectangles hide visual evidence. Do not guess hidden details or transfer a fact between records. Record E2 is the latest capture. A fuller view of an old observation does not create a new observation. What detached camera part is held separately in the right hand? lens means the cylindrical lens assembly; cap means the flat circular lens cover. Allowed values for each record: lens, cap, unknown. Return only JSON containing: E1 and E2 (their respective answers); matched_record (E1, E2, or none, indicating which historical panel the newly available fuller view matches; none if no fuller view is present); latest_record (the most recent observation by capture order); reason (brief visible evidence for any association). No additional fuller view has arrived yet.",
+    "utc": "2026-10-09T20:08:45.022000+00:00",
+    "status": "completed",
+    "response": "{\n  \"E1\": \"unknown\",\n  \"E2\": \"unknown\",\n  \"matched_record\": \"none\",\n  \"latest_record\": \"E2\",\n  \"reason\": \"No detached camera part is visible in either record; gray rectangles obscure lower portions where such items might appear, and no fuller view has been provided.\"\n}",
+    "parsed": {
+      "E1": "unknown",
+      "E2": "unknown",
+      "matched_record": "none",
+      "latest_record": "E2",
+      "reason": "No detached camera part is visible in either record; gray rectangles obscure lower portions where such items might appear, and no fuller view has been provided."
+    },
+    "seconds": 60.28241054099999
+  },
+  {
+    "id": "camera_recognition",
+    "case": "camera",
+    "condition": "recognition",
+    "image": "camera_recognition.png",
+    "sha256": "ab74870c8d66a34d0a098626a53d7b942ab1f33d49f0e27f8767890869382d8d",
+    "prompt": "What detached camera part is held separately in the right hand? lens means the cylindrical lens assembly; cap means the flat circular lens cover. Return only JSON with key value. Allowed values: lens, cap, unknown.",
+    "utc": "2026-10-09T20:05:45.226662+00:00",
+    "status": "completed",
+    "response": "{\n  \"part\": \"lens\"\n}",
+    "parsed": {
+      "part": "lens"
+    },
+    "seconds": 60.22657082599994
+  },
+  {
+    "id": "camera_joint",
+    "case": "camera",
+    "condition": "joint",
+    "image": "camera_complete.png",
+    "sha256": "aeef8d688e9dd95e2ce8794ed2b66764c0be40f99e24ecf33906ae50683abae1",
+    "prompt": "The panels labelled E1 and E2 are two historical observations in capture order. Gray rectangles hide visual evidence. Do not guess hidden details or transfer a fact between records. Record E2 is the latest capture. A fuller view of an old observation does not create a new observation. What detached camera part is held separately in the right hand? lens means the cylindrical lens assembly; cap means the flat circular lens cover. Allowed values for each record: lens, cap, unknown. Return only JSON containing: E1 and E2 (their respective answers); matched_record (E1, E2, or none, indicating which historical panel the newly available fuller view matches; none if no fuller view is present); latest_record (the most recent observation by capture order); reason (brief visible evidence for any association). The rightmost panel is newly available footage: a fuller view of exactly one earlier observation. Identify that observation from the unmasked visual context, update only the fact it establishes, and leave the other observation unknown unless its own evidence establishes its fact.",
+    "utc": "2026-10-09T20:06:45.453713+00:00",
+    "status": "completed",
+    "response": "{\n  \"E1\": \"unknown\",\n  \"E2\": \"unknown\",\n  \"matched_record\": \"E2\",\n  \"latest_record\": \"E2\",\n  \"reason\": \"The newly available fuller view shows hands holding a detached cylindrical lens assembly, matching the context of E2\u2019s unmasked area which includes a monitor and keyboard layout consistent with E2\u2019s visible frame. No such detail is visible in E1\u2019s unmasked region.\"\n}",
+    "parsed": {
+      "E1": "unknown",
+      "E2": "unknown",
+      "matched_record": "E2",
+      "latest_record": "E2",
+      "reason": "The newly available fuller view shows hands holding a detached cylindrical lens assembly, matching the context of E2\u2019s unmasked area which includes a monitor and keyboard layout consistent with E2\u2019s visible frame. No such detail is visible in E1\u2019s unmasked region."
+    },
+    "seconds": 54.73172872100008
+  },
+  {
+    "id": "camera_update",
+    "case": "camera",
+    "condition": "update",
+    "image": "camera_complete.png",
+    "sha256": "aeef8d688e9dd95e2ce8794ed2b66764c0be40f99e24ecf33906ae50683abae1",
+    "prompt": "The panels labelled E1 and E2 are two historical observations in capture order. Gray rectangles hide visual evidence. Do not guess hidden details or transfer a fact between records. Record E2 is the latest capture. A fuller view of an old observation does not create a new observation. What detached camera part is held separately in the right hand? lens means the cylindrical lens assembly; cap means the flat circular lens cover. Allowed values for each record: lens, cap, unknown. Return only JSON containing: E1 and E2 (their respective answers); matched_record (E1, E2, or none, indicating which historical panel the newly available fuller view matches; none if no fuller view is present); latest_record (the most recent observation by capture order); reason (brief visible evidence for any association). Your earlier model-produced answer, before the fuller view arrived, was:\n{\n  \"E1\": \"unknown\",\n  \"E2\": \"unknown\",\n  \"matched_record\": \"none\",\n  \"latest_record\": \"E2\",\n  \"reason\": \"No detached camera part is visible in either record; gray rectangles obscure lower portions where such items might appear, and no fuller view has been provided.\"\n}\nIt may be revised if evidence justifies it.  The rightmost panel is newly available footage: a fuller view of exactly one earlier observation. Identify that observation from the unmasked visual context, update only the fact it establishes, and leave the other observation unknown unless its own evidence establishes its fact.",
+    "utc": "2026-10-09T20:09:45.305497+00:00",
+    "status": "completed",
+    "response": "{\n  \"E1\": \"unknown\",\n  \"E2\": \"lens\",\n  \"matched_record\": \"E2\",\n  \"latest_record\": \"E2\",\n  \"reason\": \"The newly available fuller view shows hands holding a detached cylindrical lens assembly, matching the context of E2 (same keyboard layout and monitor edge visible). The right hand holds the lens; no cap is visible. E1 remains unknown as its gray rectangle still obscures the relevant area.\"\n}",
+    "parsed": {
+      "E1": "unknown",
+      "E2": "lens",
+      "matched_record": "E2",
+      "latest_record": "E2",
+      "reason": "The newly available fuller view shows hands holding a detached cylindrical lens assembly, matching the context of E2 (same keyboard layout and monitor edge visible). The right hand holds the lens; no cap is visible. E1 remains unknown as its gray rectangle still obscures the relevant area."
+    },
+    "seconds": 60.97070886100005
+  },
+  {
+    "id": "camera_withheld",
+    "case": "camera",
+    "condition": "withheld",
+    "image": "camera_prefix.png",
+    "sha256": "83593aeed6ae41ee06a95af13ca0b35cda47badca0e76e9d9271a1f264be7148",
+    "prompt": "The panels labelled E1 and E2 are two historical observations in capture order. Gray rectangles hide visual evidence. Do not guess hidden details or transfer a fact between records. Record E2 is the latest capture. A fuller view of an old observation does not create a new observation. What detached camera part is held separately in the right hand? lens means the cylindrical lens assembly; cap means the flat circular lens cover. Allowed values for each record: lens, cap, unknown. Return only JSON containing: E1 and E2 (their respective answers); matched_record (E1, E2, or none, indicating which historical panel the newly available fuller view matches; none if no fuller view is present); latest_record (the most recent observation by capture order); reason (brief visible evidence for any association). Your earlier model-produced answer, before the fuller view arrived, was:\n{\n  \"E1\": \"unknown\",\n  \"E2\": \"unknown\",\n  \"matched_record\": \"none\",\n  \"latest_record\": \"E2\",\n  \"reason\": \"No detached camera part is visible in either record; gray rectangles obscure lower portions where such items might appear, and no fuller view has been provided.\"\n}\nIt may be revised if evidence justifies it.  No additional fuller view has arrived. Reassess using only the displayed evidence.",
+    "utc": "2026-10-09T20:10:46.276833+00:00",
+    "status": "completed",
+    "response": "{\n  \"E1\": \"unknown\",\n  \"E2\": \"unknown\",\n  \"matched_record\": \"none\",\n  \"latest_record\": \"E2\",\n  \"reason\": \"No detached camera part is visible in either record; gray rectangles obscure lower portions where such items might appear, and no fuller view has been provided.\"\n}",
+    "parsed": {
+      "E1": "unknown",
+      "E2": "unknown",
+      "matched_record": "none",
+      "latest_record": "E2",
+      "reason": "No detached camera part is visible in either record; gray rectangles obscure lower portions where such items might appear, and no fuller view has been provided."
+    },
+    "seconds": 51.39505236500008
+  }
+]

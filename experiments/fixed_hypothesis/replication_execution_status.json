@@ -1,0 +1,7 @@
+{
+  "status": "blocked_by_automatic_approval_review",
+  "planned_additional_requests": 4,
+  "saved_model_responses": 0,
+  "reason": "Automatic approval review requires separate authorization for four additional post-hoc inference uploads beyond the approved ten conditions and recovery retry.",
+  "action_after_rejection": "No retry, rerouting, or indirect execution. Original ten-condition prototype remains complete; proposed repeat check remains unexecuted."
+}

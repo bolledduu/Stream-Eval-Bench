@@ -1,0 +1,24 @@
+{
+  "all_passed": true,
+  "checks": {
+    "camera_equal_final_visual_input": true,
+    "camera_prompt_only_difference_is_prior_answer": true,
+    "camera_no_new_evidence_control_uses_original_image": true,
+    "printer_equal_final_visual_input": true,
+    "printer_prompt_only_difference_is_prior_answer": true,
+    "printer_no_new_evidence_control_uses_original_image": true,
+    "camera_prefix_input_unchanged": true,
+    "camera_recognition_input_unchanged": true,
+    "camera_joint_input_unchanged": true,
+    "camera_update_input_unchanged": true,
+    "camera_withheld_input_unchanged": true,
+    "printer_prefix_input_unchanged": true,
+    "printer_recognition_input_unchanged": true,
+    "printer_joint_input_unchanged": true,
+    "printer_update_input_unchanged": true,
+    "printer_withheld_input_unchanged": true
+  },
+  "core_completed_conditions": 10,
+  "core_total_requests": 11,
+  "scorer_unit_tests_passed": 6
+}

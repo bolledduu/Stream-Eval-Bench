@@ -1,0 +1,13 @@
+{
+  "id": "camera_prefix",
+  "case": "camera",
+  "condition": "prefix",
+  "image": "camera_prefix.png",
+  "sha256": "83593aeed6ae41ee06a95af13ca0b35cda47badca0e76e9d9271a1f264be7148",
+  "prompt": "The panels labelled E1 and E2 are two historical observations in capture order. Gray rectangles hide visual evidence. Do not guess hidden details or transfer a fact between records. Record E2 is the latest capture. A fuller view of an old observation does not create a new observation. What detached camera part is held separately in the right hand? lens means the cylindrical lens assembly; cap means the flat circular lens cover. Allowed values for each record: lens, cap, unknown. Return only JSON containing: E1 and E2 (their respective answers); matched_record (E1, E2, or none, indicating which historical panel the newly available fuller view matches; none if no fuller view is present); latest_record (the most recent observation by capture order); reason (brief visible evidence for any association). No additional fuller view has arrived yet.",
+  "utc": "2026-10-09T20:04:48.981095+00:00",
+  "status": "error",
+  "stage": "/predict",
+  "error": "AppError('The upstream Gradio app has raised an exception but has not enabled verbose error reporting. To enable, set show_error=True in launch().')",
+  "seconds": 56.243819809
+}

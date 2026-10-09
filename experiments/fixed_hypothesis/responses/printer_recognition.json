@@ -1,0 +1,15 @@
+{
+  "id": "printer_recognition",
+  "case": "printer",
+  "condition": "recognition",
+  "image": "printer_recognition.png",
+  "sha256": "6c8a0934ca57aae964a7797b10cb9ca34072ba7973ba5dc6b803cad3f5903d96",
+  "prompt": "Is the central rectangular printer display illuminated or dark? Ignore small indicator LEDs. Return only JSON with key value. Allowed values: illuminated, dark, unknown.",
+  "utc": "2026-10-09T20:05:41.530395+00:00",
+  "status": "completed",
+  "response": "{\n  \"display\": \"dark\"\n}",
+  "parsed": {
+    "display": "dark"
+  },
+  "seconds": 58.66884723399994
+}

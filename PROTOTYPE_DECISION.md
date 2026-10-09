@@ -1,5 +1,17 @@
 # Prototype decision: do not scale the current claim
 
+## Latest completed controlled prototype — 2026-10-09
+
+The fixed two-source HoloAssist prototype is now **complete: ten planned conditions returned model answers**, with one archived upstream error recovered once (eleven core requests). See `experiments/fixed_hypothesis/FINDINGS.md` for the decision and `RESULTS.md` for every output.
+
+- Both revealed facts were recognized correctly in standalone requests, with renamed JSON keys recorded separately as schema noncompliance.
+- Camera: joint and incremental answering both associated the reveal with the wrong historical record. This is not an isolated streaming-update failure.
+- Printer: joint answering was correct; answering with its own earlier response was wrong on the same final image. Its initial masked-view answer already contained unsupported claims. This is an exploratory history-conditioned discrepancy, not a replicated causal effect.
+- Neither case passes every predeclared clean-initial-uncertainty qualification gate. The gates have not been changed after observing the results.
+- Four proposed post-hoc repetitions were blocked by automatic approval review and remain unexecuted. They are not included in completed counts.
+
+This follow-up uses controlled occlusions and delayed original frames, not validated natural streaming replays. Keep the retrospective-evidence question, investigate the observed discrepancy, and do not yet scale a benchmark around an established streaming-specific failure claim. The previous pilot record follows below and is retained for provenance.
+
 ## What is complete
 
 The bounded diagnostic work is complete: the prior two-clip experiment (5 calls), intervening-footage comparison (9 calls), and endpoint-recognition controls across all three recordings (6 calls). These are **20 saved model responses** from the hosted demo declaring Qwen3-VL-235B-A22B-Instruct. Two extra infrastructure-error attempts occurred in the nine-call experiment and are archived. These totals exclude older lost hosted logs and the separate local-model pilots.

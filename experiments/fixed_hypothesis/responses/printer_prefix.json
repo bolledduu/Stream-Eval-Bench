@@ -1,0 +1,19 @@
+{
+  "id": "printer_prefix",
+  "case": "printer",
+  "condition": "prefix",
+  "image": "printer_prefix.png",
+  "sha256": "9f61cea7d2d98e2f6b682cd19baa27de7ef430fc3ccf9922572ab3976f9743a3",
+  "prompt": "The panels labelled E1 and E2 are two historical observations in capture order. Gray rectangles hide visual evidence. Do not guess hidden details or transfer a fact between records. Record E2 is the latest capture. A fuller view of an old observation does not create a new observation. Is the central rectangular printer display illuminated or dark? Ignore small indicator LEDs. Allowed values for each record: illuminated, dark, unknown. Return only JSON containing: E1 and E2 (their respective answers); matched_record (E1, E2, or none, indicating which historical panel the newly available fuller view matches; none if no fuller view is present); latest_record (the most recent observation by capture order); reason (brief visible evidence for any association). No additional fuller view has arrived yet.",
+  "utc": "2026-10-09T20:04:48.981322+00:00",
+  "status": "completed",
+  "response": "{\n  \"E1\": \"illuminated\",\n  \"E2\": \"dark\",\n  \"matched_record\": \"none\",\n  \"latest_record\": \"E2\",\n  \"reason\": \"In E1, the central rectangular display shows a visible blue screen with an icon, indicating illumination. In E2, the same area is dark and lacks any visible display content or glow.\"\n}",
+  "parsed": {
+    "E1": "illuminated",
+    "E2": "dark",
+    "matched_record": "none",
+    "latest_record": "E2",
+    "reason": "In E1, the central rectangular display shows a visible blue screen with an icon, indicating illumination. In E2, the same area is dark and lacks any visible display content or glow."
+  },
+  "seconds": 52.54851524999992
+}

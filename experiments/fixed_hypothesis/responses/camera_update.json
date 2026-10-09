@@ -1,0 +1,19 @@
+{
+  "id": "camera_update",
+  "case": "camera",
+  "condition": "update",
+  "image": "camera_complete.png",
+  "sha256": "aeef8d688e9dd95e2ce8794ed2b66764c0be40f99e24ecf33906ae50683abae1",
+  "prompt": "The panels labelled E1 and E2 are two historical observations in capture order. Gray rectangles hide visual evidence. Do not guess hidden details or transfer a fact between records. Record E2 is the latest capture. A fuller view of an old observation does not create a new observation. What detached camera part is held separately in the right hand? lens means the cylindrical lens assembly; cap means the flat circular lens cover. Allowed values for each record: lens, cap, unknown. Return only JSON containing: E1 and E2 (their respective answers); matched_record (E1, E2, or none, indicating which historical panel the newly available fuller view matches; none if no fuller view is present); latest_record (the most recent observation by capture order); reason (brief visible evidence for any association). Your earlier model-produced answer, before the fuller view arrived, was:\n{\n  \"E1\": \"unknown\",\n  \"E2\": \"unknown\",\n  \"matched_record\": \"none\",\n  \"latest_record\": \"E2\",\n  \"reason\": \"No detached camera part is visible in either record; gray rectangles obscure lower portions where such items might appear, and no fuller view has been provided.\"\n}\nIt may be revised if evidence justifies it.  The rightmost panel is newly available footage: a fuller view of exactly one earlier observation. Identify that observation from the unmasked visual context, update only the fact it establishes, and leave the other observation unknown unless its own evidence establishes its fact.",
+  "utc": "2026-10-09T20:09:45.305497+00:00",
+  "status": "completed",
+  "response": "{\n  \"E1\": \"unknown\",\n  \"E2\": \"lens\",\n  \"matched_record\": \"E2\",\n  \"latest_record\": \"E2\",\n  \"reason\": \"The newly available fuller view shows hands holding a detached cylindrical lens assembly, matching the context of E2 (same keyboard layout and monitor edge visible). The right hand holds the lens; no cap is visible. E1 remains unknown as its gray rectangle still obscures the relevant area.\"\n}",
+  "parsed": {
+    "E1": "unknown",
+    "E2": "lens",
+    "matched_record": "E2",
+    "latest_record": "E2",
+    "reason": "The newly available fuller view shows hands holding a detached cylindrical lens assembly, matching the context of E2 (same keyboard layout and monitor edge visible). The right hand holds the lens; no cap is visible. E1 remains unknown as its gray rectangle still obscures the relevant area."
+  },
+  "seconds": 60.97070886100005
+}

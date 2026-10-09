@@ -1,0 +1,223 @@
+{
+  "status": "all_ten_planned_conditions_completed",
+  "conditions": [
+    {
+      "id": "camera_prefix",
+      "case": "camera",
+      "condition": "prefix",
+      "image": "camera_prefix.png",
+      "sha256": "83593aeed6ae41ee06a95af13ca0b35cda47badca0e76e9d9271a1f264be7148",
+      "prompt": "The panels labelled E1 and E2 are two historical observations in capture order. Gray rectangles hide visual evidence. Do not guess hidden details or transfer a fact between records. Record E2 is the latest capture. A fuller view of an old observation does not create a new observation. What detached camera part is held separately in the right hand? lens means the cylindrical lens assembly; cap means the flat circular lens cover. Allowed values for each record: lens, cap, unknown. Return only JSON containing: E1 and E2 (their respective answers); matched_record (E1, E2, or none, indicating which historical panel the newly available fuller view matches; none if no fuller view is present); latest_record (the most recent observation by capture order); reason (brief visible evidence for any association). No additional fuller view has arrived yet.",
+      "utc": "2026-10-09T20:08:45.022000+00:00",
+      "status": "completed",
+      "response": "{\n  \"E1\": \"unknown\",\n  \"E2\": \"unknown\",\n  \"matched_record\": \"none\",\n  \"latest_record\": \"E2\",\n  \"reason\": \"No detached camera part is visible in either record; gray rectangles obscure lower portions where such items might appear, and no fuller view has been provided.\"\n}",
+      "parsed": {
+        "E1": "unknown",
+        "E2": "unknown",
+        "matched_record": "none",
+        "latest_record": "E2",
+        "reason": "No detached camera part is visible in either record; gray rectangles obscure lower portions where such items might appear, and no fuller view has been provided."
+      },
+      "seconds": 60.28241054099999
+    },
+    {
+      "id": "camera_recognition",
+      "case": "camera",
+      "condition": "recognition",
+      "image": "camera_recognition.png",
+      "sha256": "ab74870c8d66a34d0a098626a53d7b942ab1f33d49f0e27f8767890869382d8d",
+      "prompt": "What detached camera part is held separately in the right hand? lens means the cylindrical lens assembly; cap means the flat circular lens cover. Return only JSON with key value. Allowed values: lens, cap, unknown.",
+      "utc": "2026-10-09T20:05:45.226662+00:00",
+      "status": "completed",
+      "response": "{\n  \"part\": \"lens\"\n}",
+      "parsed": {
+        "part": "lens"
+      },
+      "seconds": 60.22657082599994
+    },
+    {
+      "id": "camera_joint",
+      "case": "camera",
+      "condition": "joint",
+      "image": "camera_complete.png",
+      "sha256": "aeef8d688e9dd95e2ce8794ed2b66764c0be40f99e24ecf33906ae50683abae1",
+      "prompt": "The panels labelled E1 and E2 are two historical observations in capture order. Gray rectangles hide visual evidence. Do not guess hidden details or transfer a fact between records. Record E2 is the latest capture. A fuller view of an old observation does not create a new observation. What detached camera part is held separately in the right hand? lens means the cylindrical lens assembly; cap means the flat circular lens cover. Allowed values for each record: lens, cap, unknown. Return only JSON containing: E1 and E2 (their respective answers); matched_record (E1, E2, or none, indicating which historical panel the newly available fuller view matches; none if no fuller view is present); latest_record (the most recent observation by capture order); reason (brief visible evidence for any association). The rightmost panel is newly available footage: a fuller view of exactly one earlier observation. Identify that observation from the unmasked visual context, update only the fact it establishes, and leave the other observation unknown unless its own evidence establishes its fact.",
+      "utc": "2026-10-09T20:06:45.453713+00:00",
+      "status": "completed",
+      "response": "{\n  \"E1\": \"unknown\",\n  \"E2\": \"unknown\",\n  \"matched_record\": \"E2\",\n  \"latest_record\": \"E2\",\n  \"reason\": \"The newly available fuller view shows hands holding a detached cylindrical lens assembly, matching the context of E2\u2019s unmasked area which includes a monitor and keyboard layout consistent with E2\u2019s visible frame. No such detail is visible in E1\u2019s unmasked region.\"\n}",
+      "parsed": {
+        "E1": "unknown",
+        "E2": "unknown",
+        "matched_record": "E2",
+        "latest_record": "E2",
+        "reason": "The newly available fuller view shows hands holding a detached cylindrical lens assembly, matching the context of E2\u2019s unmasked area which includes a monitor and keyboard layout consistent with E2\u2019s visible frame. No such detail is visible in E1\u2019s unmasked region."
+      },
+      "seconds": 54.73172872100008
+    },
+    {
+      "id": "camera_update",
+      "case": "camera",
+      "condition": "update",
+      "image": "camera_complete.png",
+      "sha256": "aeef8d688e9dd95e2ce8794ed2b66764c0be40f99e24ecf33906ae50683abae1",
+      "prompt": "The panels labelled E1 and E2 are two historical observations in capture order. Gray rectangles hide visual evidence. Do not guess hidden details or transfer a fact between records. Record E2 is the latest capture. A fuller view of an old observation does not create a new observation. What detached camera part is held separately in the right hand? lens means the cylindrical lens assembly; cap means the flat circular lens cover. Allowed values for each record: lens, cap, unknown. Return only JSON containing: E1 and E2 (their respective answers); matched_record (E1, E2, or none, indicating which historical panel the newly available fuller view matches; none if no fuller view is present); latest_record (the most recent observation by capture order); reason (brief visible evidence for any association). Your earlier model-produced answer, before the fuller view arrived, was:\n{\n  \"E1\": \"unknown\",\n  \"E2\": \"unknown\",\n  \"matched_record\": \"none\",\n  \"latest_record\": \"E2\",\n  \"reason\": \"No detached camera part is visible in either record; gray rectangles obscure lower portions where such items might appear, and no fuller view has been provided.\"\n}\nIt may be revised if evidence justifies it.  The rightmost panel is newly available footage: a fuller view of exactly one earlier observation. Identify that observation from the unmasked visual context, update only the fact it establishes, and leave the other observation unknown unless its own evidence establishes its fact.",
+      "utc": "2026-10-09T20:09:45.305497+00:00",
+      "status": "completed",
+      "response": "{\n  \"E1\": \"unknown\",\n  \"E2\": \"lens\",\n  \"matched_record\": \"E2\",\n  \"latest_record\": \"E2\",\n  \"reason\": \"The newly available fuller view shows hands holding a detached cylindrical lens assembly, matching the context of E2 (same keyboard layout and monitor edge visible). The right hand holds the lens; no cap is visible. E1 remains unknown as its gray rectangle still obscures the relevant area.\"\n}",
+      "parsed": {
+        "E1": "unknown",
+        "E2": "lens",
+        "matched_record": "E2",
+        "latest_record": "E2",
+        "reason": "The newly available fuller view shows hands holding a detached cylindrical lens assembly, matching the context of E2 (same keyboard layout and monitor edge visible). The right hand holds the lens; no cap is visible. E1 remains unknown as its gray rectangle still obscures the relevant area."
+      },
+      "seconds": 60.97070886100005
+    },
+    {
+      "id": "camera_withheld",
+      "case": "camera",
+      "condition": "withheld",
+      "image": "camera_prefix.png",
+      "sha256": "83593aeed6ae41ee06a95af13ca0b35cda47badca0e76e9d9271a1f264be7148",
+      "prompt": "The panels labelled E1 and E2 are two historical observations in capture order. Gray rectangles hide visual evidence. Do not guess hidden details or transfer a fact between records. Record E2 is the latest capture. A fuller view of an old observation does not create a new observation. What detached camera part is held separately in the right hand? lens means the cylindrical lens assembly; cap means the flat circular lens cover. Allowed values for each record: lens, cap, unknown. Return only JSON containing: E1 and E2 (their respective answers); matched_record (E1, E2, or none, indicating which historical panel the newly available fuller view matches; none if no fuller view is present); latest_record (the most recent observation by capture order); reason (brief visible evidence for any association). Your earlier model-produced answer, before the fuller view arrived, was:\n{\n  \"E1\": \"unknown\",\n  \"E2\": \"unknown\",\n  \"matched_record\": \"none\",\n  \"latest_record\": \"E2\",\n  \"reason\": \"No detached camera part is visible in either record; gray rectangles obscure lower portions where such items might appear, and no fuller view has been provided.\"\n}\nIt may be revised if evidence justifies it.  No additional fuller view has arrived. Reassess using only the displayed evidence.",
+      "utc": "2026-10-09T20:10:46.276833+00:00",
+      "status": "completed",
+      "response": "{\n  \"E1\": \"unknown\",\n  \"E2\": \"unknown\",\n  \"matched_record\": \"none\",\n  \"latest_record\": \"E2\",\n  \"reason\": \"No detached camera part is visible in either record; gray rectangles obscure lower portions where such items might appear, and no fuller view has been provided.\"\n}",
+      "parsed": {
+        "E1": "unknown",
+        "E2": "unknown",
+        "matched_record": "none",
+        "latest_record": "E2",
+        "reason": "No detached camera part is visible in either record; gray rectangles obscure lower portions where such items might appear, and no fuller view has been provided."
+      },
+      "seconds": 51.39505236500008
+    },
+    {
+      "id": "printer_prefix",
+      "case": "printer",
+      "condition": "prefix",
+      "image": "printer_prefix.png",
+      "sha256": "9f61cea7d2d98e2f6b682cd19baa27de7ef430fc3ccf9922572ab3976f9743a3",
+      "prompt": "The panels labelled E1 and E2 are two historical observations in capture order. Gray rectangles hide visual evidence. Do not guess hidden details or transfer a fact between records. Record E2 is the latest capture. A fuller view of an old observation does not create a new observation. Is the central rectangular printer display illuminated or dark? Ignore small indicator LEDs. Allowed values for each record: illuminated, dark, unknown. Return only JSON containing: E1 and E2 (their respective answers); matched_record (E1, E2, or none, indicating which historical panel the newly available fuller view matches; none if no fuller view is present); latest_record (the most recent observation by capture order); reason (brief visible evidence for any association). No additional fuller view has arrived yet.",
+      "utc": "2026-10-09T20:04:48.981322+00:00",
+      "status": "completed",
+      "response": "{\n  \"E1\": \"illuminated\",\n  \"E2\": \"dark\",\n  \"matched_record\": \"none\",\n  \"latest_record\": \"E2\",\n  \"reason\": \"In E1, the central rectangular display shows a visible blue screen with an icon, indicating illumination. In E2, the same area is dark and lacks any visible display content or glow.\"\n}",
+      "parsed": {
+        "E1": "illuminated",
+        "E2": "dark",
+        "matched_record": "none",
+        "latest_record": "E2",
+        "reason": "In E1, the central rectangular display shows a visible blue screen with an icon, indicating illumination. In E2, the same area is dark and lacks any visible display content or glow."
+      },
+      "seconds": 52.54851524999992
+    },
+    {
+      "id": "printer_recognition",
+      "case": "printer",
+      "condition": "recognition",
+      "image": "printer_recognition.png",
+      "sha256": "6c8a0934ca57aae964a7797b10cb9ca34072ba7973ba5dc6b803cad3f5903d96",
+      "prompt": "Is the central rectangular printer display illuminated or dark? Ignore small indicator LEDs. Return only JSON with key value. Allowed values: illuminated, dark, unknown.",
+      "utc": "2026-10-09T20:05:41.530395+00:00",
+      "status": "completed",
+      "response": "{\n  \"display\": \"dark\"\n}",
+      "parsed": {
+        "display": "dark"
+      },
+      "seconds": 58.66884723399994
+    },
+    {
+      "id": "printer_joint",
+      "case": "printer",
+      "condition": "joint",
+      "image": "printer_complete.png",
+      "sha256": "4cf95a490e1aa6e7ed58893cda6b73e7f504165b822c16ee9a67ce40da79c517",
+      "prompt": "The panels labelled E1 and E2 are two historical observations in capture order. Gray rectangles hide visual evidence. Do not guess hidden details or transfer a fact between records. Record E2 is the latest capture. A fuller view of an old observation does not create a new observation. Is the central rectangular printer display illuminated or dark? Ignore small indicator LEDs. Allowed values for each record: illuminated, dark, unknown. Return only JSON containing: E1 and E2 (their respective answers); matched_record (E1, E2, or none, indicating which historical panel the newly available fuller view matches; none if no fuller view is present); latest_record (the most recent observation by capture order); reason (brief visible evidence for any association). The rightmost panel is newly available footage: a fuller view of exactly one earlier observation. Identify that observation from the unmasked visual context, update only the fact it establishes, and leave the other observation unknown unless its own evidence establishes its fact.",
+      "utc": "2026-10-09T20:06:40.199801+00:00",
+      "status": "completed",
+      "response": "{\n  \"E1\": \"unknown\",\n  \"E2\": \"dark\",\n  \"matched_record\": \"E2\",\n  \"latest_record\": \"E2\",\n  \"reason\": \"The newly available fuller view matches E2\u2019s spatial layout and angle, confirming the central display is dark. E1 remains unknown as no direct visual evidence from its own panel establishes display state.\"\n}",
+      "parsed": {
+        "E1": "unknown",
+        "E2": "dark",
+        "matched_record": "E2",
+        "latest_record": "E2",
+        "reason": "The newly available fuller view matches E2\u2019s spatial layout and angle, confirming the central display is dark. E1 remains unknown as no direct visual evidence from its own panel establishes display state."
+      },
+      "seconds": 56.481107382000005
+    },
+    {
+      "id": "printer_update",
+      "case": "printer",
+      "condition": "update",
+      "image": "printer_complete.png",
+      "sha256": "4cf95a490e1aa6e7ed58893cda6b73e7f504165b822c16ee9a67ce40da79c517",
+      "prompt": "The panels labelled E1 and E2 are two historical observations in capture order. Gray rectangles hide visual evidence. Do not guess hidden details or transfer a fact between records. Record E2 is the latest capture. A fuller view of an old observation does not create a new observation. Is the central rectangular printer display illuminated or dark? Ignore small indicator LEDs. Allowed values for each record: illuminated, dark, unknown. Return only JSON containing: E1 and E2 (their respective answers); matched_record (E1, E2, or none, indicating which historical panel the newly available fuller view matches; none if no fuller view is present); latest_record (the most recent observation by capture order); reason (brief visible evidence for any association). Your earlier model-produced answer, before the fuller view arrived, was:\n{\n  \"E1\": \"illuminated\",\n  \"E2\": \"dark\",\n  \"matched_record\": \"none\",\n  \"latest_record\": \"E2\",\n  \"reason\": \"In E1, the central rectangular display shows a visible blue screen with an icon, indicating illumination. In E2, the same area is dark and lacks any visible display content or glow.\"\n}\nIt may be revised if evidence justifies it.  The rightmost panel is newly available footage: a fuller view of exactly one earlier observation. Identify that observation from the unmasked visual context, update only the fact it establishes, and leave the other observation unknown unless its own evidence establishes its fact.",
+      "utc": "2026-10-09T20:07:36.681555+00:00",
+      "status": "completed",
+      "response": "{\n  \"E1\": \"illuminated\",\n  \"E2\": \"unknown\",\n  \"matched_record\": \"E1\",\n  \"latest_record\": \"E2\",\n  \"reason\": \"The fuller view matches E1: same blue card reader, same paper stack, same angle. It confirms the central display is dark (no glow or content visible). Since E2\u2019s display area remains masked and no direct evidence exists for it, E2 status is unknown. E2 remains latest by capture order.\"\n}",
+      "parsed": {
+        "E1": "illuminated",
+        "E2": "unknown",
+        "matched_record": "E1",
+        "latest_record": "E2",
+        "reason": "The fuller view matches E1: same blue card reader, same paper stack, same angle. It confirms the central display is dark (no glow or content visible). Since E2\u2019s display area remains masked and no direct evidence exists for it, E2 status is unknown. E2 remains latest by capture order."
+      },
+      "seconds": 52.626350452999986
+    },
+    {
+      "id": "printer_withheld",
+      "case": "printer",
+      "condition": "withheld",
+      "image": "printer_prefix.png",
+      "sha256": "9f61cea7d2d98e2f6b682cd19baa27de7ef430fc3ccf9922572ab3976f9743a3",
+      "prompt": "The panels labelled E1 and E2 are two historical observations in capture order. Gray rectangles hide visual evidence. Do not guess hidden details or transfer a fact between records. Record E2 is the latest capture. A fuller view of an old observation does not create a new observation. Is the central rectangular printer display illuminated or dark? Ignore small indicator LEDs. Allowed values for each record: illuminated, dark, unknown. Return only JSON containing: E1 and E2 (their respective answers); matched_record (E1, E2, or none, indicating which historical panel the newly available fuller view matches; none if no fuller view is present); latest_record (the most recent observation by capture order); reason (brief visible evidence for any association). Your earlier model-produced answer, before the fuller view arrived, was:\n{\n  \"E1\": \"illuminated\",\n  \"E2\": \"dark\",\n  \"matched_record\": \"none\",\n  \"latest_record\": \"E2\",\n  \"reason\": \"In E1, the central rectangular display shows a visible blue screen with an icon, indicating illumination. In E2, the same area is dark and lacks any visible display content or glow.\"\n}\nIt may be revised if evidence justifies it.  No additional fuller view has arrived. Reassess using only the displayed evidence.",
+      "utc": "2026-10-09T20:08:29.308430+00:00",
+      "status": "completed",
+      "response": "{\n  \"E1\": \"illuminated\",\n  \"E2\": \"dark\",\n  \"matched_record\": \"none\",\n  \"latest_record\": \"E2\",\n  \"reason\": \"In E1, the central rectangular display shows a visible blue screen with an icon, indicating illumination. In E2, the same area is dark and lacks any visible display content or glow.\"\n}",
+      "parsed": {
+        "E1": "illuminated",
+        "E2": "dark",
+        "matched_record": "none",
+        "latest_record": "E2",
+        "reason": "In E1, the central rectangular display shows a visible blue screen with an icon, indicating illumination. In E2, the same area is dark and lacks any visible display content or glow."
+      },
+      "seconds": 61.640848274000064
+    }
+  ],
+  "completed_conditions": 10,
+  "archived_infrastructure_errors": [
+    {
+      "id": "camera_prefix",
+      "case": "camera",
+      "condition": "prefix",
+      "image": "camera_prefix.png",
+      "sha256": "83593aeed6ae41ee06a95af13ca0b35cda47badca0e76e9d9271a1f264be7148",
+      "prompt": "The panels labelled E1 and E2 are two historical observations in capture order. Gray rectangles hide visual evidence. Do not guess hidden details or transfer a fact between records. Record E2 is the latest capture. A fuller view of an old observation does not create a new observation. What detached camera part is held separately in the right hand? lens means the cylindrical lens assembly; cap means the flat circular lens cover. Allowed values for each record: lens, cap, unknown. Return only JSON containing: E1 and E2 (their respective answers); matched_record (E1, E2, or none, indicating which historical panel the newly available fuller view matches; none if no fuller view is present); latest_record (the most recent observation by capture order); reason (brief visible evidence for any association). No additional fuller view has arrived yet.",
+      "utc": "2026-10-09T20:04:48.981095+00:00",
+      "status": "error",
+      "stage": "/predict",
+      "error": "AppError('The upstream Gradio app has raised an exception but has not enabled verbose error reporting. To enable, set show_error=True in launch().')",
+      "seconds": 56.243819809
+    }
+  ],
+  "total_requests_for_core_prototype": 11,
+  "audit": {
+    "camera_equal_final_visual_input": true,
+    "camera_prompt_only_difference_is_prior_answer": true,
+    "camera_no_new_evidence_control_uses_original_image": true,
+    "printer_equal_final_visual_input": true,
+    "printer_prompt_only_difference_is_prior_answer": true,
+    "printer_no_new_evidence_control_uses_original_image": true,
+    "camera_prefix_input_unchanged": true,
+    "camera_recognition_input_unchanged": true,
+    "camera_joint_input_unchanged": true,
+    "camera_update_input_unchanged": true,
+    "camera_withheld_input_unchanged": true,
+    "printer_prefix_input_unchanged": true,
+    "printer_recognition_input_unchanged": true,
+    "printer_joint_input_unchanged": true,
+    "printer_update_input_unchanged": true,
+    "printer_withheld_input_unchanged": true
+  },
+  "replication_status": "Separately proposed four-request repeat check blocked by automatic approval review; zero repeat responses."
+}

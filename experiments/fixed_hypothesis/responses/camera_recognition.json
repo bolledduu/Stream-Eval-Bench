@@ -1,0 +1,15 @@
+{
+  "id": "camera_recognition",
+  "case": "camera",
+  "condition": "recognition",
+  "image": "camera_recognition.png",
+  "sha256": "ab74870c8d66a34d0a098626a53d7b942ab1f33d49f0e27f8767890869382d8d",
+  "prompt": "What detached camera part is held separately in the right hand? lens means the cylindrical lens assembly; cap means the flat circular lens cover. Return only JSON with key value. Allowed values: lens, cap, unknown.",
+  "utc": "2026-10-09T20:05:45.226662+00:00",
+  "status": "completed",
+  "response": "{\n  \"part\": \"lens\"\n}",
+  "parsed": {
+    "part": "lens"
+  },
+  "seconds": 60.22657082599994
+}
