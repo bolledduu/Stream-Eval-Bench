@@ -1,0 +1,104 @@
+{
+  "status": "Post-hoc completed-action check: camera cap-removal passes recognition but fails static matching. Trusted event identity bypasses matching to isolate visual-to-record integration. Not pooled with main trials.",
+  "environment": {
+    "model": "Qwen/Qwen2-VL-2B-Instruct",
+    "torch": "2.6.0+cpu",
+    "transformers": "4.49.0",
+    "device": "cpu",
+    "dtype": "bfloat16",
+    "threads": 4,
+    "min_visual_tokens": 64,
+    "max_visual_tokens": 256,
+    "max_new_tokens": 128,
+    "decoding": "greedy",
+    "vision_features": "Disabled: unmodified joint-image vision forward; supersedes invalidated cached experiment"
+  },
+  "results": [
+    {
+      "id": "camera_1_context_recognition",
+      "prompt": "Consider ONLY the THIRD image, the later delivered complete view. What detached camera part is held separately in the right hand? lens means the cylindrical lens assembly; cap means the flat circular lens cover. Return only JSON with key \"value\"; use unknown if not established.",
+      "frames": [
+        {
+          "label": "Earlier partial view for record E1",
+          "path": "inputs/camera_E1_partial.png",
+          "sha256": "8681414b8f8bfd0e73ffb9630e9b5fc3f114964556e163b5e838610e876a46ed"
+        },
+        {
+          "label": "Earlier partial view for record E2",
+          "path": "inputs/camera_E2_partial.png",
+          "sha256": "13021309507adf909460384ff537260f812a241f51690412f64de2352f8e31d2"
+        },
+        {
+          "label": "Later delivered image",
+          "path": "inputs/camera_E2_full.png",
+          "sha256": "911e918ffa4f407353128b89fb8da988ee33b144e133fa5cda5ca8e6e4ea2253"
+        }
+      ],
+      "response": "```json\n{\n  \"value\": \"lens\"\n}\n```",
+      "parsed": {
+        "value": "lens"
+      },
+      "expected": {
+        "value": "cap"
+      },
+      "pass": false,
+      "latency_seconds": 25.275038891999884
+    },
+    {
+      "id": "camera_1_plain_oracle_update",
+      "prompt": "The third image is a complete view from earlier record E2. The first two are covered reference views. The stored question for each record is: What detached camera part is held separately in the right hand? lens means the cylindrical lens assembly; cap means the flat circular lens cover.\nExisting records: {\"E1\": \"unknown\", \"E2\": \"unknown\", \"event_count\": 2, \"device\": \"camera\"}\nRead the answer from the third image and replace ONLY E2 with that answer. Keep all other values unchanged. Return only JSON with keys E1, E2, event_count and device.",
+      "frames": [
+        {
+          "label": "Earlier partial view for record E1",
+          "path": "inputs/camera_E1_partial.png",
+          "sha256": "8681414b8f8bfd0e73ffb9630e9b5fc3f114964556e163b5e838610e876a46ed"
+        },
+        {
+          "label": "Earlier partial view for record E2",
+          "path": "inputs/camera_E2_partial.png",
+          "sha256": "13021309507adf909460384ff537260f812a241f51690412f64de2352f8e31d2"
+        },
+        {
+          "label": "Later delivered image",
+          "path": "inputs/camera_E2_full.png",
+          "sha256": "911e918ffa4f407353128b89fb8da988ee33b144e133fa5cda5ca8e6e4ea2253"
+        }
+      ],
+      "response": "{\"E1\": \"unknown\", \"E2\": \"lens\", \"event_count\": 2, \"device\": \"camera\"}",
+      "parsed": {
+        "E1": "unknown",
+        "E2": "lens",
+        "event_count": 2,
+        "device": "camera"
+      },
+      "expected": {
+        "E1": "unknown",
+        "E2": "cap",
+        "event_count": 2,
+        "device": "camera"
+      },
+      "pass": false,
+      "latency_seconds": 28.40567228200007
+    },
+    {
+      "id": "camera_1_text_oracle_update",
+      "prompt": "Existing records: {\"E1\": \"unknown\", \"E2\": \"unknown\", \"event_count\": 2, \"device\": \"camera\"}\nTrusted verified evidence establishes E2 = \"cap\". Replace ONLY that record value with this verified value and preserve every other value. Return only JSON with keys E1, E2, event_count and device.",
+      "frames": [],
+      "response": "{\"E1\": \"unknown\", \"E2\": \"cap\", \"event_count\": 2, \"device\": \"camera\"}",
+      "parsed": {
+        "E1": "unknown",
+        "E2": "cap",
+        "event_count": 2,
+        "device": "camera"
+      },
+      "expected": {
+        "E1": "unknown",
+        "E2": "cap",
+        "event_count": 2,
+        "device": "camera"
+      },
+      "pass": true,
+      "latency_seconds": 4.681118470999991
+    }
+  ]
+}

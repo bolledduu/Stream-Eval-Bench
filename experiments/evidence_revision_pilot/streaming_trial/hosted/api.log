@@ -1,0 +1,43 @@
+Loaded as API: https://qwen-qwen3-vl-235b-a22b-instruct-demo.hf.space/ ✔
+Client.predict() Usage Info
+---------------------------
+Named API endpoints: 6
+
+ - predict(history, text, api_name="/add_text") -> qwen3vl235ba22binstruct
+    Parameters:
+     - [Chatbot] history: tuple[str | dict(file: filepath, alt_text: str | None) | dict(component: str, value: Any, constructor_args: dict(str, Any), props: dict(str, Any)) | None, str | dict(file: filepath, alt_text: str | None) | dict(component: str, value: Any, constructor_args: dict(str, Any), props: dict(str, Any)) | None] (not required, defaults to:   [])  
+     - [Textbox] text: str (required)  
+    Returns:
+     - [Chatbot] qwen3vl235ba22binstruct: tuple[str | dict(file: filepath, alt_text: str | None) | dict(component: str, value: Any, constructor_args: dict(str, Any), props: dict(str, Any)) | None, str | dict(file: filepath, alt_text: str | None) | dict(component: str, value: Any, constructor_args: dict(str, Any), props: dict(str, Any)) | None] 
+
+ - predict(_chatbot, api_name="/predict") -> qwen3vl235ba22binstruct
+    Parameters:
+     - [Chatbot] _chatbot: tuple[str | dict(file: filepath, alt_text: str | None) | dict(component: str, value: Any, constructor_args: dict(str, Any), props: dict(str, Any)) | None, str | dict(file: filepath, alt_text: str | None) | dict(component: str, value: Any, constructor_args: dict(str, Any), props: dict(str, Any)) | None] (not required, defaults to:   [])  
+    Returns:
+     - [Chatbot] qwen3vl235ba22binstruct: tuple[str | dict(file: filepath, alt_text: str | None) | dict(component: str, value: Any, constructor_args: dict(str, Any), props: dict(str, Any)) | None, str | dict(file: filepath, alt_text: str | None) | dict(component: str, value: Any, constructor_args: dict(str, Any), props: dict(str, Any)) | None] 
+
+ - predict(api_name="/reset_user_input") -> input
+    Parameters:
+     - None
+    Returns:
+     - [Textbox] input: str 
+
+ - predict(api_name="/reset_state") -> qwen3vl235ba22binstruct
+    Parameters:
+     - None
+    Returns:
+     - [Chatbot] qwen3vl235ba22binstruct: tuple[str | dict(file: filepath, alt_text: str | None) | dict(component: str, value: Any, constructor_args: dict(str, Any), props: dict(str, Any)) | None, str | dict(file: filepath, alt_text: str | None) | dict(component: str, value: Any, constructor_args: dict(str, Any), props: dict(str, Any)) | None] 
+
+ - predict(_chatbot, api_name="/regenerate") -> qwen3vl235ba22binstruct
+    Parameters:
+     - [Chatbot] _chatbot: tuple[str | dict(file: filepath, alt_text: str | None) | dict(component: str, value: Any, constructor_args: dict(str, Any), props: dict(str, Any)) | None, str | dict(file: filepath, alt_text: str | None) | dict(component: str, value: Any, constructor_args: dict(str, Any), props: dict(str, Any)) | None] (not required, defaults to:   [])  
+    Returns:
+     - [Chatbot] qwen3vl235ba22binstruct: tuple[str | dict(file: filepath, alt_text: str | None) | dict(component: str, value: Any, constructor_args: dict(str, Any), props: dict(str, Any)) | None, str | dict(file: filepath, alt_text: str | None) | dict(component: str, value: Any, constructor_args: dict(str, Any), props: dict(str, Any)) | None] 
+
+ - predict(history, file, api_name="/add_file") -> qwen3vl235ba22binstruct
+    Parameters:
+     - [Chatbot] history: tuple[str | dict(file: filepath, alt_text: str | None) | dict(component: str, value: Any, constructor_args: dict(str, Any), props: dict(str, Any)) | None, str | dict(file: filepath, alt_text: str | None) | dict(component: str, value: Any, constructor_args: dict(str, Any), props: dict(str, Any)) | None] (not required, defaults to:   [])  
+     - [Uploadbutton] file: filepath (required)  
+    Returns:
+     - [Chatbot] qwen3vl235ba22binstruct: tuple[str | dict(file: filepath, alt_text: str | None) | dict(component: str, value: Any, constructor_args: dict(str, Any), props: dict(str, Any)) | None, str | dict(file: filepath, alt_text: str | None) | dict(component: str, value: Any, constructor_args: dict(str, Any), props: dict(str, Any)) | None] 
+

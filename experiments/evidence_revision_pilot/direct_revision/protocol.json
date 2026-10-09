@@ -1,0 +1,193 @@
+{
+  "design": "Controlled artificially delayed full view of previously redacted real footage; not natural livestream evidence.",
+  "initial_memory": "Two records, device and unknown field values supplied by experiment. No claim of model-generated memory or human impossibility of early inference.",
+  "replay_status": "New packet explicitly described as footage from one of two earlier records. Replay detection is given, not tested. Printer/table rows describe historical state observations; only camera rows depict detachment events.",
+  "conditions": [
+    "recognition",
+    "static_matching",
+    "visual_update",
+    "oracle_update",
+    "withheld_update"
+  ],
+  "counterbalancing": "Both targets E1 and E2 tested for all three sessions, fixed reference order.",
+  "main_endpoint": "Correct target field, other field remains unknown, count remains 2, device preserved.",
+  "gates": "Only interpret revision failure beyond generic matching where full-view recognition AND static reference matching pass.",
+  "n_independent_sources": 3,
+  "cases": [
+    {
+      "id": "camera",
+      "source": "holo_1",
+      "times": [
+        10.02,
+        17.03
+      ],
+      "field": "part_removed",
+      "values": [
+        "lens",
+        "cap"
+      ],
+      "question": "What detached camera part is held separately in the right hand? lens means the cylindrical lens assembly; cap means the flat circular lens cover.",
+      "box": [
+        80,
+        55,
+        460,
+        288
+      ],
+      "records": [
+        {
+          "id": "E1",
+          "source_time": 10.0142,
+          "full": "inputs/camera_E1_full.png",
+          "partial": "inputs/camera_E1_partial.png",
+          "source_frame_sha256": "102cac74f630c3b486220679f5a6b8fc15fde1e41926533b82bfef5270e29882",
+          "full_sha256": "c821a79feb7a03878e8d0a125678b90bb499a5410f6afd14db709a9f37d223a0",
+          "partial_sha256": "8681414b8f8bfd0e73ffb9630e9b5fc3f114964556e163b5e838610e876a46ed",
+          "value": "lens"
+        },
+        {
+          "id": "E2",
+          "source_time": 17.0241,
+          "full": "inputs/camera_E2_full.png",
+          "partial": "inputs/camera_E2_partial.png",
+          "source_frame_sha256": "1c083d02bbd1972577be92bf952386cac258d815feea713b72d82284a8fcbec0",
+          "full_sha256": "911e918ffa4f407353128b89fb8da988ee33b144e133fa5cda5ca8e6e4ea2253",
+          "partial_sha256": "13021309507adf909460384ff537260f812a241f51690412f64de2352f8e31d2",
+          "value": "cap"
+        }
+      ],
+      "context_pixel_distances": [
+        [
+          0.0,
+          29.77246107617766
+        ],
+        [
+          29.77246107617766,
+          0.0
+        ]
+      ],
+      "initial_state": {
+        "E1": "unknown",
+        "E2": "unknown",
+        "event_count": 2,
+        "device": "camera"
+      }
+    },
+    {
+      "id": "printer",
+      "source": "holo_2",
+      "times": [
+        19.3,
+        42.65
+      ],
+      "field": "display",
+      "values": [
+        "illuminated",
+        "dark"
+      ],
+      "question": "Is the central rectangular printer display illuminated or dark? Ignore small indicator LEDs.",
+      "box": [
+        100,
+        40,
+        450,
+        230
+      ],
+      "records": [
+        {
+          "id": "E1",
+          "source_time": 19.2864,
+          "full": "inputs/printer_E1_full.png",
+          "partial": "inputs/printer_E1_partial.png",
+          "source_frame_sha256": "949d51366e03071df3ebcc8e96e48193ecd70dfbe82ac0e6c8bab3fe0ca3d9aa",
+          "full_sha256": "cabda3562fc5c9a7247cb903ed444c67e00732c66b9813169d0fe3f46f830e62",
+          "partial_sha256": "8e6ccff1bf52755211f9def9bce5db8c417686893b21fa2ebfa009e073930cf3",
+          "value": "illuminated"
+        },
+        {
+          "id": "E2",
+          "source_time": 42.6331,
+          "full": "inputs/printer_E2_full.png",
+          "partial": "inputs/printer_E2_partial.png",
+          "source_frame_sha256": "72ac1689baed5e41c1181e60d9e854c354287b6f988a8e22e69cd5367be2987d",
+          "full_sha256": "a5133b668ac20ececdb00d88c00ec3f14be19d34a20d160088242a2c2c29ae15",
+          "partial_sha256": "9c2392a7665d229233d36ca4fb5b6492bbc510f6c20f8f8f9fac6e1b31ead2ec",
+          "value": "dark"
+        }
+      ],
+      "context_pixel_distances": [
+        [
+          0.0,
+          56.63915107048851
+        ],
+        [
+          56.63915107048851,
+          0.0
+        ]
+      ],
+      "initial_state": {
+        "E1": "unknown",
+        "E2": "unknown",
+        "event_count": 2,
+        "device": "printer"
+      }
+    },
+    {
+      "id": "table",
+      "source": "holo_3",
+      "times": [
+        73.15,
+        118.24
+      ],
+      "field": "tray_on_frame",
+      "values": [
+        "no",
+        "yes"
+      ],
+      "question": "Is the large round tray resting on top of the table frame? yes means resting on the frame; no means not resting on the frame.",
+      "box": [
+        50,
+        40,
+        480,
+        288
+      ],
+      "records": [
+        {
+          "id": "E1",
+          "source_time": 73.1363,
+          "full": "inputs/table_E1_full.png",
+          "partial": "inputs/table_E1_partial.png",
+          "source_frame_sha256": "10405e416005ac05bd6f49b9b4c785217496d4e0d885b38e353556430e9f8b63",
+          "full_sha256": "28608f88da4dc524224ac362ad132399f4144ec5a072c6ea3343de82a211c956",
+          "partial_sha256": "0f6e185bbb80c6fe0879431232f452b8b8d41f8b0b8294c5afd0cbff6ee6127a",
+          "value": "no"
+        },
+        {
+          "id": "E2",
+          "source_time": 118.22,
+          "full": "inputs/table_E2_full.png",
+          "partial": "inputs/table_E2_partial.png",
+          "source_frame_sha256": "4934db6d24fe89362351c5a13da5823eac10204a47206a481d36c4d2a66b92f9",
+          "full_sha256": "b4e7b3d883fe44a3221799d4e882bbdc19a6984d8a8dd71718b49ad34bf765d9",
+          "partial_sha256": "d42e990c81df20f4d2c3d16c58b797f1a42bb8c4e011cd257f471d06b57e87fa",
+          "value": "yes"
+        }
+      ],
+      "context_pixel_distances": [
+        [
+          0.0,
+          52.56002267797279
+        ],
+        [
+          52.56002267797279,
+          0.0
+        ]
+      ],
+      "initial_state": {
+        "E1": "unknown",
+        "E2": "unknown",
+        "event_count": 2,
+        "device": "table"
+      }
+    }
+  ],
+  "frozen_before_qwen_predictions": true
+}

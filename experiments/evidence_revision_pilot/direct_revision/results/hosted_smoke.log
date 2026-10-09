@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/06f7a90cc9c6/outputs/evidence_revision_pilot/direct_revision/hosted_smoke.py", line 8, in <module>
+    history=client.predict(history,prompt,api_name='/add_text')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/06f7a90cc9c6/outputs/evidence_revision_pilot/.venv/lib/python3.12/site-packages/gradio_client/client.py", line 478, in predict
+    ).result()
+      ^^^^^^^^
+  File "/workspace/scratch/06f7a90cc9c6/outputs/evidence_revision_pilot/.venv/lib/python3.12/site-packages/gradio_client/client.py", line 1539, in result
+    return super().result(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/06f7a90cc9c6/outputs/evidence_revision_pilot/.venv/lib/python3.12/site-packages/gradio_client/client.py", line 1158, in _inner
+    predictions = _predict(*data)
+                  ^^^^^^^^^^^^^^^
+  File "/workspace/scratch/06f7a90cc9c6/outputs/evidence_revision_pilot/.venv/lib/python3.12/site-packages/gradio_client/client.py", line 1270, in _predict
+    raise AppError(
+gradio_client.exceptions.AppError: The upstream Gradio app has raised an exception but has not enabled verbose error reporting. To enable, set show_error=True in launch().

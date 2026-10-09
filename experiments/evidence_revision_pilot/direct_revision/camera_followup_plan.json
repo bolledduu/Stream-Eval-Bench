@@ -1,0 +1,64 @@
+[
+  {
+    "id": "camera_1_context_recognition",
+    "frames": [
+      {
+        "label": "Earlier partial view for record E1",
+        "path": "inputs/camera_E1_partial.png",
+        "sha256": "8681414b8f8bfd0e73ffb9630e9b5fc3f114964556e163b5e838610e876a46ed"
+      },
+      {
+        "label": "Earlier partial view for record E2",
+        "path": "inputs/camera_E2_partial.png",
+        "sha256": "13021309507adf909460384ff537260f812a241f51690412f64de2352f8e31d2"
+      },
+      {
+        "label": "Later delivered image",
+        "path": "inputs/camera_E2_full.png",
+        "sha256": "911e918ffa4f407353128b89fb8da988ee33b144e133fa5cda5ca8e6e4ea2253"
+      }
+    ],
+    "prompt": "Consider ONLY the THIRD image, the later delivered complete view. What detached camera part is held separately in the right hand? lens means the cylindrical lens assembly; cap means the flat circular lens cover. Return only JSON with key \"value\"; use unknown if not established.",
+    "expected": {
+      "value": "cap"
+    }
+  },
+  {
+    "id": "camera_1_plain_oracle_update",
+    "frames": [
+      {
+        "label": "Earlier partial view for record E1",
+        "path": "inputs/camera_E1_partial.png",
+        "sha256": "8681414b8f8bfd0e73ffb9630e9b5fc3f114964556e163b5e838610e876a46ed"
+      },
+      {
+        "label": "Earlier partial view for record E2",
+        "path": "inputs/camera_E2_partial.png",
+        "sha256": "13021309507adf909460384ff537260f812a241f51690412f64de2352f8e31d2"
+      },
+      {
+        "label": "Later delivered image",
+        "path": "inputs/camera_E2_full.png",
+        "sha256": "911e918ffa4f407353128b89fb8da988ee33b144e133fa5cda5ca8e6e4ea2253"
+      }
+    ],
+    "prompt": "The third image is a complete view from earlier record E2. The first two are covered reference views. The stored question for each record is: What detached camera part is held separately in the right hand? lens means the cylindrical lens assembly; cap means the flat circular lens cover.\nExisting records: {\"E1\": \"unknown\", \"E2\": \"unknown\", \"event_count\": 2, \"device\": \"camera\"}\nRead the answer from the third image and replace ONLY E2 with that answer. Keep all other values unchanged. Return only JSON with keys E1, E2, event_count and device.",
+    "expected": {
+      "E1": "unknown",
+      "E2": "cap",
+      "event_count": 2,
+      "device": "camera"
+    }
+  },
+  {
+    "id": "camera_1_text_oracle_update",
+    "frames": [],
+    "prompt": "Existing records: {\"E1\": \"unknown\", \"E2\": \"unknown\", \"event_count\": 2, \"device\": \"camera\"}\nTrusted verified evidence establishes E2 = \"cap\". Replace ONLY that record value with this verified value and preserve every other value. Return only JSON with keys E1, E2, event_count and device.",
+    "expected": {
+      "E1": "unknown",
+      "E2": "cap",
+      "event_count": 2,
+      "device": "camera"
+    }
+  }
+]

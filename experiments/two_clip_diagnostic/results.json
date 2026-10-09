@@ -1,0 +1,132 @@
+{
+  "design": "Frozen five-call, two-packet diagnostic; no selection or prompt changes based on outcomes. Model-produced text memory only. No statistical inference from one example.",
+  "host": "https://qwen-qwen3-vl-235b-a22b-instruct-demo.hf.space",
+  "declared_model": "qwen3-vl-235b-a22b-instruct",
+  "limitations": [
+    "Four sampled source frames per video packet; not continuous streaming",
+    "Public demo decoding and backend weights not controlled",
+    "Supplied capture times; no autonomous replay detection"
+  ],
+  "expected_final": {
+    "earlier": "no",
+    "latest": "yes"
+  },
+  "media_sha256": {
+    "earlier": "6cfc5b3de6172fe0e78b71ea1fbde9835f48630c735e8113b525be9eb5a614f2",
+    "later": "aeb549803cbf17a33183f9a59cd9cdb546f7a35f67e38953f65f7e6afa6af599"
+  },
+  "results": [
+    {
+      "id": "together",
+      "clips": [
+        "earlier",
+        "later"
+      ],
+      "input_memory": "{}",
+      "prompt": "Uploaded video 1 (earlier): its four frames have ORIGINAL capture timestamps [64.019, 67.993, 71.934, 75.908] seconds.\nUploaded video 2 (later): its four frames have ORIGINAL capture timestamps [112.009, 114.647, 117.285, 119.924] seconds.\nPlayback time is local to each uploaded file. Use original capture timestamps.\nTrack whether the large round tray rests on the table frame. An open frame is not a tray.\nAnswer two questions: earlier = was the tray resting on the frame around capture time 72 seconds? latest = was the tray resting on the frame at the latest capture time received? Use unknown when the relevant evidence has not been received. Do not infer an earlier state from later footage. An older clip arriving later can update history but does not become the latest capture time. Latest capture time received: 119.924 seconds.\nPrevious model-produced memory: {}\nReturn only JSON with keys earlier and latest, each with value yes, no, or unknown.",
+      "response": "{\n  \"earlier\": \"no\",\n  \"latest\": \"yes\"\n}",
+      "parsed": {
+        "earlier": "no",
+        "latest": "yes"
+      },
+      "elapsed_seconds": 78.7432285509999,
+      "utc": "2026-10-09T02:41:20.164702+00:00"
+    },
+    {
+      "id": "chronological_0",
+      "clips": [
+        "earlier"
+      ],
+      "input_memory": "{}",
+      "prompt": "Uploaded video 1 (earlier): its four frames have ORIGINAL capture timestamps [64.019, 67.993, 71.934, 75.908] seconds.\nPlayback time is local to each uploaded file. Use original capture timestamps.\nTrack whether the large round tray rests on the table frame. An open frame is not a tray.\nAnswer two questions: earlier = was the tray resting on the frame around capture time 72 seconds? latest = was the tray resting on the frame at the latest capture time received? Use unknown when the relevant evidence has not been received. Do not infer an earlier state from later footage. An older clip arriving later can update history but does not become the latest capture time. Latest capture time received: 75.908 seconds.\nPrevious model-produced memory: {}\nReturn only JSON with keys earlier and latest, each with value yes, no, or unknown.",
+      "response": "{\n  \"earlier\": \"no\",\n  \"latest\": \"yes\"\n}",
+      "parsed": {
+        "earlier": "no",
+        "latest": "yes"
+      },
+      "elapsed_seconds": 48.73461850900003,
+      "utc": "2026-10-09T02:42:25.866762+00:00"
+    },
+    {
+      "id": "chronological_1",
+      "clips": [
+        "later"
+      ],
+      "input_memory": "{\n  \"earlier\": \"no\",\n  \"latest\": \"yes\"\n}",
+      "prompt": "Uploaded video 1 (later): its four frames have ORIGINAL capture timestamps [112.009, 114.647, 117.285, 119.924] seconds.\nPlayback time is local to each uploaded file. Use original capture timestamps.\nTrack whether the large round tray rests on the table frame. An open frame is not a tray.\nAnswer two questions: earlier = was the tray resting on the frame around capture time 72 seconds? latest = was the tray resting on the frame at the latest capture time received? Use unknown when the relevant evidence has not been received. Do not infer an earlier state from later footage. An older clip arriving later can update history but does not become the latest capture time. Latest capture time received: 119.924 seconds.\nPrevious model-produced memory: {\n  \"earlier\": \"no\",\n  \"latest\": \"yes\"\n}\nReturn only JSON with keys earlier and latest, each with value yes, no, or unknown.",
+      "response": "{\n  \"earlier\": \"no\",\n  \"latest\": \"yes\"\n}",
+      "parsed": {
+        "earlier": "no",
+        "latest": "yes"
+      },
+      "elapsed_seconds": 47.28051728600008,
+      "utc": "2026-10-09T02:43:40.793139+00:00"
+    },
+    {
+      "id": "delayed_0",
+      "clips": [
+        "later"
+      ],
+      "input_memory": "{}",
+      "prompt": "Uploaded video 1 (later): its four frames have ORIGINAL capture timestamps [112.009, 114.647, 117.285, 119.924] seconds.\nPlayback time is local to each uploaded file. Use original capture timestamps.\nTrack whether the large round tray rests on the table frame. An open frame is not a tray.\nAnswer two questions: earlier = was the tray resting on the frame around capture time 72 seconds? latest = was the tray resting on the frame at the latest capture time received? Use unknown when the relevant evidence has not been received. Do not infer an earlier state from later footage. An older clip arriving later can update history but does not become the latest capture time. Latest capture time received: 119.924 seconds.\nPrevious model-produced memory: {}\nReturn only JSON with keys earlier and latest, each with value yes, no, or unknown.",
+      "response": "{\n  \"earlier\": \"unknown\",\n  \"latest\": \"yes\"\n}",
+      "parsed": {
+        "earlier": "unknown",
+        "latest": "yes"
+      },
+      "elapsed_seconds": 50.227937211999915,
+      "utc": "2026-10-09T02:44:55.602255+00:00"
+    },
+    {
+      "id": "delayed_1",
+      "clips": [
+        "earlier"
+      ],
+      "input_memory": "{\n  \"earlier\": \"unknown\",\n  \"latest\": \"yes\"\n}",
+      "prompt": "Uploaded video 1 (earlier): its four frames have ORIGINAL capture timestamps [64.019, 67.993, 71.934, 75.908] seconds.\nPlayback time is local to each uploaded file. Use original capture timestamps.\nTrack whether the large round tray rests on the table frame. An open frame is not a tray.\nAnswer two questions: earlier = was the tray resting on the frame around capture time 72 seconds? latest = was the tray resting on the frame at the latest capture time received? Use unknown when the relevant evidence has not been received. Do not infer an earlier state from later footage. An older clip arriving later can update history but does not become the latest capture time. Latest capture time received: 119.924 seconds.\nPrevious model-produced memory: {\n  \"earlier\": \"unknown\",\n  \"latest\": \"yes\"\n}\nReturn only JSON with keys earlier and latest, each with value yes, no, or unknown.",
+      "response": "{\n  \"earlier\": \"no\",\n  \"latest\": \"yes\"\n}",
+      "parsed": {
+        "earlier": "no",
+        "latest": "yes"
+      },
+      "elapsed_seconds": 47.734345519000044,
+      "utc": "2026-10-09T02:46:02.332791+00:00"
+    }
+  ],
+  "finished": true,
+  "audit": {
+    "five_calls_complete": true,
+    "model_memory_carry_forward_verified": true,
+    "media_hashes_verified": true,
+    "expected_by_step": {
+      "together": {
+        "earlier": "no",
+        "latest": "yes"
+      },
+      "chronological_0": {
+        "earlier": "no",
+        "latest": "no"
+      },
+      "chronological_1": {
+        "earlier": "no",
+        "latest": "yes"
+      },
+      "delayed_0": {
+        "earlier": "unknown",
+        "latest": "yes"
+      },
+      "delayed_1": {
+        "earlier": "no",
+        "latest": "yes"
+      }
+    },
+    "exact_match_by_step": {
+      "together": true,
+      "chronological_0": false,
+      "chronological_1": true,
+      "delayed_0": true,
+      "delayed_1": true
+    },
+    "conclusion": "No candidate arrival-order failure in this single two-clip diagnostic. Intermediate chronological state error observed. No population or novelty claim."
+  }
+}

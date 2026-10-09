@@ -1,0 +1,39 @@
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.48, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  6.21it/s]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  7.21it/s]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  7.03it/s]
+Model loaded {'model': 'Qwen/Qwen2-VL-2B-Instruct', 'torch': '2.6.0+cpu', 'transformers': '4.49.0', 'device': 'cpu', 'dtype': 'bfloat16', 'threads': 4, 'min_visual_tokens': 64, 'max_visual_tokens': 256, 'max_new_tokens': 128, 'decoding': 'greedy', 'vision_features': 'per-image cache enabled after first seven calls; images and prompts unchanged'}
+/workspace/scratch/06f7a90cc9c6/outputs/evidence_revision_pilot/.venv/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:629: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.01` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/workspace/scratch/06f7a90cc9c6/outputs/evidence_revision_pilot/.venv/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:634: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.001` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+/workspace/scratch/06f7a90cc9c6/outputs/evidence_revision_pilot/.venv/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:651: UserWarning: `do_sample` is set to `False`. However, `top_k` is set to `1` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_k`.
+  warnings.warn(
+Encoded image dba25066cd44 seconds 30.26
+Encoded image 098d4498b88c seconds 31.19
+Encoded image 91d0b0e1a37b seconds 29.35
+camera_1_static_matching '{"record":"E1"}' PASS False SECONDS 154.01
+Encoded image c800f57bff16 seconds 29.91
+Encoded image 14d63253a29b seconds 28.43
+Encoded image 6190521aa95b seconds 28.38
+printer_0_static_matching '{"record":"unknown"}' PASS False SECONDS 146.88
+Encoded image de619020bc41 seconds 32.52
+printer_1_static_matching '{"record":"unknown"}' PASS False SECONDS 96.41
+Encoded image 0dae47b41d26 seconds 33.57
+Encoded image 79f9412bd3bb seconds 29.88
+Encoded image 4110d8295c6e seconds 27.93
+table_0_static_matching '{"record":"E1"}' PASS True SECONDS 156.27
+Encoded image bf16b832bd7d seconds 33.9
+table_1_static_matching '{"record":"E1"}' PASS False SECONDS 102.04
+Encoded image e5adae73dee3 seconds 30.69
+camera_0_visual_update '```json\n{\n  "E1": "unknown",\n  "E2": "unknown",\n  "event_count": 2,\n  "device": "camera"\n}\n```' PASS False SECONDS 112.99
+camera_1_visual_update '```json\n{\n  "E1": "unknown",\n  "E2": "unknown",\n  "event_count": 2,\n  "device": "camera"\n}\n```' PASS False SECONDS 82.68
+printer_0_visual_update '```json\n{\n  "E1": "unknown",\n  "E2": "unknown",\n  "event_count": 2,\n  "device": "printer"\n}\n```' PASS False SECONDS 78.76
+printer_1_visual_update '```json\n{\n  "E1": "unknown",\n  "E2": "unknown",\n  "event_count": 2,\n  "device": "printer"\n}\n```' PASS False SECONDS 81.36
+table_0_visual_update '```json\n{\n  "E1": "unknown",\n  "E2": "unknown",\n  "event_count": 2,\n  "device": "table"\n}\n```' PASS False SECONDS 88.84
+table_1_visual_update '{\n  "E1": "yes",\n  "E2": "unknown",\n  "event_count": 3,\n  "device": "table"\n}' PASS False SECONDS 84.81
+camera_0_oracle_update '```json\n{\n  "E1": "unknown",\n  "E2": "unknown",\n  "event_count": 2,\n  "device": "camera"\n}\n```' PASS False SECONDS 91.41
+camera_1_oracle_update '{\n  "E1": "unknown",\n  "E2": "unknown",\n  "event_count": 2,\n  "device": "camera"\n}' PASS False SECONDS 92.48
+printer_0_oracle_update '```json\n{\n  "E1": "illuminated",\n  "E2": "unknown",\n  "event_count": 2,\n  "device": "printer"\n}\n```' PASS True SECONDS 90.02

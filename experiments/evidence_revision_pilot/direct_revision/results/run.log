@@ -1,0 +1,20 @@
+Using a slow image processor as `use_fast` is unset and a slow processor was saved with this model. `use_fast=True` will be the default behavior in v4.48, even if the model was saved with a slow processor. This will result in minor differences in outputs. You'll still be able to use a slow processor with `use_fast=False`.
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  6.45it/s]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  7.44it/s]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  7.27it/s]
+Model loaded {'model': 'Qwen/Qwen2-VL-2B-Instruct', 'torch': '2.6.0+cpu', 'transformers': '4.49.0', 'device': 'cpu', 'dtype': 'bfloat16', 'threads': 4, 'min_visual_tokens': 64, 'max_visual_tokens': 256, 'max_new_tokens': 128, 'decoding': 'greedy'}
+/workspace/scratch/06f7a90cc9c6/outputs/evidence_revision_pilot/.venv/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:629: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.01` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/workspace/scratch/06f7a90cc9c6/outputs/evidence_revision_pilot/.venv/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:634: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.001` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+/workspace/scratch/06f7a90cc9c6/outputs/evidence_revision_pilot/.venv/lib/python3.12/site-packages/transformers/generation/configuration_utils.py:651: UserWarning: `do_sample` is set to `False`. However, `top_k` is set to `1` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_k`.
+  warnings.warn(
+camera_0_recognition '{"value": "unknown"}' PASS False SECONDS 54.04
+camera_1_recognition '{"value": "cap"}' PASS True SECONDS 52.41
+printer_0_recognition '{"value": "illuminated"}' PASS True SECONDS 51.5
+printer_1_recognition '{"value": "unknown"}' PASS False SECONDS 52.6
+table_0_recognition '{"value": "no"}' PASS True SECONDS 55.1
+table_1_recognition '{"value": "yes"}' PASS True SECONDS 57.49
+camera_0_static_matching '{"record":"E1"}' PASS True SECONDS 156.29

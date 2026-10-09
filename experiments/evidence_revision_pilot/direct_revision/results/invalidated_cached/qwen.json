@@ -1,0 +1,1245 @@
+{
+  "protocol_sha256": "4d822289ee1b877d24fdd1f12a68f90cfe008e4ac77458630cf9c2d809fac50b",
+  "requests_sha256": "61ebd2ce946bc0fadef61da989fee11a6a6e42508f1862180a887c7ce29ed14a",
+  "model": {
+    "name": "Qwen/Qwen2-VL-2B-Instruct",
+    "revision": "895c3a49bc3fa70a340399125c650a463535e71c",
+    "files": [
+      {
+        "file": "chat_template.json",
+        "bytes": 1050,
+        "sha256": "ad60d90252ed0b0705ba14e2d0ad0fec0beac1ea955642b54059b36052d8bc96"
+      },
+      {
+        "file": "config.json",
+        "bytes": 1196,
+        "sha256": "422adefa19e62dd175961cec85bc0400344fe5bf9b22bd1182e05aaae78556e0"
+      },
+      {
+        "file": "generation_config.json",
+        "bytes": 272,
+        "sha256": "d2864bf1edea5863d331edfff48106b586a366f5a2c41aa77731fadc53aa25d2"
+      },
+      {
+        "file": "merges.txt",
+        "bytes": 1671839,
+        "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+      },
+      {
+        "file": "model-00001-of-00002.safetensors",
+        "bytes": 3988609112,
+        "sha256": "994ac2b03f97de8bc647d0fe5eba2e4b632b3e28dc03574c29bdfc36cf47e1b9"
+      },
+      {
+        "file": "model-00002-of-00002.safetensors",
+        "bytes": 429441656,
+        "sha256": "92540d8353c8d226a589a3b179bdb33851c970ee2cc2ac7ba035f79425e7b833"
+      },
+      {
+        "file": "model.safetensors.index.json",
+        "bytes": 56411,
+        "sha256": "260ab9fa1418d6d6ab79daa1d9da2c47264f3b72edb4630fc799077ac67d27c6"
+      },
+      {
+        "file": "preprocessor_config.json",
+        "bytes": 347,
+        "sha256": "b5eaad0c2815f07631535dcc58f3c462b0d73693638ad21d19f3c50820eae1cc"
+      },
+      {
+        "file": "tokenizer.json",
+        "bytes": 7029741,
+        "sha256": "cb63a0a23eef3d5b01063a9880a1925a65aaf4d1591d519910ee3527852950a0"
+      },
+      {
+        "file": "tokenizer_config.json",
+        "bytes": 4190,
+        "sha256": "ff5c4fd898fe8c39591eb70e5d39d2782802d4204d6ae9ba1223252f354842a0"
+      },
+      {
+        "file": "vocab.json",
+        "bytes": 2776833,
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      }
+    ]
+  },
+  "environment": {
+    "model": "Qwen/Qwen2-VL-2B-Instruct",
+    "torch": "2.6.0+cpu",
+    "transformers": "4.49.0",
+    "device": "cpu",
+    "dtype": "bfloat16",
+    "threads": 4,
+    "min_visual_tokens": 64,
+    "max_visual_tokens": 256,
+    "max_new_tokens": 128,
+    "decoding": "greedy",
+    "vision_features": "per-image cache enabled after first seven calls; images and prompts unchanged"
+  },
+  "saved_at_utc": "2026-10-08T13:43:18.569447+00:00",
+  "results": [
+    {
+      "trial_id": "camera_0_recognition",
+      "case": "camera",
+      "target": 0,
+      "condition": "recognition",
+      "frames": [
+        {
+          "label": "Full view",
+          "path": "inputs/camera_E1_full.png",
+          "sha256": "c821a79feb7a03878e8d0a125678b90bb499a5410f6afd14db709a9f37d223a0"
+        }
+      ],
+      "prompt": "What detached camera part is held separately in the right hand? lens means the cylindrical lens assembly; cap means the flat circular lens cover. Return only a JSON object with key \"value\". Allowed values: [\"lens\", \"cap\", \"unknown\"]. Use unknown if the image does not establish the answer.",
+      "response": "{\"value\": \"unknown\"}",
+      "latency_seconds": 54.037347003000036,
+      "score": {
+        "parsed": {
+          "value": "unknown"
+        },
+        "pass": false,
+        "format_failure": false
+      }
+    },
+    {
+      "trial_id": "camera_1_recognition",
+      "case": "camera",
+      "target": 1,
+      "condition": "recognition",
+      "frames": [
+        {
+          "label": "Full view",
+          "path": "inputs/camera_E2_full.png",
+          "sha256": "911e918ffa4f407353128b89fb8da988ee33b144e133fa5cda5ca8e6e4ea2253"
+        }
+      ],
+      "prompt": "What detached camera part is held separately in the right hand? lens means the cylindrical lens assembly; cap means the flat circular lens cover. Return only a JSON object with key \"value\". Allowed values: [\"lens\", \"cap\", \"unknown\"]. Use unknown if the image does not establish the answer.",
+      "response": "{\"value\": \"cap\"}",
+      "latency_seconds": 52.410852633000104,
+      "score": {
+        "parsed": {
+          "value": "cap"
+        },
+        "pass": true,
+        "format_failure": false
+      }
+    },
+    {
+      "trial_id": "printer_0_recognition",
+      "case": "printer",
+      "target": 0,
+      "condition": "recognition",
+      "frames": [
+        {
+          "label": "Full view",
+          "path": "inputs/printer_E1_full.png",
+          "sha256": "cabda3562fc5c9a7247cb903ed444c67e00732c66b9813169d0fe3f46f830e62"
+        }
+      ],
+      "prompt": "Is the central rectangular printer display illuminated or dark? Ignore small indicator LEDs. Return only a JSON object with key \"value\". Allowed values: [\"illuminated\", \"dark\", \"unknown\"]. Use unknown if the image does not establish the answer.",
+      "response": "{\"value\": \"illuminated\"}",
+      "latency_seconds": 51.496259478999946,
+      "score": {
+        "parsed": {
+          "value": "illuminated"
+        },
+        "pass": true,
+        "format_failure": false
+      }
+    },
+    {
+      "trial_id": "printer_1_recognition",
+      "case": "printer",
+      "target": 1,
+      "condition": "recognition",
+      "frames": [
+        {
+          "label": "Full view",
+          "path": "inputs/printer_E2_full.png",
+          "sha256": "a5133b668ac20ececdb00d88c00ec3f14be19d34a20d160088242a2c2c29ae15"
+        }
+      ],
+      "prompt": "Is the central rectangular printer display illuminated or dark? Ignore small indicator LEDs. Return only a JSON object with key \"value\". Allowed values: [\"illuminated\", \"dark\", \"unknown\"]. Use unknown if the image does not establish the answer.",
+      "response": "{\"value\": \"unknown\"}",
+      "latency_seconds": 52.5997210590001,
+      "score": {
+        "parsed": {
+          "value": "unknown"
+        },
+        "pass": false,
+        "format_failure": false
+      }
+    },
+    {
+      "trial_id": "table_0_recognition",
+      "case": "table",
+      "target": 0,
+      "condition": "recognition",
+      "frames": [
+        {
+          "label": "Full view",
+          "path": "inputs/table_E1_full.png",
+          "sha256": "28608f88da4dc524224ac362ad132399f4144ec5a072c6ea3343de82a211c956"
+        }
+      ],
+      "prompt": "Is the large round tray resting on top of the table frame? yes means resting on the frame; no means not resting on the frame. Return only a JSON object with key \"value\". Allowed values: [\"no\", \"yes\", \"unknown\"]. Use unknown if the image does not establish the answer.",
+      "response": "{\"value\": \"no\"}",
+      "latency_seconds": 55.09639297900003,
+      "score": {
+        "parsed": {
+          "value": "no"
+        },
+        "pass": true,
+        "format_failure": false
+      }
+    },
+    {
+      "trial_id": "table_1_recognition",
+      "case": "table",
+      "target": 1,
+      "condition": "recognition",
+      "frames": [
+        {
+          "label": "Full view",
+          "path": "inputs/table_E2_full.png",
+          "sha256": "b4e7b3d883fe44a3221799d4e882bbdc19a6984d8a8dd71718b49ad34bf765d9"
+        }
+      ],
+      "prompt": "Is the large round tray resting on top of the table frame? yes means resting on the frame; no means not resting on the frame. Return only a JSON object with key \"value\". Allowed values: [\"no\", \"yes\", \"unknown\"]. Use unknown if the image does not establish the answer.",
+      "response": "{\"value\": \"yes\"}",
+      "latency_seconds": 57.48796012399998,
+      "score": {
+        "parsed": {
+          "value": "yes"
+        },
+        "pass": true,
+        "format_failure": false
+      }
+    },
+    {
+      "trial_id": "camera_0_static_matching",
+      "case": "camera",
+      "target": 0,
+      "condition": "static_matching",
+      "frames": [
+        {
+          "label": "Earlier partial view for record E1",
+          "path": "inputs/camera_E1_partial.png",
+          "sha256": "8681414b8f8bfd0e73ffb9630e9b5fc3f114964556e163b5e838610e876a46ed"
+        },
+        {
+          "label": "Earlier partial view for record E2",
+          "path": "inputs/camera_E2_partial.png",
+          "sha256": "13021309507adf909460384ff537260f812a241f51690412f64de2352f8e31d2"
+        },
+        {
+          "label": "Later delivered image",
+          "path": "inputs/camera_E1_full.png",
+          "sha256": "c821a79feb7a03878e8d0a125678b90bb499a5410f6afd14db709a9f37d223a0"
+        }
+      ],
+      "prompt": "This is a static image-matching control. The third image is the full version of one of the first two images. Gray rectangles in the first two hide content. Match the visible, unmasked scene context. Return only JSON {\"record\":\"E1\"} or {\"record\":\"E2\"}; use {\"record\":\"unknown\"} if you cannot identify the match.",
+      "response": "{\"record\":\"E1\"}",
+      "latency_seconds": 156.29215834199988,
+      "score": {
+        "parsed": {
+          "record": "E1"
+        },
+        "pass": true,
+        "format_failure": false
+      }
+    },
+    {
+      "trial_id": "camera_1_static_matching",
+      "case": "camera",
+      "target": 1,
+      "condition": "static_matching",
+      "frames": [
+        {
+          "label": "Earlier partial view for record E1",
+          "path": "inputs/camera_E1_partial.png",
+          "sha256": "8681414b8f8bfd0e73ffb9630e9b5fc3f114964556e163b5e838610e876a46ed"
+        },
+        {
+          "label": "Earlier partial view for record E2",
+          "path": "inputs/camera_E2_partial.png",
+          "sha256": "13021309507adf909460384ff537260f812a241f51690412f64de2352f8e31d2"
+        },
+        {
+          "label": "Later delivered image",
+          "path": "inputs/camera_E2_full.png",
+          "sha256": "911e918ffa4f407353128b89fb8da988ee33b144e133fa5cda5ca8e6e4ea2253"
+        }
+      ],
+      "prompt": "This is a static image-matching control. The third image is the full version of one of the first two images. Gray rectangles in the first two hide content. Match the visible, unmasked scene context. Return only JSON {\"record\":\"E1\"} or {\"record\":\"E2\"}; use {\"record\":\"unknown\"} if you cannot identify the match.",
+      "response": "{\"record\":\"E1\"}",
+      "latency_seconds": 154.01135718699993,
+      "score": {
+        "parsed": {
+          "record": "E1"
+        },
+        "pass": false,
+        "format_failure": false
+      }
+    },
+    {
+      "trial_id": "printer_0_static_matching",
+      "case": "printer",
+      "target": 0,
+      "condition": "static_matching",
+      "frames": [
+        {
+          "label": "Earlier partial view for record E1",
+          "path": "inputs/printer_E1_partial.png",
+          "sha256": "8e6ccff1bf52755211f9def9bce5db8c417686893b21fa2ebfa009e073930cf3"
+        },
+        {
+          "label": "Earlier partial view for record E2",
+          "path": "inputs/printer_E2_partial.png",
+          "sha256": "9c2392a7665d229233d36ca4fb5b6492bbc510f6c20f8f8f9fac6e1b31ead2ec"
+        },
+        {
+          "label": "Later delivered image",
+          "path": "inputs/printer_E1_full.png",
+          "sha256": "cabda3562fc5c9a7247cb903ed444c67e00732c66b9813169d0fe3f46f830e62"
+        }
+      ],
+      "prompt": "This is a static image-matching control. The third image is the full version of one of the first two images. Gray rectangles in the first two hide content. Match the visible, unmasked scene context. Return only JSON {\"record\":\"E1\"} or {\"record\":\"E2\"}; use {\"record\":\"unknown\"} if you cannot identify the match.",
+      "response": "{\"record\":\"unknown\"}",
+      "latency_seconds": 146.87649853800008,
+      "score": {
+        "parsed": {
+          "record": "unknown"
+        },
+        "pass": false,
+        "format_failure": false
+      }
+    },
+    {
+      "trial_id": "printer_1_static_matching",
+      "case": "printer",
+      "target": 1,
+      "condition": "static_matching",
+      "frames": [
+        {
+          "label": "Earlier partial view for record E1",
+          "path": "inputs/printer_E1_partial.png",
+          "sha256": "8e6ccff1bf52755211f9def9bce5db8c417686893b21fa2ebfa009e073930cf3"
+        },
+        {
+          "label": "Earlier partial view for record E2",
+          "path": "inputs/printer_E2_partial.png",
+          "sha256": "9c2392a7665d229233d36ca4fb5b6492bbc510f6c20f8f8f9fac6e1b31ead2ec"
+        },
+        {
+          "label": "Later delivered image",
+          "path": "inputs/printer_E2_full.png",
+          "sha256": "a5133b668ac20ececdb00d88c00ec3f14be19d34a20d160088242a2c2c29ae15"
+        }
+      ],
+      "prompt": "This is a static image-matching control. The third image is the full version of one of the first two images. Gray rectangles in the first two hide content. Match the visible, unmasked scene context. Return only JSON {\"record\":\"E1\"} or {\"record\":\"E2\"}; use {\"record\":\"unknown\"} if you cannot identify the match.",
+      "response": "{\"record\":\"unknown\"}",
+      "latency_seconds": 96.41078204299993,
+      "score": {
+        "parsed": {
+          "record": "unknown"
+        },
+        "pass": false,
+        "format_failure": false
+      }
+    },
+    {
+      "trial_id": "table_0_static_matching",
+      "case": "table",
+      "target": 0,
+      "condition": "static_matching",
+      "frames": [
+        {
+          "label": "Earlier partial view for record E1",
+          "path": "inputs/table_E1_partial.png",
+          "sha256": "0f6e185bbb80c6fe0879431232f452b8b8d41f8b0b8294c5afd0cbff6ee6127a"
+        },
+        {
+          "label": "Earlier partial view for record E2",
+          "path": "inputs/table_E2_partial.png",
+          "sha256": "d42e990c81df20f4d2c3d16c58b797f1a42bb8c4e011cd257f471d06b57e87fa"
+        },
+        {
+          "label": "Later delivered image",
+          "path": "inputs/table_E1_full.png",
+          "sha256": "28608f88da4dc524224ac362ad132399f4144ec5a072c6ea3343de82a211c956"
+        }
+      ],
+      "prompt": "This is a static image-matching control. The third image is the full version of one of the first two images. Gray rectangles in the first two hide content. Match the visible, unmasked scene context. Return only JSON {\"record\":\"E1\"} or {\"record\":\"E2\"}; use {\"record\":\"unknown\"} if you cannot identify the match.",
+      "response": "{\"record\":\"E1\"}",
+      "latency_seconds": 156.27003127499984,
+      "score": {
+        "parsed": {
+          "record": "E1"
+        },
+        "pass": true,
+        "format_failure": false
+      }
+    },
+    {
+      "trial_id": "table_1_static_matching",
+      "case": "table",
+      "target": 1,
+      "condition": "static_matching",
+      "frames": [
+        {
+          "label": "Earlier partial view for record E1",
+          "path": "inputs/table_E1_partial.png",
+          "sha256": "0f6e185bbb80c6fe0879431232f452b8b8d41f8b0b8294c5afd0cbff6ee6127a"
+        },
+        {
+          "label": "Earlier partial view for record E2",
+          "path": "inputs/table_E2_partial.png",
+          "sha256": "d42e990c81df20f4d2c3d16c58b797f1a42bb8c4e011cd257f471d06b57e87fa"
+        },
+        {
+          "label": "Later delivered image",
+          "path": "inputs/table_E2_full.png",
+          "sha256": "b4e7b3d883fe44a3221799d4e882bbdc19a6984d8a8dd71718b49ad34bf765d9"
+        }
+      ],
+      "prompt": "This is a static image-matching control. The third image is the full version of one of the first two images. Gray rectangles in the first two hide content. Match the visible, unmasked scene context. Return only JSON {\"record\":\"E1\"} or {\"record\":\"E2\"}; use {\"record\":\"unknown\"} if you cannot identify the match.",
+      "response": "{\"record\":\"E1\"}",
+      "latency_seconds": 102.03630696699997,
+      "score": {
+        "parsed": {
+          "record": "E1"
+        },
+        "pass": false,
+        "format_failure": false
+      }
+    },
+    {
+      "trial_id": "camera_0_visual_update",
+      "case": "camera",
+      "target": 0,
+      "condition": "visual_update",
+      "frames": [
+        {
+          "label": "Earlier partial view for record E1",
+          "path": "inputs/camera_E1_partial.png",
+          "sha256": "8681414b8f8bfd0e73ffb9630e9b5fc3f114964556e163b5e838610e876a46ed"
+        },
+        {
+          "label": "Earlier partial view for record E2",
+          "path": "inputs/camera_E2_partial.png",
+          "sha256": "13021309507adf909460384ff537260f812a241f51690412f64de2352f8e31d2"
+        },
+        {
+          "label": "Later delivered image",
+          "path": "inputs/camera_E1_full.png",
+          "sha256": "c821a79feb7a03878e8d0a125678b90bb499a5410f6afd14db709a9f37d223a0"
+        }
+      ],
+      "prompt": "You maintain records of two earlier observations E1 and E2. The first two images are their partial reference views; gray rectangles hide content. The third image is a packet delivered later, from one of those SAME earlier observations, not a new occurrence. If that packet is completely gray, it provides no new visual evidence.\nExisting memory: {\"E1\": \"unknown\", \"E2\": \"unknown\", \"event_count\": 2, \"device\": \"camera\"}\nThe E1 and E2 values answer this question for their respective earlier observations: What detached camera part is held separately in the right hand? lens means the cylindrical lens assembly; cap means the flat circular lens cover.\nMatch the later packet to the earlier record using visible scene context. Update ONLY the matched record using the newly visible evidence. Preserve the other record, device and event_count. If there is no new evidence or the match is uncertain, preserve unknown rather than guessing.\nReturn only a JSON object with exactly these keys: E1, E2, event_count, device. E1 and E2 values must be from [\"lens\", \"cap\", \"unknown\"].",
+      "response": "```json\n{\n  \"E1\": \"unknown\",\n  \"E2\": \"unknown\",\n  \"event_count\": 2,\n  \"device\": \"camera\"\n}\n```",
+      "latency_seconds": 112.9886193960001,
+      "score": {
+        "parsed": {
+          "E1": "unknown",
+          "E2": "unknown",
+          "event_count": 2,
+          "device": "camera"
+        },
+        "expected": {
+          "E1": "lens",
+          "E2": "unknown",
+          "event_count": 2,
+          "device": "camera"
+        },
+        "pass": false,
+        "target_correct": false,
+        "other_preserved": true,
+        "count_preserved": true,
+        "device_preserved": true,
+        "format_failure": false
+      }
+    },
+    {
+      "trial_id": "camera_1_visual_update",
+      "case": "camera",
+      "target": 1,
+      "condition": "visual_update",
+      "frames": [
+        {
+          "label": "Earlier partial view for record E1",
+          "path": "inputs/camera_E1_partial.png",
+          "sha256": "8681414b8f8bfd0e73ffb9630e9b5fc3f114964556e163b5e838610e876a46ed"
+        },
+        {
+          "label": "Earlier partial view for record E2",
+          "path": "inputs/camera_E2_partial.png",
+          "sha256": "13021309507adf909460384ff537260f812a241f51690412f64de2352f8e31d2"
+        },
+        {
+          "label": "Later delivered image",
+          "path": "inputs/camera_E2_full.png",
+          "sha256": "911e918ffa4f407353128b89fb8da988ee33b144e133fa5cda5ca8e6e4ea2253"
+        }
+      ],
+      "prompt": "You maintain records of two earlier observations E1 and E2. The first two images are their partial reference views; gray rectangles hide content. The third image is a packet delivered later, from one of those SAME earlier observations, not a new occurrence. If that packet is completely gray, it provides no new visual evidence.\nExisting memory: {\"E1\": \"unknown\", \"E2\": \"unknown\", \"event_count\": 2, \"device\": \"camera\"}\nThe E1 and E2 values answer this question for their respective earlier observations: What detached camera part is held separately in the right hand? lens means the cylindrical lens assembly; cap means the flat circular lens cover.\nMatch the later packet to the earlier record using visible scene context. Update ONLY the matched record using the newly visible evidence. Preserve the other record, device and event_count. If there is no new evidence or the match is uncertain, preserve unknown rather than guessing.\nReturn only a JSON object with exactly these keys: E1, E2, event_count, device. E1 and E2 values must be from [\"lens\", \"cap\", \"unknown\"].",
+      "response": "```json\n{\n  \"E1\": \"unknown\",\n  \"E2\": \"unknown\",\n  \"event_count\": 2,\n  \"device\": \"camera\"\n}\n```",
+      "latency_seconds": 82.67708618899997,
+      "score": {
+        "parsed": {
+          "E1": "unknown",
+          "E2": "unknown",
+          "event_count": 2,
+          "device": "camera"
+        },
+        "expected": {
+          "E1": "unknown",
+          "E2": "cap",
+          "event_count": 2,
+          "device": "camera"
+        },
+        "pass": false,
+        "target_correct": false,
+        "other_preserved": true,
+        "count_preserved": true,
+        "device_preserved": true,
+        "format_failure": false
+      }
+    },
+    {
+      "trial_id": "printer_0_visual_update",
+      "case": "printer",
+      "target": 0,
+      "condition": "visual_update",
+      "frames": [
+        {
+          "label": "Earlier partial view for record E1",
+          "path": "inputs/printer_E1_partial.png",
+          "sha256": "8e6ccff1bf52755211f9def9bce5db8c417686893b21fa2ebfa009e073930cf3"
+        },
+        {
+          "label": "Earlier partial view for record E2",
+          "path": "inputs/printer_E2_partial.png",
+          "sha256": "9c2392a7665d229233d36ca4fb5b6492bbc510f6c20f8f8f9fac6e1b31ead2ec"
+        },
+        {
+          "label": "Later delivered image",
+          "path": "inputs/printer_E1_full.png",
+          "sha256": "cabda3562fc5c9a7247cb903ed444c67e00732c66b9813169d0fe3f46f830e62"
+        }
+      ],
+      "prompt": "You maintain records of two earlier observations E1 and E2. The first two images are their partial reference views; gray rectangles hide content. The third image is a packet delivered later, from one of those SAME earlier observations, not a new occurrence. If that packet is completely gray, it provides no new visual evidence.\nExisting memory: {\"E1\": \"unknown\", \"E2\": \"unknown\", \"event_count\": 2, \"device\": \"printer\"}\nThe E1 and E2 values answer this question for their respective earlier observations: Is the central rectangular printer display illuminated or dark? Ignore small indicator LEDs.\nMatch the later packet to the earlier record using visible scene context. Update ONLY the matched record using the newly visible evidence. Preserve the other record, device and event_count. If there is no new evidence or the match is uncertain, preserve unknown rather than guessing.\nReturn only a JSON object with exactly these keys: E1, E2, event_count, device. E1 and E2 values must be from [\"illuminated\", \"dark\", \"unknown\"].",
+      "response": "```json\n{\n  \"E1\": \"unknown\",\n  \"E2\": \"unknown\",\n  \"event_count\": 2,\n  \"device\": \"printer\"\n}\n```",
+      "latency_seconds": 78.76075678799998,
+      "score": {
+        "parsed": {
+          "E1": "unknown",
+          "E2": "unknown",
+          "event_count": 2,
+          "device": "printer"
+        },
+        "expected": {
+          "E1": "illuminated",
+          "E2": "unknown",
+          "event_count": 2,
+          "device": "printer"
+        },
+        "pass": false,
+        "target_correct": false,
+        "other_preserved": true,
+        "count_preserved": true,
+        "device_preserved": true,
+        "format_failure": false
+      }
+    },
+    {
+      "trial_id": "printer_1_visual_update",
+      "case": "printer",
+      "target": 1,
+      "condition": "visual_update",
+      "frames": [
+        {
+          "label": "Earlier partial view for record E1",
+          "path": "inputs/printer_E1_partial.png",
+          "sha256": "8e6ccff1bf52755211f9def9bce5db8c417686893b21fa2ebfa009e073930cf3"
+        },
+        {
+          "label": "Earlier partial view for record E2",
+          "path": "inputs/printer_E2_partial.png",
+          "sha256": "9c2392a7665d229233d36ca4fb5b6492bbc510f6c20f8f8f9fac6e1b31ead2ec"
+        },
+        {
+          "label": "Later delivered image",
+          "path": "inputs/printer_E2_full.png",
+          "sha256": "a5133b668ac20ececdb00d88c00ec3f14be19d34a20d160088242a2c2c29ae15"
+        }
+      ],
+      "prompt": "You maintain records of two earlier observations E1 and E2. The first two images are their partial reference views; gray rectangles hide content. The third image is a packet delivered later, from one of those SAME earlier observations, not a new occurrence. If that packet is completely gray, it provides no new visual evidence.\nExisting memory: {\"E1\": \"unknown\", \"E2\": \"unknown\", \"event_count\": 2, \"device\": \"printer\"}\nThe E1 and E2 values answer this question for their respective earlier observations: Is the central rectangular printer display illuminated or dark? Ignore small indicator LEDs.\nMatch the later packet to the earlier record using visible scene context. Update ONLY the matched record using the newly visible evidence. Preserve the other record, device and event_count. If there is no new evidence or the match is uncertain, preserve unknown rather than guessing.\nReturn only a JSON object with exactly these keys: E1, E2, event_count, device. E1 and E2 values must be from [\"illuminated\", \"dark\", \"unknown\"].",
+      "response": "```json\n{\n  \"E1\": \"unknown\",\n  \"E2\": \"unknown\",\n  \"event_count\": 2,\n  \"device\": \"printer\"\n}\n```",
+      "latency_seconds": 81.35725670500005,
+      "score": {
+        "parsed": {
+          "E1": "unknown",
+          "E2": "unknown",
+          "event_count": 2,
+          "device": "printer"
+        },
+        "expected": {
+          "E1": "unknown",
+          "E2": "dark",
+          "event_count": 2,
+          "device": "printer"
+        },
+        "pass": false,
+        "target_correct": false,
+        "other_preserved": true,
+        "count_preserved": true,
+        "device_preserved": true,
+        "format_failure": false
+      }
+    },
+    {
+      "trial_id": "table_0_visual_update",
+      "case": "table",
+      "target": 0,
+      "condition": "visual_update",
+      "frames": [
+        {
+          "label": "Earlier partial view for record E1",
+          "path": "inputs/table_E1_partial.png",
+          "sha256": "0f6e185bbb80c6fe0879431232f452b8b8d41f8b0b8294c5afd0cbff6ee6127a"
+        },
+        {
+          "label": "Earlier partial view for record E2",
+          "path": "inputs/table_E2_partial.png",
+          "sha256": "d42e990c81df20f4d2c3d16c58b797f1a42bb8c4e011cd257f471d06b57e87fa"
+        },
+        {
+          "label": "Later delivered image",
+          "path": "inputs/table_E1_full.png",
+          "sha256": "28608f88da4dc524224ac362ad132399f4144ec5a072c6ea3343de82a211c956"
+        }
+      ],
+      "prompt": "You maintain records of two earlier observations E1 and E2. The first two images are their partial reference views; gray rectangles hide content. The third image is a packet delivered later, from one of those SAME earlier observations, not a new occurrence. If that packet is completely gray, it provides no new visual evidence.\nExisting memory: {\"E1\": \"unknown\", \"E2\": \"unknown\", \"event_count\": 2, \"device\": \"table\"}\nThe E1 and E2 values answer this question for their respective earlier observations: Is the large round tray resting on top of the table frame? yes means resting on the frame; no means not resting on the frame.\nMatch the later packet to the earlier record using visible scene context. Update ONLY the matched record using the newly visible evidence. Preserve the other record, device and event_count. If there is no new evidence or the match is uncertain, preserve unknown rather than guessing.\nReturn only a JSON object with exactly these keys: E1, E2, event_count, device. E1 and E2 values must be from [\"no\", \"yes\", \"unknown\"].",
+      "response": "```json\n{\n  \"E1\": \"unknown\",\n  \"E2\": \"unknown\",\n  \"event_count\": 2,\n  \"device\": \"table\"\n}\n```",
+      "latency_seconds": 88.84465179400013,
+      "score": {
+        "parsed": {
+          "E1": "unknown",
+          "E2": "unknown",
+          "event_count": 2,
+          "device": "table"
+        },
+        "expected": {
+          "E1": "no",
+          "E2": "unknown",
+          "event_count": 2,
+          "device": "table"
+        },
+        "pass": false,
+        "target_correct": false,
+        "other_preserved": true,
+        "count_preserved": true,
+        "device_preserved": true,
+        "format_failure": false
+      }
+    },
+    {
+      "trial_id": "table_1_visual_update",
+      "case": "table",
+      "target": 1,
+      "condition": "visual_update",
+      "frames": [
+        {
+          "label": "Earlier partial view for record E1",
+          "path": "inputs/table_E1_partial.png",
+          "sha256": "0f6e185bbb80c6fe0879431232f452b8b8d41f8b0b8294c5afd0cbff6ee6127a"
+        },
+        {
+          "label": "Earlier partial view for record E2",
+          "path": "inputs/table_E2_partial.png",
+          "sha256": "d42e990c81df20f4d2c3d16c58b797f1a42bb8c4e011cd257f471d06b57e87fa"
+        },
+        {
+          "label": "Later delivered image",
+          "path": "inputs/table_E2_full.png",
+          "sha256": "b4e7b3d883fe44a3221799d4e882bbdc19a6984d8a8dd71718b49ad34bf765d9"
+        }
+      ],
+      "prompt": "You maintain records of two earlier observations E1 and E2. The first two images are their partial reference views; gray rectangles hide content. The third image is a packet delivered later, from one of those SAME earlier observations, not a new occurrence. If that packet is completely gray, it provides no new visual evidence.\nExisting memory: {\"E1\": \"unknown\", \"E2\": \"unknown\", \"event_count\": 2, \"device\": \"table\"}\nThe E1 and E2 values answer this question for their respective earlier observations: Is the large round tray resting on top of the table frame? yes means resting on the frame; no means not resting on the frame.\nMatch the later packet to the earlier record using visible scene context. Update ONLY the matched record using the newly visible evidence. Preserve the other record, device and event_count. If there is no new evidence or the match is uncertain, preserve unknown rather than guessing.\nReturn only a JSON object with exactly these keys: E1, E2, event_count, device. E1 and E2 values must be from [\"no\", \"yes\", \"unknown\"].",
+      "response": "{\n  \"E1\": \"yes\",\n  \"E2\": \"unknown\",\n  \"event_count\": 3,\n  \"device\": \"table\"\n}",
+      "latency_seconds": 84.80664812300029,
+      "score": {
+        "parsed": {
+          "E1": "yes",
+          "E2": "unknown",
+          "event_count": 3,
+          "device": "table"
+        },
+        "expected": {
+          "E1": "unknown",
+          "E2": "yes",
+          "event_count": 2,
+          "device": "table"
+        },
+        "pass": false,
+        "target_correct": false,
+        "other_preserved": false,
+        "count_preserved": false,
+        "device_preserved": true,
+        "format_failure": false
+      }
+    },
+    {
+      "trial_id": "camera_0_oracle_update",
+      "case": "camera",
+      "target": 0,
+      "condition": "oracle_update",
+      "frames": [
+        {
+          "label": "Earlier partial view for record E1",
+          "path": "inputs/camera_E1_partial.png",
+          "sha256": "8681414b8f8bfd0e73ffb9630e9b5fc3f114964556e163b5e838610e876a46ed"
+        },
+        {
+          "label": "Earlier partial view for record E2",
+          "path": "inputs/camera_E2_partial.png",
+          "sha256": "13021309507adf909460384ff537260f812a241f51690412f64de2352f8e31d2"
+        },
+        {
+          "label": "Later delivered image",
+          "path": "inputs/camera_E1_full.png",
+          "sha256": "c821a79feb7a03878e8d0a125678b90bb499a5410f6afd14db709a9f37d223a0"
+        }
+      ],
+      "prompt": "You maintain records of two earlier observations E1 and E2. The first two images are their partial reference views; gray rectangles hide content. The third image is a packet delivered later, from one of those SAME earlier observations, not a new occurrence. If that packet is completely gray, it provides no new visual evidence.\nExisting memory: {\"E1\": \"unknown\", \"E2\": \"unknown\", \"event_count\": 2, \"device\": \"camera\"}\nThe E1 and E2 values answer this question for their respective earlier observations: What detached camera part is held separately in the right hand? lens means the cylindrical lens assembly; cap means the flat circular lens cover.\nMatch the later packet to the earlier record using visible scene context. Update ONLY the matched record using the newly visible evidence. Preserve the other record, device and event_count. If there is no new evidence or the match is uncertain, preserve unknown rather than guessing.\nTrusted provenance: this packet belongs to E1.\nReturn only a JSON object with exactly these keys: E1, E2, event_count, device. E1 and E2 values must be from [\"lens\", \"cap\", \"unknown\"].",
+      "response": "```json\n{\n  \"E1\": \"unknown\",\n  \"E2\": \"unknown\",\n  \"event_count\": 2,\n  \"device\": \"camera\"\n}\n```",
+      "latency_seconds": 91.40812796399996,
+      "score": {
+        "parsed": {
+          "E1": "unknown",
+          "E2": "unknown",
+          "event_count": 2,
+          "device": "camera"
+        },
+        "expected": {
+          "E1": "lens",
+          "E2": "unknown",
+          "event_count": 2,
+          "device": "camera"
+        },
+        "pass": false,
+        "target_correct": false,
+        "other_preserved": true,
+        "count_preserved": true,
+        "device_preserved": true,
+        "format_failure": false
+      }
+    },
+    {
+      "trial_id": "camera_1_oracle_update",
+      "case": "camera",
+      "target": 1,
+      "condition": "oracle_update",
+      "frames": [
+        {
+          "label": "Earlier partial view for record E1",
+          "path": "inputs/camera_E1_partial.png",
+          "sha256": "8681414b8f8bfd0e73ffb9630e9b5fc3f114964556e163b5e838610e876a46ed"
+        },
+        {
+          "label": "Earlier partial view for record E2",
+          "path": "inputs/camera_E2_partial.png",
+          "sha256": "13021309507adf909460384ff537260f812a241f51690412f64de2352f8e31d2"
+        },
+        {
+          "label": "Later delivered image",
+          "path": "inputs/camera_E2_full.png",
+          "sha256": "911e918ffa4f407353128b89fb8da988ee33b144e133fa5cda5ca8e6e4ea2253"
+        }
+      ],
+      "prompt": "You maintain records of two earlier observations E1 and E2. The first two images are their partial reference views; gray rectangles hide content. The third image is a packet delivered later, from one of those SAME earlier observations, not a new occurrence. If that packet is completely gray, it provides no new visual evidence.\nExisting memory: {\"E1\": \"unknown\", \"E2\": \"unknown\", \"event_count\": 2, \"device\": \"camera\"}\nThe E1 and E2 values answer this question for their respective earlier observations: What detached camera part is held separately in the right hand? lens means the cylindrical lens assembly; cap means the flat circular lens cover.\nMatch the later packet to the earlier record using visible scene context. Update ONLY the matched record using the newly visible evidence. Preserve the other record, device and event_count. If there is no new evidence or the match is uncertain, preserve unknown rather than guessing.\nTrusted provenance: this packet belongs to E2.\nReturn only a JSON object with exactly these keys: E1, E2, event_count, device. E1 and E2 values must be from [\"lens\", \"cap\", \"unknown\"].",
+      "response": "{\n  \"E1\": \"unknown\",\n  \"E2\": \"unknown\",\n  \"event_count\": 2,\n  \"device\": \"camera\"\n}",
+      "latency_seconds": 92.47777391900036,
+      "score": {
+        "parsed": {
+          "E1": "unknown",
+          "E2": "unknown",
+          "event_count": 2,
+          "device": "camera"
+        },
+        "expected": {
+          "E1": "unknown",
+          "E2": "cap",
+          "event_count": 2,
+          "device": "camera"
+        },
+        "pass": false,
+        "target_correct": false,
+        "other_preserved": true,
+        "count_preserved": true,
+        "device_preserved": true,
+        "format_failure": false
+      }
+    },
+    {
+      "trial_id": "printer_0_oracle_update",
+      "case": "printer",
+      "target": 0,
+      "condition": "oracle_update",
+      "frames": [
+        {
+          "label": "Earlier partial view for record E1",
+          "path": "inputs/printer_E1_partial.png",
+          "sha256": "8e6ccff1bf52755211f9def9bce5db8c417686893b21fa2ebfa009e073930cf3"
+        },
+        {
+          "label": "Earlier partial view for record E2",
+          "path": "inputs/printer_E2_partial.png",
+          "sha256": "9c2392a7665d229233d36ca4fb5b6492bbc510f6c20f8f8f9fac6e1b31ead2ec"
+        },
+        {
+          "label": "Later delivered image",
+          "path": "inputs/printer_E1_full.png",
+          "sha256": "cabda3562fc5c9a7247cb903ed444c67e00732c66b9813169d0fe3f46f830e62"
+        }
+      ],
+      "prompt": "You maintain records of two earlier observations E1 and E2. The first two images are their partial reference views; gray rectangles hide content. The third image is a packet delivered later, from one of those SAME earlier observations, not a new occurrence. If that packet is completely gray, it provides no new visual evidence.\nExisting memory: {\"E1\": \"unknown\", \"E2\": \"unknown\", \"event_count\": 2, \"device\": \"printer\"}\nThe E1 and E2 values answer this question for their respective earlier observations: Is the central rectangular printer display illuminated or dark? Ignore small indicator LEDs.\nMatch the later packet to the earlier record using visible scene context. Update ONLY the matched record using the newly visible evidence. Preserve the other record, device and event_count. If there is no new evidence or the match is uncertain, preserve unknown rather than guessing.\nTrusted provenance: this packet belongs to E1.\nReturn only a JSON object with exactly these keys: E1, E2, event_count, device. E1 and E2 values must be from [\"illuminated\", \"dark\", \"unknown\"].",
+      "response": "```json\n{\n  \"E1\": \"illuminated\",\n  \"E2\": \"unknown\",\n  \"event_count\": 2,\n  \"device\": \"printer\"\n}\n```",
+      "latency_seconds": 90.0239965300002,
+      "score": {
+        "parsed": {
+          "E1": "illuminated",
+          "E2": "unknown",
+          "event_count": 2,
+          "device": "printer"
+        },
+        "expected": {
+          "E1": "illuminated",
+          "E2": "unknown",
+          "event_count": 2,
+          "device": "printer"
+        },
+        "pass": true,
+        "target_correct": true,
+        "other_preserved": true,
+        "count_preserved": true,
+        "device_preserved": true,
+        "format_failure": false
+      }
+    },
+    {
+      "trial_id": "printer_1_oracle_update",
+      "case": "printer",
+      "target": 1,
+      "condition": "oracle_update",
+      "frames": [
+        {
+          "label": "Earlier partial view for record E1",
+          "path": "inputs/printer_E1_partial.png",
+          "sha256": "8e6ccff1bf52755211f9def9bce5db8c417686893b21fa2ebfa009e073930cf3"
+        },
+        {
+          "label": "Earlier partial view for record E2",
+          "path": "inputs/printer_E2_partial.png",
+          "sha256": "9c2392a7665d229233d36ca4fb5b6492bbc510f6c20f8f8f9fac6e1b31ead2ec"
+        },
+        {
+          "label": "Later delivered image",
+          "path": "inputs/printer_E2_full.png",
+          "sha256": "a5133b668ac20ececdb00d88c00ec3f14be19d34a20d160088242a2c2c29ae15"
+        }
+      ],
+      "prompt": "You maintain records of two earlier observations E1 and E2. The first two images are their partial reference views; gray rectangles hide content. The third image is a packet delivered later, from one of those SAME earlier observations, not a new occurrence. If that packet is completely gray, it provides no new visual evidence.\nExisting memory: {\"E1\": \"unknown\", \"E2\": \"unknown\", \"event_count\": 2, \"device\": \"printer\"}\nThe E1 and E2 values answer this question for their respective earlier observations: Is the central rectangular printer display illuminated or dark? Ignore small indicator LEDs.\nMatch the later packet to the earlier record using visible scene context. Update ONLY the matched record using the newly visible evidence. Preserve the other record, device and event_count. If there is no new evidence or the match is uncertain, preserve unknown rather than guessing.\nTrusted provenance: this packet belongs to E2.\nReturn only a JSON object with exactly these keys: E1, E2, event_count, device. E1 and E2 values must be from [\"illuminated\", \"dark\", \"unknown\"].",
+      "response": "```json\n{\n  \"E1\": \"unknown\",\n  \"E2\": \"unknown\",\n  \"event_count\": 2,\n  \"device\": \"printer\"\n}\n```",
+      "latency_seconds": 20.21932678600001,
+      "score": {
+        "parsed": {
+          "E1": "unknown",
+          "E2": "unknown",
+          "event_count": 2,
+          "device": "printer"
+        },
+        "expected": {
+          "E1": "unknown",
+          "E2": "dark",
+          "event_count": 2,
+          "device": "printer"
+        },
+        "pass": false,
+        "target_correct": false,
+        "other_preserved": true,
+        "count_preserved": true,
+        "device_preserved": true,
+        "format_failure": false
+      }
+    },
+    {
+      "trial_id": "table_0_oracle_update",
+      "case": "table",
+      "target": 0,
+      "condition": "oracle_update",
+      "frames": [
+        {
+          "label": "Earlier partial view for record E1",
+          "path": "inputs/table_E1_partial.png",
+          "sha256": "0f6e185bbb80c6fe0879431232f452b8b8d41f8b0b8294c5afd0cbff6ee6127a"
+        },
+        {
+          "label": "Earlier partial view for record E2",
+          "path": "inputs/table_E2_partial.png",
+          "sha256": "d42e990c81df20f4d2c3d16c58b797f1a42bb8c4e011cd257f471d06b57e87fa"
+        },
+        {
+          "label": "Later delivered image",
+          "path": "inputs/table_E1_full.png",
+          "sha256": "28608f88da4dc524224ac362ad132399f4144ec5a072c6ea3343de82a211c956"
+        }
+      ],
+      "prompt": "You maintain records of two earlier observations E1 and E2. The first two images are their partial reference views; gray rectangles hide content. The third image is a packet delivered later, from one of those SAME earlier observations, not a new occurrence. If that packet is completely gray, it provides no new visual evidence.\nExisting memory: {\"E1\": \"unknown\", \"E2\": \"unknown\", \"event_count\": 2, \"device\": \"table\"}\nThe E1 and E2 values answer this question for their respective earlier observations: Is the large round tray resting on top of the table frame? yes means resting on the frame; no means not resting on the frame.\nMatch the later packet to the earlier record using visible scene context. Update ONLY the matched record using the newly visible evidence. Preserve the other record, device and event_count. If there is no new evidence or the match is uncertain, preserve unknown rather than guessing.\nTrusted provenance: this packet belongs to E1.\nReturn only a JSON object with exactly these keys: E1, E2, event_count, device. E1 and E2 values must be from [\"no\", \"yes\", \"unknown\"].",
+      "response": "{\n  \"E1\": \"yes\",\n  \"E2\": \"unknown\",\n  \"event_count\": 3,\n  \"device\": \"table\"\n}",
+      "latency_seconds": 18.105396723000013,
+      "score": {
+        "parsed": {
+          "E1": "yes",
+          "E2": "unknown",
+          "event_count": 3,
+          "device": "table"
+        },
+        "expected": {
+          "E1": "no",
+          "E2": "unknown",
+          "event_count": 2,
+          "device": "table"
+        },
+        "pass": false,
+        "target_correct": false,
+        "other_preserved": true,
+        "count_preserved": false,
+        "device_preserved": true,
+        "format_failure": false
+      }
+    },
+    {
+      "trial_id": "table_1_oracle_update",
+      "case": "table",
+      "target": 1,
+      "condition": "oracle_update",
+      "frames": [
+        {
+          "label": "Earlier partial view for record E1",
+          "path": "inputs/table_E1_partial.png",
+          "sha256": "0f6e185bbb80c6fe0879431232f452b8b8d41f8b0b8294c5afd0cbff6ee6127a"
+        },
+        {
+          "label": "Earlier partial view for record E2",
+          "path": "inputs/table_E2_partial.png",
+          "sha256": "d42e990c81df20f4d2c3d16c58b797f1a42bb8c4e011cd257f471d06b57e87fa"
+        },
+        {
+          "label": "Later delivered image",
+          "path": "inputs/table_E2_full.png",
+          "sha256": "b4e7b3d883fe44a3221799d4e882bbdc19a6984d8a8dd71718b49ad34bf765d9"
+        }
+      ],
+      "prompt": "You maintain records of two earlier observations E1 and E2. The first two images are their partial reference views; gray rectangles hide content. The third image is a packet delivered later, from one of those SAME earlier observations, not a new occurrence. If that packet is completely gray, it provides no new visual evidence.\nExisting memory: {\"E1\": \"unknown\", \"E2\": \"unknown\", \"event_count\": 2, \"device\": \"table\"}\nThe E1 and E2 values answer this question for their respective earlier observations: Is the large round tray resting on top of the table frame? yes means resting on the frame; no means not resting on the frame.\nMatch the later packet to the earlier record using visible scene context. Update ONLY the matched record using the newly visible evidence. Preserve the other record, device and event_count. If there is no new evidence or the match is uncertain, preserve unknown rather than guessing.\nTrusted provenance: this packet belongs to E2.\nReturn only a JSON object with exactly these keys: E1, E2, event_count, device. E1 and E2 values must be from [\"no\", \"yes\", \"unknown\"].",
+      "response": "{\n  \"E1\": \"yes\",\n  \"E2\": \"yes\",\n  \"event_count\": 3,\n  \"device\": \"table\"\n}",
+      "latency_seconds": 12.773493637000001,
+      "score": {
+        "parsed": {
+          "E1": "yes",
+          "E2": "yes",
+          "event_count": 3,
+          "device": "table"
+        },
+        "expected": {
+          "E1": "unknown",
+          "E2": "yes",
+          "event_count": 2,
+          "device": "table"
+        },
+        "pass": false,
+        "target_correct": true,
+        "other_preserved": false,
+        "count_preserved": false,
+        "device_preserved": true,
+        "format_failure": false
+      }
+    },
+    {
+      "trial_id": "camera_0_withheld_update",
+      "case": "camera",
+      "target": 0,
+      "condition": "withheld_update",
+      "frames": [
+        {
+          "label": "Earlier partial view for record E1",
+          "path": "inputs/camera_E1_partial.png",
+          "sha256": "8681414b8f8bfd0e73ffb9630e9b5fc3f114964556e163b5e838610e876a46ed"
+        },
+        {
+          "label": "Earlier partial view for record E2",
+          "path": "inputs/camera_E2_partial.png",
+          "sha256": "13021309507adf909460384ff537260f812a241f51690412f64de2352f8e31d2"
+        },
+        {
+          "label": "Later delivered image",
+          "path": "inputs/withheld.png",
+          "sha256": "f74faae606812c09475d349b21d5177f6b62248450e1bd80e7f1c45066a293d8"
+        }
+      ],
+      "prompt": "You maintain records of two earlier observations E1 and E2. The first two images are their partial reference views; gray rectangles hide content. The third image is a packet delivered later, from one of those SAME earlier observations, not a new occurrence. If that packet is completely gray, it provides no new visual evidence.\nExisting memory: {\"E1\": \"unknown\", \"E2\": \"unknown\", \"event_count\": 2, \"device\": \"camera\"}\nThe E1 and E2 values answer this question for their respective earlier observations: What detached camera part is held separately in the right hand? lens means the cylindrical lens assembly; cap means the flat circular lens cover.\nMatch the later packet to the earlier record using visible scene context. Update ONLY the matched record using the newly visible evidence. Preserve the other record, device and event_count. If there is no new evidence or the match is uncertain, preserve unknown rather than guessing.\nReturn only a JSON object with exactly these keys: E1, E2, event_count, device. E1 and E2 values must be from [\"lens\", \"cap\", \"unknown\"].",
+      "response": "```json\n{\n  \"E1\": \"unknown\",\n  \"E2\": \"unknown\",\n  \"event_count\": 2,\n  \"device\": \"camera\"\n}\n```",
+      "latency_seconds": 21.06117975299992,
+      "score": {
+        "parsed": {
+          "E1": "unknown",
+          "E2": "unknown",
+          "event_count": 2,
+          "device": "camera"
+        },
+        "expected": {
+          "E1": "unknown",
+          "E2": "unknown",
+          "event_count": 2,
+          "device": "camera"
+        },
+        "pass": true,
+        "target_correct": true,
+        "other_preserved": true,
+        "count_preserved": true,
+        "device_preserved": true,
+        "format_failure": false
+      }
+    },
+    {
+      "trial_id": "camera_1_withheld_update",
+      "case": "camera",
+      "target": 1,
+      "condition": "withheld_update",
+      "frames": [
+        {
+          "label": "Earlier partial view for record E1",
+          "path": "inputs/camera_E1_partial.png",
+          "sha256": "8681414b8f8bfd0e73ffb9630e9b5fc3f114964556e163b5e838610e876a46ed"
+        },
+        {
+          "label": "Earlier partial view for record E2",
+          "path": "inputs/camera_E2_partial.png",
+          "sha256": "13021309507adf909460384ff537260f812a241f51690412f64de2352f8e31d2"
+        },
+        {
+          "label": "Later delivered image",
+          "path": "inputs/withheld.png",
+          "sha256": "f74faae606812c09475d349b21d5177f6b62248450e1bd80e7f1c45066a293d8"
+        }
+      ],
+      "prompt": "You maintain records of two earlier observations E1 and E2. The first two images are their partial reference views; gray rectangles hide content. The third image is a packet delivered later, from one of those SAME earlier observations, not a new occurrence. If that packet is completely gray, it provides no new visual evidence.\nExisting memory: {\"E1\": \"unknown\", \"E2\": \"unknown\", \"event_count\": 2, \"device\": \"camera\"}\nThe E1 and E2 values answer this question for their respective earlier observations: What detached camera part is held separately in the right hand? lens means the cylindrical lens assembly; cap means the flat circular lens cover.\nMatch the later packet to the earlier record using visible scene context. Update ONLY the matched record using the newly visible evidence. Preserve the other record, device and event_count. If there is no new evidence or the match is uncertain, preserve unknown rather than guessing.\nReturn only a JSON object with exactly these keys: E1, E2, event_count, device. E1 and E2 values must be from [\"lens\", \"cap\", \"unknown\"].",
+      "response": "```json\n{\n  \"E1\": \"unknown\",\n  \"E2\": \"unknown\",\n  \"event_count\": 2,\n  \"device\": \"camera\"\n}\n```",
+      "latency_seconds": 10.652250943000013,
+      "score": {
+        "parsed": {
+          "E1": "unknown",
+          "E2": "unknown",
+          "event_count": 2,
+          "device": "camera"
+        },
+        "expected": {
+          "E1": "unknown",
+          "E2": "unknown",
+          "event_count": 2,
+          "device": "camera"
+        },
+        "pass": true,
+        "target_correct": true,
+        "other_preserved": true,
+        "count_preserved": true,
+        "device_preserved": true,
+        "format_failure": false
+      }
+    },
+    {
+      "trial_id": "printer_0_withheld_update",
+      "case": "printer",
+      "target": 0,
+      "condition": "withheld_update",
+      "frames": [
+        {
+          "label": "Earlier partial view for record E1",
+          "path": "inputs/printer_E1_partial.png",
+          "sha256": "8e6ccff1bf52755211f9def9bce5db8c417686893b21fa2ebfa009e073930cf3"
+        },
+        {
+          "label": "Earlier partial view for record E2",
+          "path": "inputs/printer_E2_partial.png",
+          "sha256": "9c2392a7665d229233d36ca4fb5b6492bbc510f6c20f8f8f9fac6e1b31ead2ec"
+        },
+        {
+          "label": "Later delivered image",
+          "path": "inputs/withheld.png",
+          "sha256": "f74faae606812c09475d349b21d5177f6b62248450e1bd80e7f1c45066a293d8"
+        }
+      ],
+      "prompt": "You maintain records of two earlier observations E1 and E2. The first two images are their partial reference views; gray rectangles hide content. The third image is a packet delivered later, from one of those SAME earlier observations, not a new occurrence. If that packet is completely gray, it provides no new visual evidence.\nExisting memory: {\"E1\": \"unknown\", \"E2\": \"unknown\", \"event_count\": 2, \"device\": \"printer\"}\nThe E1 and E2 values answer this question for their respective earlier observations: Is the central rectangular printer display illuminated or dark? Ignore small indicator LEDs.\nMatch the later packet to the earlier record using visible scene context. Update ONLY the matched record using the newly visible evidence. Preserve the other record, device and event_count. If there is no new evidence or the match is uncertain, preserve unknown rather than guessing.\nReturn only a JSON object with exactly these keys: E1, E2, event_count, device. E1 and E2 values must be from [\"illuminated\", \"dark\", \"unknown\"].",
+      "response": "```json\n{\n  \"E1\": \"unknown\",\n  \"E2\": \"unknown\",\n  \"event_count\": 2,\n  \"device\": \"printer\"\n}\n```",
+      "latency_seconds": 9.799160440000037,
+      "score": {
+        "parsed": {
+          "E1": "unknown",
+          "E2": "unknown",
+          "event_count": 2,
+          "device": "printer"
+        },
+        "expected": {
+          "E1": "unknown",
+          "E2": "unknown",
+          "event_count": 2,
+          "device": "printer"
+        },
+        "pass": true,
+        "target_correct": true,
+        "other_preserved": true,
+        "count_preserved": true,
+        "device_preserved": true,
+        "format_failure": false
+      }
+    },
+    {
+      "trial_id": "printer_1_withheld_update",
+      "case": "printer",
+      "target": 1,
+      "condition": "withheld_update",
+      "frames": [
+        {
+          "label": "Earlier partial view for record E1",
+          "path": "inputs/printer_E1_partial.png",
+          "sha256": "8e6ccff1bf52755211f9def9bce5db8c417686893b21fa2ebfa009e073930cf3"
+        },
+        {
+          "label": "Earlier partial view for record E2",
+          "path": "inputs/printer_E2_partial.png",
+          "sha256": "9c2392a7665d229233d36ca4fb5b6492bbc510f6c20f8f8f9fac6e1b31ead2ec"
+        },
+        {
+          "label": "Later delivered image",
+          "path": "inputs/withheld.png",
+          "sha256": "f74faae606812c09475d349b21d5177f6b62248450e1bd80e7f1c45066a293d8"
+        }
+      ],
+      "prompt": "You maintain records of two earlier observations E1 and E2. The first two images are their partial reference views; gray rectangles hide content. The third image is a packet delivered later, from one of those SAME earlier observations, not a new occurrence. If that packet is completely gray, it provides no new visual evidence.\nExisting memory: {\"E1\": \"unknown\", \"E2\": \"unknown\", \"event_count\": 2, \"device\": \"printer\"}\nThe E1 and E2 values answer this question for their respective earlier observations: Is the central rectangular printer display illuminated or dark? Ignore small indicator LEDs.\nMatch the later packet to the earlier record using visible scene context. Update ONLY the matched record using the newly visible evidence. Preserve the other record, device and event_count. If there is no new evidence or the match is uncertain, preserve unknown rather than guessing.\nReturn only a JSON object with exactly these keys: E1, E2, event_count, device. E1 and E2 values must be from [\"illuminated\", \"dark\", \"unknown\"].",
+      "response": "```json\n{\n  \"E1\": \"unknown\",\n  \"E2\": \"unknown\",\n  \"event_count\": 2,\n  \"device\": \"printer\"\n}\n```",
+      "latency_seconds": 11.668907762000003,
+      "score": {
+        "parsed": {
+          "E1": "unknown",
+          "E2": "unknown",
+          "event_count": 2,
+          "device": "printer"
+        },
+        "expected": {
+          "E1": "unknown",
+          "E2": "unknown",
+          "event_count": 2,
+          "device": "printer"
+        },
+        "pass": true,
+        "target_correct": true,
+        "other_preserved": true,
+        "count_preserved": true,
+        "device_preserved": true,
+        "format_failure": false
+      }
+    },
+    {
+      "trial_id": "table_0_withheld_update",
+      "case": "table",
+      "target": 0,
+      "condition": "withheld_update",
+      "frames": [
+        {
+          "label": "Earlier partial view for record E1",
+          "path": "inputs/table_E1_partial.png",
+          "sha256": "0f6e185bbb80c6fe0879431232f452b8b8d41f8b0b8294c5afd0cbff6ee6127a"
+        },
+        {
+          "label": "Earlier partial view for record E2",
+          "path": "inputs/table_E2_partial.png",
+          "sha256": "d42e990c81df20f4d2c3d16c58b797f1a42bb8c4e011cd257f471d06b57e87fa"
+        },
+        {
+          "label": "Later delivered image",
+          "path": "inputs/withheld.png",
+          "sha256": "f74faae606812c09475d349b21d5177f6b62248450e1bd80e7f1c45066a293d8"
+        }
+      ],
+      "prompt": "You maintain records of two earlier observations E1 and E2. The first two images are their partial reference views; gray rectangles hide content. The third image is a packet delivered later, from one of those SAME earlier observations, not a new occurrence. If that packet is completely gray, it provides no new visual evidence.\nExisting memory: {\"E1\": \"unknown\", \"E2\": \"unknown\", \"event_count\": 2, \"device\": \"table\"}\nThe E1 and E2 values answer this question for their respective earlier observations: Is the large round tray resting on top of the table frame? yes means resting on the frame; no means not resting on the frame.\nMatch the later packet to the earlier record using visible scene context. Update ONLY the matched record using the newly visible evidence. Preserve the other record, device and event_count. If there is no new evidence or the match is uncertain, preserve unknown rather than guessing.\nReturn only a JSON object with exactly these keys: E1, E2, event_count, device. E1 and E2 values must be from [\"no\", \"yes\", \"unknown\"].",
+      "response": "```json\n{\n  \"E1\": \"unknown\",\n  \"E2\": \"unknown\",\n  \"event_count\": 2,\n  \"device\": \"table\"\n}\n```",
+      "latency_seconds": 10.333899728000006,
+      "score": {
+        "parsed": {
+          "E1": "unknown",
+          "E2": "unknown",
+          "event_count": 2,
+          "device": "table"
+        },
+        "expected": {
+          "E1": "unknown",
+          "E2": "unknown",
+          "event_count": 2,
+          "device": "table"
+        },
+        "pass": true,
+        "target_correct": true,
+        "other_preserved": true,
+        "count_preserved": true,
+        "device_preserved": true,
+        "format_failure": false
+      }
+    },
+    {
+      "trial_id": "table_1_withheld_update",
+      "case": "table",
+      "target": 1,
+      "condition": "withheld_update",
+      "frames": [
+        {
+          "label": "Earlier partial view for record E1",
+          "path": "inputs/table_E1_partial.png",
+          "sha256": "0f6e185bbb80c6fe0879431232f452b8b8d41f8b0b8294c5afd0cbff6ee6127a"
+        },
+        {
+          "label": "Earlier partial view for record E2",
+          "path": "inputs/table_E2_partial.png",
+          "sha256": "d42e990c81df20f4d2c3d16c58b797f1a42bb8c4e011cd257f471d06b57e87fa"
+        },
+        {
+          "label": "Later delivered image",
+          "path": "inputs/withheld.png",
+          "sha256": "f74faae606812c09475d349b21d5177f6b62248450e1bd80e7f1c45066a293d8"
+        }
+      ],
+      "prompt": "You maintain records of two earlier observations E1 and E2. The first two images are their partial reference views; gray rectangles hide content. The third image is a packet delivered later, from one of those SAME earlier observations, not a new occurrence. If that packet is completely gray, it provides no new visual evidence.\nExisting memory: {\"E1\": \"unknown\", \"E2\": \"unknown\", \"event_count\": 2, \"device\": \"table\"}\nThe E1 and E2 values answer this question for their respective earlier observations: Is the large round tray resting on top of the table frame? yes means resting on the frame; no means not resting on the frame.\nMatch the later packet to the earlier record using visible scene context. Update ONLY the matched record using the newly visible evidence. Preserve the other record, device and event_count. If there is no new evidence or the match is uncertain, preserve unknown rather than guessing.\nReturn only a JSON object with exactly these keys: E1, E2, event_count, device. E1 and E2 values must be from [\"no\", \"yes\", \"unknown\"].",
+      "response": "```json\n{\n  \"E1\": \"unknown\",\n  \"E2\": \"unknown\",\n  \"event_count\": 2,\n  \"device\": \"table\"\n}\n```",
+      "latency_seconds": 11.722017564999987,
+      "score": {
+        "parsed": {
+          "E1": "unknown",
+          "E2": "unknown",
+          "event_count": 2,
+          "device": "table"
+        },
+        "expected": {
+          "E1": "unknown",
+          "E2": "unknown",
+          "event_count": 2,
+          "device": "table"
+        },
+        "pass": true,
+        "target_correct": true,
+        "other_preserved": true,
+        "count_preserved": true,
+        "device_preserved": true,
+        "format_failure": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+camera_current_perception 'yes' 24.4
+table_historical_perception 'yes' 18.56
+table_current_perception 'yes' 19.18
+camera_chronological_0 '{"first_detached": "lens", "second_detached": "cap", "detachments": 2, "lens_attached_now": "unknown"}' 41.32
+camera_chronological_1 '{"first_detached": "lens", "second_detached": "cap", "detachments": 2, "lens_attached_now": "unknown"}' 44.42
+camera_chronological_2 '{"first_detached": "lens", "second_detached": "cap", "detachments": 2, "lens_attached_now": "unknown"}' 45.5
+camera_chronological_3 '{"first_detached": "lens", "second_detached": "cap", "detachments": 2, "lens_attached_now": "unknown"}' 46.28
+camera_chronological_4 '{"first_detached": "lens", "second_detached": "cap", "detachments": 2, "lens_attached_now": "unknown"}' 42.15

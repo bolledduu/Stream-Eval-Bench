@@ -1,0 +1,73 @@
+{
+  "rows": [
+    {
+      "case": "camera",
+      "target": 0,
+      "outside_mask_unchanged": true,
+      "mask_value": 127,
+      "pixel_distances": [
+        0.0,
+        29.772461076177656
+      ],
+      "pixel_match_correct": true
+    },
+    {
+      "case": "camera",
+      "target": 1,
+      "outside_mask_unchanged": true,
+      "mask_value": 127,
+      "pixel_distances": [
+        29.772461076177656,
+        0.0
+      ],
+      "pixel_match_correct": true
+    },
+    {
+      "case": "printer",
+      "target": 0,
+      "outside_mask_unchanged": true,
+      "mask_value": 127,
+      "pixel_distances": [
+        0.0,
+        56.63915107048851
+      ],
+      "pixel_match_correct": true
+    },
+    {
+      "case": "printer",
+      "target": 1,
+      "outside_mask_unchanged": true,
+      "mask_value": 127,
+      "pixel_distances": [
+        56.63915107048851,
+        0.0
+      ],
+      "pixel_match_correct": true
+    },
+    {
+      "case": "table",
+      "target": 0,
+      "outside_mask_unchanged": true,
+      "mask_value": 127,
+      "pixel_distances": [
+        0.0,
+        52.56002267797279
+      ],
+      "pixel_match_correct": true
+    },
+    {
+      "case": "table",
+      "target": 1,
+      "outside_mask_unchanged": true,
+      "mask_value": 127,
+      "pixel_distances": [
+        52.56002267797279,
+        0.0
+      ],
+      "pixel_match_correct": true
+    }
+  ],
+  "pixel_matching_correct": 6,
+  "trials": 6,
+  "interpretation": "Same-frame constructed reveals make association exactly solvable by pixel matching. This is a sanity baseline, not a novel method or proof of natural-stream difficulty."
+}

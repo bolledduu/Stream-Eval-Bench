@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "max_absolute_difference": 0.0,
+  "scope": "small synthetic engineering check, not research evidence",
+  "cache": "per-image encoder only; language decoding remains conditioned on the complete prompt"
+}

@@ -1,0 +1,11 @@
+test_inventing_new_event_fails (test_design.DesignTests.test_inventing_new_event_fails) ... ok
+test_no_evidence_preserves_memory (test_design.DesignTests.test_no_evidence_preserves_memory) ... ok
+test_oracle_changes_only_provenance_text (test_design.DesignTests.test_oracle_changes_only_provenance_text) ... ok
+test_target_is_not_given_in_visual_prompt (test_design.DesignTests.test_target_is_not_given_in_visual_prompt) ... ok
+test_withheld_targets_are_duplicate_controls (test_design.DesignTests.test_withheld_targets_are_duplicate_controls) ... ok
+test_wrong_record_update_fails (test_design.DesignTests.test_wrong_record_update_fails) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.001s
+
+OK

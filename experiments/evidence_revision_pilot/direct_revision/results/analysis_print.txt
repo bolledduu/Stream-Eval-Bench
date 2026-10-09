@@ -1,0 +1,125 @@
+{
+  "completed_calls": 30,
+  "unique_requests": 27,
+  "source_sessions": 3,
+  "conditions": {
+    "recognition": {
+      "pass": 4,
+      "unique_trials": 6,
+      "format_failures": 0
+    },
+    "static_matching": {
+      "pass": 2,
+      "unique_trials": 6,
+      "format_failures": 0
+    },
+    "visual_update": {
+      "pass": 0,
+      "unique_trials": 6,
+      "format_failures": 0
+    },
+    "oracle_update": {
+      "pass": 1,
+      "unique_trials": 6,
+      "format_failures": 0
+    },
+    "withheld_update": {
+      "pass": 3,
+      "unique_trials": 3,
+      "format_failures": 0
+    }
+  },
+  "breakdown": [
+    {
+      "case": "camera",
+      "record": "E1",
+      "expected": "lens",
+      "recognition_pass": false,
+      "static_match_pass": true,
+      "visual_update_pass": false,
+      "oracle_update_pass": false,
+      "withheld_pass": true,
+      "eligible_for_combination_failure_check": false,
+      "candidate_combination_failure": false,
+      "association_bottleneck_candidate": false
+    },
+    {
+      "case": "camera",
+      "record": "E2",
+      "expected": "cap",
+      "recognition_pass": true,
+      "static_match_pass": false,
+      "visual_update_pass": false,
+      "oracle_update_pass": false,
+      "withheld_pass": true,
+      "eligible_for_combination_failure_check": false,
+      "candidate_combination_failure": false,
+      "association_bottleneck_candidate": false
+    },
+    {
+      "case": "printer",
+      "record": "E1",
+      "expected": "illuminated",
+      "recognition_pass": true,
+      "static_match_pass": false,
+      "visual_update_pass": false,
+      "oracle_update_pass": true,
+      "withheld_pass": true,
+      "eligible_for_combination_failure_check": false,
+      "candidate_combination_failure": false,
+      "association_bottleneck_candidate": true
+    },
+    {
+      "case": "printer",
+      "record": "E2",
+      "expected": "dark",
+      "recognition_pass": false,
+      "static_match_pass": false,
+      "visual_update_pass": false,
+      "oracle_update_pass": false,
+      "withheld_pass": true,
+      "eligible_for_combination_failure_check": false,
+      "candidate_combination_failure": false,
+      "association_bottleneck_candidate": false
+    },
+    {
+      "case": "table",
+      "record": "E1",
+      "expected": "no",
+      "recognition_pass": true,
+      "static_match_pass": true,
+      "visual_update_pass": false,
+      "oracle_update_pass": false,
+      "withheld_pass": true,
+      "eligible_for_combination_failure_check": true,
+      "candidate_combination_failure": true,
+      "association_bottleneck_candidate": false
+    },
+    {
+      "case": "table",
+      "record": "E2",
+      "expected": "yes",
+      "recognition_pass": true,
+      "static_match_pass": false,
+      "visual_update_pass": false,
+      "oracle_update_pass": false,
+      "withheld_pass": true,
+      "eligible_for_combination_failure_check": false,
+      "candidate_combination_failure": false,
+      "association_bottleneck_candidate": false
+    }
+  ],
+  "audit": "Passed exact frame-byte, prompt, protocol and score checks for completed calls.",
+  "limitations": [
+    "Constructed redactions and delayed delivery; not natural livestream evidence.",
+    "Supplied initial memory and replay status; not autonomous replay detection.",
+    "Two historical state observations per printer/table session, not two necessarily distinct physical action events.",
+    "Only 3 independent source sessions; no population-level statistical claim.",
+    "One 2B model, not frontier model coverage.",
+    "Annotations assistant-screened, not independently human-validated.",
+    "Static matcher never selected E2; one correct E1 match does not establish robust association.",
+    "A candidate combination failure is not proof of a temporal-specific mechanism.",
+    "Inputs are sampled still images in one request, not an end-to-end continuous video stream.",
+    "The target update is unknown-to-known completion, not correction of a previously false belief."
+  ]
+}

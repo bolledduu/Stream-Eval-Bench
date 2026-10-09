@@ -1,0 +1,5 @@
+Loaded as API: https://qwen-qwen3-vl-235b-a22b-instruct-demo.hf.space/ ✔
+reset
+uploaded [[{'file': '/tmp/gradio/c821a79feb7a03878e8d0a125678b90bb499a5410f6afd14db709a9f37d223a0/camera_E1_full.png', 'alt_text': None}, None]]
+text added [['What detached part is held in the right hand: a cylindrical camera lens assembly, or a flat lens cap? Return only the name.', None]]
+OUTPUT [['What detached part is held in the right hand: a cylindrical camera lens assembly, or a flat lens cap? Return only the name.', 'cylindrical camera lens assembly']]

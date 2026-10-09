@@ -1,0 +1,69 @@
+{
+  "_id": "68d2c08df8068a327e68ab30",
+  "id": "Qwen/Qwen3-VL-235B-A22B-Instruct-Demo",
+  "sdk": "gradio",
+  "likes": 20,
+  "tags": [
+    "gradio",
+    "region:us"
+  ],
+  "private": false,
+  "author": "Qwen",
+  "sha": "eb7f245e2c0d3b573dd8ed6addca9b7f6af26847",
+  "lastModified": "2025-09-23T15:47:45.000Z",
+  "cardData": {
+    "title": "Qwen3 VL 235B A22B Instruct Demo",
+    "emoji": "\ud83d\udcac",
+    "colorFrom": "yellow",
+    "colorTo": "purple",
+    "sdk": "gradio",
+    "sdk_version": "5.42.0",
+    "app_file": "app.py",
+    "pinned": false,
+    "hf_oauth": true,
+    "hf_oauth_scopes": [
+      "inference-api"
+    ],
+    "license": "apache-2.0",
+    "short_description": "Qwen3-VL-235B-A22B-Instruct "
+  },
+  "subdomain": "qwen-qwen3-vl-235b-a22b-instruct-demo",
+  "gated": false,
+  "disabled": false,
+  "host": "https://qwen-qwen3-vl-235b-a22b-instruct-demo.hf.space",
+  "region": "us",
+  "siblings": [
+    {
+      "rfilename": ".gitattributes"
+    },
+    {
+      "rfilename": "README.md"
+    },
+    {
+      "rfilename": "app.py"
+    }
+  ],
+  "createdAt": "2025-09-23T15:45:17.000Z",
+  "usedStorage": 0,
+  "runtime": {
+    "stage": "RUNNING",
+    "hardware": {
+      "current": "cpu-basic",
+      "requested": "cpu-basic"
+    },
+    "gcTimeout": 172800,
+    "replicas": {
+      "current": 1,
+      "requested": 1
+    },
+    "devMode": false,
+    "domains": [
+      {
+        "domain": "qwen-qwen3-vl-235b-a22b-instruct-demo.hf.space",
+        "stage": "READY"
+      }
+    ],
+    "sha": "eb7f245e2c0d3b573dd8ed6addca9b7f6af26847",
+    "pySpacesVersion": "0.50.2"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "test": "Real camera E2 multi-image trial: joint versus cached per-image encoding",
+  "bitwise_equal": false,
+  "max_absolute_difference": 25.125,
+  "shape": [
+    540,
+    1536
+  ],
+  "frames": [
+    {
+      "path": "inputs/camera_E1_partial.png",
+      "sha256": "8681414b8f8bfd0e73ffb9630e9b5fc3f114964556e163b5e838610e876a46ed"
+    },
+    {
+      "path": "inputs/camera_E2_partial.png",
+      "sha256": "13021309507adf909460384ff537260f812a241f51690412f64de2352f8e31d2"
+    },
+    {
+      "path": "inputs/camera_E2_full.png",
+      "sha256": "911e918ffa4f407353128b89fb8da988ee33b144e133fa5cda5ca8e6e4ea2253"
+    }
+  ]
+}

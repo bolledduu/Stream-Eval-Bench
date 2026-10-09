@@ -1,0 +1,11 @@
+{
+  "reason": "Real multi-image equivalence audit failed: cached per-image features were not equivalent to unmodified joint encoding. Initial tiny synthetic check was inadequate.",
+  "max_absolute_feature_difference": 25.125,
+  "action": "Invalidate cached research conclusions; rerun all 30 main calls and both 3-call diagnostics using unmodified Qwen forward. Prompts, labels, inputs, model weights and decoding unchanged.",
+  "prior_results": "results/invalidated_cached",
+  "created_utc": "2026-10-08T13:45:56.250510+00:00",
+  "corrected_run": "results/qwen.json",
+  "completed_corrected_calls": 30,
+  "all_corrected_calls_complete": true,
+  "same_parsed_main_outputs_as_discarded_run": 30
+}

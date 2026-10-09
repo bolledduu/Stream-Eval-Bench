@@ -1,0 +1,36 @@
+camera_perception uniform_8 ' C' 11.475196864999987
+camera_history_early uniform_8 ' C.' 11.190148857999986
+camera_history_late uniform_8 ' C.' 11.980805474000022
+printer_screen_early uniform_8 ' B.' 12.887869458000011
+printer_screen_late uniform_8 ' B.' 11.92029387399998
+printer_history uniform_8 ' B.' 11.582458492
+table_before_tray uniform_8 ' B.' 13.279238941000017
+table_after_tray uniform_8 ' B.' 11.04018057099995
+table_screw_exploratory uniform_8 ' B' 11.751480275999995
+camera_perception recent_8 ' C' 10.811166422999975
+camera_history_early recent_8 ' C.' 11.035001529999988
+camera_history_late recent_8 ' C.' 11.203708619999986
+printer_screen_early recent_8 ' B.' 11.185341903999984
+printer_screen_late recent_8 ' B.' 10.594883713000002
+printer_history recent_8 ' B.' 11.808337068000014
+table_before_tray recent_8 ' B.' 11.53144251099991
+table_after_tray recent_8 ' B.' 12.270609300000046
+table_screw_exploratory recent_8 ' B.' 14.041692323999996
+camera_perception uniform_8_with_answer_history ' C' 11.574920432999988
+camera_history_early uniform_8_with_answer_history ' C.' 11.416075796000086
+camera_history_late uniform_8_with_answer_history ' [{"checkpoint": 20, "answer": " B. A. C."}]' 13.303417558000092
+printer_screen_early uniform_8_with_answer_history ' B.' 11.651547408000056
+printer_screen_late uniform_8_with_answer_history ' [{"checkpoint": 22, "answer": " B."], "answer": " B."}]}' 12.890334333999931
+printer_history uniform_8_with_answer_history ' B.' 11.560619908000035
+table_before_tray uniform_8_with_answer_history ' B.' 10.847758490999922
+table_after_tray uniform_8_with_answer_history ' [{"checkpoint": 74, "answer": " B. "}, {"checkpoint": 74, "answer": " B. "}, {"' 13.809032882999986
+table_screw_exploratory uniform_8_with_answer_history ' B' 12.727033557000027
+camera_perception text_only ' C' 0.2585317989999112
+camera_history_early text_only ' C: The cylindrical lens assembly\n\nThe correct answer is C: The cylindrical lens assembly. The other options are incorrect because:\n\n- The first detachment' 2.1218494499998997
+camera_history_late text_only ' C: The cylindrical lens assembly\n\nThe correct answer is C: The cylindrical lens assembly. The other options are incorrect because:\n\n- The first detachment' 2.132480787000077
+printer_screen_early text_only ' B: No, it appears dark.' 0.7776374349999742
+printer_screen_late text_only ' B: No, it appears dark.' 0.7473047659999565
+printer_history text_only ' B: No, it was dark then.' 0.85064313700002
+table_before_tray text_only ' B: No, the tray rests on the frame.' 0.8851552029999539
+table_after_tray text_only ' B: No, the tray rests on the frame.' 0.8531464400000459
+table_screw_exploratory text_only ' B: No, the incorrect length is established visually.' 0.8610401920000186

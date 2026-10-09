@@ -1,0 +1,49 @@
+[
+  {
+    "id": "single_image_supplied_id",
+    "frames": [
+      {
+        "label": "Later delivered image",
+        "path": "inputs/table_E1_full.png",
+        "sha256": "28608f88da4dc524224ac362ad132399f4144ec5a072c6ea3343de82a211c956"
+      }
+    ],
+    "prompt": "This complete image is from earlier record E1. The stored question is: Is the large round tray resting on top of the table frame? yes means resting on the frame; no means not resting on the frame.\nExisting records: {\"E1\": \"unknown\", \"E2\": \"unknown\", \"event_count\": 2, \"device\": \"table\"}\nRead the answer from this image and replace ONLY E1 with that answer. Keep all other values unchanged. Return only JSON with keys E1, E2, event_count and device.",
+    "expected": {
+      "E1": "no",
+      "E2": "unknown",
+      "event_count": 2,
+      "device": "table"
+    }
+  },
+  {
+    "id": "read_then_write_three_images",
+    "frames": [
+      {
+        "label": "Earlier partial view for record E1",
+        "path": "inputs/table_E1_partial.png",
+        "sha256": "0f6e185bbb80c6fe0879431232f452b8b8d41f8b0b8294c5afd0cbff6ee6127a"
+      },
+      {
+        "label": "Earlier partial view for record E2",
+        "path": "inputs/table_E2_partial.png",
+        "sha256": "d42e990c81df20f4d2c3d16c58b797f1a42bb8c4e011cd257f471d06b57e87fa"
+      },
+      {
+        "label": "Later delivered image",
+        "path": "inputs/table_E1_full.png",
+        "sha256": "28608f88da4dc524224ac362ad132399f4144ec5a072c6ea3343de82a211c956"
+      }
+    ],
+    "prompt": "The third image is a complete view from earlier record E1. The first two are covered reference views. The stored question is: Is the large round tray resting on top of the table frame? yes means resting on the frame; no means not resting on the frame.\nExisting records: {\"E1\": \"unknown\", \"E2\": \"unknown\", \"event_count\": 2, \"device\": \"table\"}\nFirst report the answer seen in the third image as observed_value. Then put that value into E1 in memory; preserve E2, event_count and device. Return JSON with observed_value and memory; memory must contain E1, E2, event_count and device.",
+    "expected": {
+      "observed_value": "no",
+      "memory": {
+        "E1": "no",
+        "E2": "unknown",
+        "event_count": 2,
+        "device": "table"
+      }
+    }
+  }
+]

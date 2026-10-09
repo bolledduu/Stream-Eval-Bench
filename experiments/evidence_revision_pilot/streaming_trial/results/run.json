@@ -1,0 +1,875 @@
+{
+  "protocol_sha256": "51b024a7ca9f80783c87bfacb17cbe865d9eb5d1232451b2931f62b772448b59",
+  "model": {
+    "name": "Qwen/Qwen3-VL-2B-Instruct",
+    "revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+    "files": [
+      {
+        "file": "chat_template.json",
+        "bytes": 5502,
+        "sha256": "6f8a6a55027e3da5160105556cda5dd69f6423f1c32645f6730d32de7773d0c4"
+      },
+      {
+        "file": "config.json",
+        "bytes": 1505,
+        "sha256": "bec4b3d446efa05807365c9e1cec03ac590836879d02f3a6da879971154bdd3b"
+      },
+      {
+        "file": "generation_config.json",
+        "bytes": 269,
+        "sha256": "1e241830b48b397cb0900101421df5450baddc7adf01e5fc86b5615865f3bae4"
+      },
+      {
+        "file": "merges.txt",
+        "bytes": 1671839,
+        "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+      },
+      {
+        "file": "model.safetensors",
+        "bytes": 4255140312,
+        "sha256": "7de1838c87a5349b016c26a1c3f7d2bc400a3d485f95ef39a7059ffd734977a0"
+      },
+      {
+        "file": "preprocessor_config.json",
+        "bytes": 390,
+        "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+      },
+      {
+        "file": "tokenizer.json",
+        "bytes": 7032403,
+        "sha256": "a5d85b6dcc535e6b93115a9ef287e6132fdbf30270da6218194ba742261173c7"
+      },
+      {
+        "file": "tokenizer_config.json",
+        "bytes": 10868,
+        "sha256": "c2da771801886ad9ae98181793ffd3dfb7f1af30f6f7c6a4e15d7dbba52e2399"
+      },
+      {
+        "file": "video_preprocessor_config.json",
+        "bytes": 385,
+        "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13"
+      },
+      {
+        "file": "vocab.json",
+        "bytes": 2776833,
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      }
+    ]
+  },
+  "environment": {
+    "torch": "2.6.0+cpu",
+    "transformers": "4.57.1",
+    "dtype": "bfloat16",
+    "device": "cpu",
+    "threads": 4,
+    "decoding": "greedy",
+    "max_new_tokens": 180,
+    "native_video": true,
+    "custom_feature_cache": false,
+    "video_pixels": {
+      "shortest_edge": 65536,
+      "longest_edge": 131072
+    }
+  },
+  "results": [
+    {
+      "id": "camera_historical_perception",
+      "case": "camera",
+      "condition": "historical_perception",
+      "packets": [
+        {
+          "id": 1,
+          "capture_start": 9,
+          "capture_end": 12,
+          "frames": [
+            {
+              "path": "packets/camera_1_0.png",
+              "source_time": 9.012739291162204,
+              "source_frame_index": 270,
+              "sha256": "19c4e99703346acca64cb6708e93cfe2fdc4496098db19a81c896686b1a9a62f"
+            },
+            {
+              "path": "packets/camera_1_1.png",
+              "source_time": 9.98077425206481,
+              "source_frame_index": 299,
+              "sha256": "4806d1f9c95b0cdf9e4257b8552a9d49e9aee888cffb363640e21303f73adbe2"
+            },
+            {
+              "path": "packets/camera_1_2.png",
+              "source_time": 10.948809212967417,
+              "source_frame_index": 328,
+              "sha256": "c82a4932e3f49566bc7c96bd9b5499098c73bec90236f9e668384cc7dd1af827"
+            },
+            {
+              "path": "packets/camera_1_3.png",
+              "source_time": 11.916844173870023,
+              "source_frame_index": 357,
+              "sha256": "9ba953fe78e93704cb39d5252b8e01ffed2937e875e5945fad41bc0f14f64427"
+            }
+          ],
+          "source_fps": 29.957595718402636,
+          "total_source_frames": 2040
+        }
+      ],
+      "prompt": "What part is being detached from the camera body in this clip? Return JSON {\"value\":\"lens\"}, {\"value\":\"cap\"}, or {\"value\":\"unknown\"}.",
+      "response": "{\"value\":\"cap\"}",
+      "parsed": {
+        "value": "cap"
+      },
+      "expected": {
+        "value": "lens"
+      },
+      "seconds": 20.245740086999945,
+      "video_grids": [
+        [
+          2,
+          8,
+          14
+        ]
+      ]
+    },
+    {
+      "id": "camera_current_perception",
+      "case": "camera",
+      "condition": "current_perception",
+      "packets": [
+        {
+          "id": 3,
+          "capture_start": 15,
+          "capture_end": 18,
+          "frames": [
+            {
+              "path": "packets/camera_3_0.png",
+              "source_time": 15.021232151937005,
+              "source_frame_index": 450,
+              "sha256": "9a52ec02d6671e65412b9ff47bd586fd089eee7bfd739283eebae538583ea402"
+            },
+            {
+              "path": "packets/camera_3_1.png",
+              "source_time": 15.989267112839611,
+              "source_frame_index": 479,
+              "sha256": "4b95dce456331d16ec8dd491c2225d16c9b8736c61bc327594e0fa323de2bf60"
+            },
+            {
+              "path": "packets/camera_3_2.png",
+              "source_time": 16.95730207374222,
+              "source_frame_index": 508,
+              "sha256": "235df6434ec51c2b8a8feebc3f1bca5ac09f1ee4dd2e5e3fbadc35304c415f03"
+            },
+            {
+              "path": "packets/camera_3_3.png",
+              "source_time": 17.925337034644826,
+              "source_frame_index": 537,
+              "sha256": "b5b203ceff167283548b106fae2f842f3d3d89f6f3e0eb504f1968befd605b21"
+            }
+          ],
+          "source_fps": 29.957595718402636,
+          "total_source_frames": 2040
+        }
+      ],
+      "prompt": "At the end of this clip, is the cylindrical lens attached to the camera body? Return JSON with key value, using yes, no, or unknown.",
+      "response": "yes",
+      "parsed": null,
+      "expected": {
+        "value": "yes"
+      },
+      "seconds": 24.397769390999883,
+      "video_grids": [
+        [
+          2,
+          8,
+          14
+        ]
+      ]
+    },
+    {
+      "id": "table_historical_perception",
+      "case": "table",
+      "condition": "historical_perception",
+      "packets": [
+        {
+          "id": 1,
+          "capture_start": 64,
+          "capture_end": 76,
+          "frames": [
+            {
+              "path": "packets/table_1_0.png",
+              "source_time": 64.0193363704207,
+              "source_frame_index": 1917,
+              "sha256": "ca6087b5827c8ddc12e51d8095585ef679c2fa762e68c1aa86d5208f0365b761"
+            },
+            {
+              "path": "packets/table_1_1.png",
+              "source_time": 67.9934109807911,
+              "source_frame_index": 2036,
+              "sha256": "f029cad15bb67d9917ac8a51ac9f5361c51c09d45599f5b4657d524af4d5bb3a"
+            },
+            {
+              "path": "packets/table_1_2.png",
+              "source_time": 71.9340900062004,
+              "source_frame_index": 2154,
+              "sha256": "9b588fd3e062e3f44764da090b88a0d1a13a303b6836d4029dcebf5b9a4af8bc"
+            },
+            {
+              "path": "packets/table_1_3.png",
+              "source_time": 75.90816461657082,
+              "source_frame_index": 2273,
+              "sha256": "e4f131e2a6b0818aadf28a108cc82acf2d53d6bff150e64ec31cc3c4e8f76de0"
+            }
+          ],
+          "source_fps": 29.944077972131634,
+          "total_source_frames": 3645
+        }
+      ],
+      "prompt": "Around source time 72 seconds, is the large round tray resting on the table frame? Return JSON with key value, using yes, no, or unknown.",
+      "response": "yes",
+      "parsed": null,
+      "expected": {
+        "value": "no"
+      },
+      "seconds": 18.557393633999936,
+      "video_grids": [
+        [
+          2,
+          8,
+          14
+        ]
+      ]
+    },
+    {
+      "id": "table_current_perception",
+      "case": "table",
+      "condition": "current_perception",
+      "packets": [
+        {
+          "id": 5,
+          "capture_start": 112,
+          "capture_end": 120,
+          "frames": [
+            {
+              "path": "packets/table_5_0.png",
+              "source_time": 112.0087919595154,
+              "source_frame_index": 3354,
+              "sha256": "904c3229d09a118095688c9d30b4ad52432ac00b5bc6c131c8d637a05943cce4"
+            },
+            {
+              "path": "packets/table_5_1.png",
+              "source_time": 114.64704317144198,
+              "source_frame_index": 3433,
+              "sha256": "f25545b209bdf80284e102a726fffcc8a2968ea2929b92ab11d5d72f019a6778"
+            },
+            {
+              "path": "packets/table_5_2.png",
+              "source_time": 117.28529438336854,
+              "source_frame_index": 3512,
+              "sha256": "206d602217ecd6c6a000b56c12f0d493519148a9a565db0c7f0aa1024c4afafe"
+            },
+            {
+              "path": "packets/table_5_3.png",
+              "source_time": 119.92354559529511,
+              "source_frame_index": 3591,
+              "sha256": "9403b3ed5dcc6f58fcf532ef00adff4d8372bee20709ea9ee14ca130f3574b8d"
+            }
+          ],
+          "source_fps": 29.944077972131634,
+          "total_source_frames": 3645
+        }
+      ],
+      "prompt": "At the end of this clip, is the large round tray resting on the table frame? Return JSON with key value, using yes, no, or unknown.",
+      "response": "yes",
+      "parsed": null,
+      "expected": {
+        "value": "yes"
+      },
+      "seconds": 19.181268229000125,
+      "video_grids": [
+        [
+          2,
+          8,
+          14
+        ]
+      ]
+    },
+    {
+      "id": "camera_chronological_0",
+      "case": "camera",
+      "condition": "chronological",
+      "step": 0,
+      "packet_id": 0,
+      "arrived_packet_ids": [
+        0
+      ],
+      "latest_capture_boundary": 9,
+      "packets": [
+        {
+          "id": 0,
+          "capture_start": 6,
+          "capture_end": 9,
+          "frames": [
+            {
+              "path": "packets/camera_0_0.png",
+              "source_time": 6.008492860774802,
+              "source_frame_index": 180,
+              "sha256": "1ae20eba67afecc786b6eb39895fe6be0cae469b02db1408b4d581924167aa73"
+            },
+            {
+              "path": "packets/camera_0_1.png",
+              "source_time": 6.976527821677409,
+              "source_frame_index": 209,
+              "sha256": "0c29dfe170e90e7d16b45e7c347575c64e73ffc548554a2809b25ef6b5e63d28"
+            },
+            {
+              "path": "packets/camera_0_2.png",
+              "source_time": 7.944562782580015,
+              "source_frame_index": 238,
+              "sha256": "a41e5ff05a1ae9206ed93539fd46f43ba1e2e044c69a4346c6b5544fe780a467"
+            },
+            {
+              "path": "packets/camera_0_3.png",
+              "source_time": 8.912597743482623,
+              "source_frame_index": 267,
+              "sha256": "4e7a792d12ab629534ef525e3ae9ed902094312057857c1e56a8361ff4615a6a"
+            }
+          ],
+          "source_fps": 29.957595718402636,
+          "total_source_frames": 2040
+        }
+      ],
+      "input_memory": "{}",
+      "prompt": "You receive a video stream packet by packet. Capture time describes when something happened; arrival order may differ. A late packet is older evidence, not a new physical occurrence. Update the historical facts it supports, and preserve facts about later capture times. Base the current state on the latest CAPTURE time observed. Your earlier response may be incomplete; revise it when evidence warrants.\nLatest capture boundary received: 9 seconds.\nPrevious model-produced memory: {}\nTask: Track camera-part detachments in the capture-time interval 6\u201324 seconds. first_detached and second_detached name the first and second separate part-removal actions in CAPTURE-TIME order (lens or cap; unknown if not established). detachments is the number of distinct removals supported by the received footage, not the number of clips. lens_attached_now describes the latest capture time received, not the last packet arrival. Do not count putting a part back on as another removal.\nReturn only one JSON object with these keys: [\"first_detached\", \"second_detached\", \"detachments\", \"lens_attached_now\"]. Use unknown for unsupported fields. Do not give explanations.",
+      "response": "{\"first_detached\": \"lens\", \"second_detached\": \"cap\", \"detachments\": 2, \"lens_attached_now\": \"unknown\"}",
+      "parsed": {
+        "first_detached": "lens",
+        "second_detached": "cap",
+        "detachments": 2,
+        "lens_attached_now": "unknown"
+      },
+      "seconds": 41.32140012400009,
+      "video_grids": [
+        [
+          2,
+          8,
+          14
+        ]
+      ]
+    },
+    {
+      "id": "camera_chronological_1",
+      "case": "camera",
+      "condition": "chronological",
+      "step": 1,
+      "packet_id": 1,
+      "arrived_packet_ids": [
+        0,
+        1
+      ],
+      "latest_capture_boundary": 12,
+      "packets": [
+        {
+          "id": 1,
+          "capture_start": 9,
+          "capture_end": 12,
+          "frames": [
+            {
+              "path": "packets/camera_1_0.png",
+              "source_time": 9.012739291162204,
+              "source_frame_index": 270,
+              "sha256": "19c4e99703346acca64cb6708e93cfe2fdc4496098db19a81c896686b1a9a62f"
+            },
+            {
+              "path": "packets/camera_1_1.png",
+              "source_time": 9.98077425206481,
+              "source_frame_index": 299,
+              "sha256": "4806d1f9c95b0cdf9e4257b8552a9d49e9aee888cffb363640e21303f73adbe2"
+            },
+            {
+              "path": "packets/camera_1_2.png",
+              "source_time": 10.948809212967417,
+              "source_frame_index": 328,
+              "sha256": "c82a4932e3f49566bc7c96bd9b5499098c73bec90236f9e668384cc7dd1af827"
+            },
+            {
+              "path": "packets/camera_1_3.png",
+              "source_time": 11.916844173870023,
+              "source_frame_index": 357,
+              "sha256": "9ba953fe78e93704cb39d5252b8e01ffed2937e875e5945fad41bc0f14f64427"
+            }
+          ],
+          "source_fps": 29.957595718402636,
+          "total_source_frames": 2040
+        }
+      ],
+      "input_memory": "{\"first_detached\": \"lens\", \"second_detached\": \"cap\", \"detachments\": 2, \"lens_attached_now\": \"unknown\"}",
+      "prompt": "You receive a video stream packet by packet. Capture time describes when something happened; arrival order may differ. A late packet is older evidence, not a new physical occurrence. Update the historical facts it supports, and preserve facts about later capture times. Base the current state on the latest CAPTURE time observed. Your earlier response may be incomplete; revise it when evidence warrants.\nLatest capture boundary received: 12 seconds.\nPrevious model-produced memory: {\"first_detached\": \"lens\", \"second_detached\": \"cap\", \"detachments\": 2, \"lens_attached_now\": \"unknown\"}\nTask: Track camera-part detachments in the capture-time interval 6\u201324 seconds. first_detached and second_detached name the first and second separate part-removal actions in CAPTURE-TIME order (lens or cap; unknown if not established). detachments is the number of distinct removals supported by the received footage, not the number of clips. lens_attached_now describes the latest capture time received, not the last packet arrival. Do not count putting a part back on as another removal.\nReturn only one JSON object with these keys: [\"first_detached\", \"second_detached\", \"detachments\", \"lens_attached_now\"]. Use unknown for unsupported fields. Do not give explanations.",
+      "response": "{\"first_detached\": \"lens\", \"second_detached\": \"cap\", \"detachments\": 2, \"lens_attached_now\": \"unknown\"}",
+      "parsed": {
+        "first_detached": "lens",
+        "second_detached": "cap",
+        "detachments": 2,
+        "lens_attached_now": "unknown"
+      },
+      "seconds": 44.42422121499999,
+      "video_grids": [
+        [
+          2,
+          8,
+          14
+        ]
+      ]
+    },
+    {
+      "id": "camera_chronological_2",
+      "case": "camera",
+      "condition": "chronological",
+      "step": 2,
+      "packet_id": 2,
+      "arrived_packet_ids": [
+        0,
+        1,
+        2
+      ],
+      "latest_capture_boundary": 15,
+      "packets": [
+        {
+          "id": 2,
+          "capture_start": 12,
+          "capture_end": 15,
+          "frames": [
+            {
+              "path": "packets/camera_2_0.png",
+              "source_time": 12.016985721549604,
+              "source_frame_index": 360,
+              "sha256": "580aee0cd75f6dd21fc9bf3c72a41d4a1cb1b449b01cc30dd8190731ee00767d"
+            },
+            {
+              "path": "packets/camera_2_1.png",
+              "source_time": 12.98502068245221,
+              "source_frame_index": 389,
+              "sha256": "225b2fcec3add00b438ec7b89b6b1a75eeede71a5631d4d8e40f353c899cca2e"
+            },
+            {
+              "path": "packets/camera_2_2.png",
+              "source_time": 13.953055643354817,
+              "source_frame_index": 418,
+              "sha256": "5e4ad17c432e617c3edf40a67a2704672c2d8b633d6a11b46979e2e64d07193a"
+            },
+            {
+              "path": "packets/camera_2_3.png",
+              "source_time": 14.921090604257424,
+              "source_frame_index": 447,
+              "sha256": "c73ba4383f7532af0ba5ada73dec3f7108f467b4e5e285593f6c923fccd97e79"
+            }
+          ],
+          "source_fps": 29.957595718402636,
+          "total_source_frames": 2040
+        }
+      ],
+      "input_memory": "{\"first_detached\": \"lens\", \"second_detached\": \"cap\", \"detachments\": 2, \"lens_attached_now\": \"unknown\"}",
+      "prompt": "You receive a video stream packet by packet. Capture time describes when something happened; arrival order may differ. A late packet is older evidence, not a new physical occurrence. Update the historical facts it supports, and preserve facts about later capture times. Base the current state on the latest CAPTURE time observed. Your earlier response may be incomplete; revise it when evidence warrants.\nLatest capture boundary received: 15 seconds.\nPrevious model-produced memory: {\"first_detached\": \"lens\", \"second_detached\": \"cap\", \"detachments\": 2, \"lens_attached_now\": \"unknown\"}\nTask: Track camera-part detachments in the capture-time interval 6\u201324 seconds. first_detached and second_detached name the first and second separate part-removal actions in CAPTURE-TIME order (lens or cap; unknown if not established). detachments is the number of distinct removals supported by the received footage, not the number of clips. lens_attached_now describes the latest capture time received, not the last packet arrival. Do not count putting a part back on as another removal.\nReturn only one JSON object with these keys: [\"first_detached\", \"second_detached\", \"detachments\", \"lens_attached_now\"]. Use unknown for unsupported fields. Do not give explanations.",
+      "response": "{\"first_detached\": \"lens\", \"second_detached\": \"cap\", \"detachments\": 2, \"lens_attached_now\": \"unknown\"}",
+      "parsed": {
+        "first_detached": "lens",
+        "second_detached": "cap",
+        "detachments": 2,
+        "lens_attached_now": "unknown"
+      },
+      "seconds": 45.50021518299991,
+      "video_grids": [
+        [
+          2,
+          8,
+          14
+        ]
+      ]
+    },
+    {
+      "id": "camera_chronological_3",
+      "case": "camera",
+      "condition": "chronological",
+      "step": 3,
+      "packet_id": 3,
+      "arrived_packet_ids": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "latest_capture_boundary": 18,
+      "packets": [
+        {
+          "id": 3,
+          "capture_start": 15,
+          "capture_end": 18,
+          "frames": [
+            {
+              "path": "packets/camera_3_0.png",
+              "source_time": 15.021232151937005,
+              "source_frame_index": 450,
+              "sha256": "9a52ec02d6671e65412b9ff47bd586fd089eee7bfd739283eebae538583ea402"
+            },
+            {
+              "path": "packets/camera_3_1.png",
+              "source_time": 15.989267112839611,
+              "source_frame_index": 479,
+              "sha256": "4b95dce456331d16ec8dd491c2225d16c9b8736c61bc327594e0fa323de2bf60"
+            },
+            {
+              "path": "packets/camera_3_2.png",
+              "source_time": 16.95730207374222,
+              "source_frame_index": 508,
+              "sha256": "235df6434ec51c2b8a8feebc3f1bca5ac09f1ee4dd2e5e3fbadc35304c415f03"
+            },
+            {
+              "path": "packets/camera_3_3.png",
+              "source_time": 17.925337034644826,
+              "source_frame_index": 537,
+              "sha256": "b5b203ceff167283548b106fae2f842f3d3d89f6f3e0eb504f1968befd605b21"
+            }
+          ],
+          "source_fps": 29.957595718402636,
+          "total_source_frames": 2040
+        }
+      ],
+      "input_memory": "{\"first_detached\": \"lens\", \"second_detached\": \"cap\", \"detachments\": 2, \"lens_attached_now\": \"unknown\"}",
+      "prompt": "You receive a video stream packet by packet. Capture time describes when something happened; arrival order may differ. A late packet is older evidence, not a new physical occurrence. Update the historical facts it supports, and preserve facts about later capture times. Base the current state on the latest CAPTURE time observed. Your earlier response may be incomplete; revise it when evidence warrants.\nLatest capture boundary received: 18 seconds.\nPrevious model-produced memory: {\"first_detached\": \"lens\", \"second_detached\": \"cap\", \"detachments\": 2, \"lens_attached_now\": \"unknown\"}\nTask: Track camera-part detachments in the capture-time interval 6\u201324 seconds. first_detached and second_detached name the first and second separate part-removal actions in CAPTURE-TIME order (lens or cap; unknown if not established). detachments is the number of distinct removals supported by the received footage, not the number of clips. lens_attached_now describes the latest capture time received, not the last packet arrival. Do not count putting a part back on as another removal.\nReturn only one JSON object with these keys: [\"first_detached\", \"second_detached\", \"detachments\", \"lens_attached_now\"]. Use unknown for unsupported fields. Do not give explanations.",
+      "response": "{\"first_detached\": \"lens\", \"second_detached\": \"cap\", \"detachments\": 2, \"lens_attached_now\": \"unknown\"}",
+      "parsed": {
+        "first_detached": "lens",
+        "second_detached": "cap",
+        "detachments": 2,
+        "lens_attached_now": "unknown"
+      },
+      "seconds": 46.27577350399997,
+      "video_grids": [
+        [
+          2,
+          8,
+          14
+        ]
+      ]
+    },
+    {
+      "id": "camera_chronological_4",
+      "case": "camera",
+      "condition": "chronological",
+      "step": 4,
+      "packet_id": 4,
+      "arrived_packet_ids": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "latest_capture_boundary": 21,
+      "packets": [
+        {
+          "id": 4,
+          "capture_start": 18,
+          "capture_end": 21,
+          "frames": [
+            {
+              "path": "packets/camera_4_0.png",
+              "source_time": 18.025478582324407,
+              "source_frame_index": 540,
+              "sha256": "73285a709f75dd2a64236c3bae209923038654aac624f4b5dbdfe54a91b2fcdc"
+            },
+            {
+              "path": "packets/camera_4_1.png",
+              "source_time": 18.993513543227014,
+              "source_frame_index": 569,
+              "sha256": "e1a2adb1eca5ab977e3446c09d53035f840c467e240f7e8fa8e98e8ecafbbe61"
+            },
+            {
+              "path": "packets/camera_4_2.png",
+              "source_time": 19.96154850412962,
+              "source_frame_index": 598,
+              "sha256": "db2171609b8ddde1f18c39e85a6bc60a166979fad100f83d553626b03371f83a"
+            },
+            {
+              "path": "packets/camera_4_3.png",
+              "source_time": 20.929583465032227,
+              "source_frame_index": 627,
+              "sha256": "4f9c5c2addd40f364b22cb8053029a7f2c29243ff7fc9c6bba743f1be0f7a459"
+            }
+          ],
+          "source_fps": 29.957595718402636,
+          "total_source_frames": 2040
+        }
+      ],
+      "input_memory": "{\"first_detached\": \"lens\", \"second_detached\": \"cap\", \"detachments\": 2, \"lens_attached_now\": \"unknown\"}",
+      "prompt": "You receive a video stream packet by packet. Capture time describes when something happened; arrival order may differ. A late packet is older evidence, not a new physical occurrence. Update the historical facts it supports, and preserve facts about later capture times. Base the current state on the latest CAPTURE time observed. Your earlier response may be incomplete; revise it when evidence warrants.\nLatest capture boundary received: 21 seconds.\nPrevious model-produced memory: {\"first_detached\": \"lens\", \"second_detached\": \"cap\", \"detachments\": 2, \"lens_attached_now\": \"unknown\"}\nTask: Track camera-part detachments in the capture-time interval 6\u201324 seconds. first_detached and second_detached name the first and second separate part-removal actions in CAPTURE-TIME order (lens or cap; unknown if not established). detachments is the number of distinct removals supported by the received footage, not the number of clips. lens_attached_now describes the latest capture time received, not the last packet arrival. Do not count putting a part back on as another removal.\nReturn only one JSON object with these keys: [\"first_detached\", \"second_detached\", \"detachments\", \"lens_attached_now\"]. Use unknown for unsupported fields. Do not give explanations.",
+      "response": "{\"first_detached\": \"lens\", \"second_detached\": \"cap\", \"detachments\": 2, \"lens_attached_now\": \"unknown\"}",
+      "parsed": {
+        "first_detached": "lens",
+        "second_detached": "cap",
+        "detachments": 2,
+        "lens_attached_now": "unknown"
+      },
+      "seconds": 42.15142201399999,
+      "video_grids": [
+        [
+          2,
+          8,
+          14
+        ]
+      ]
+    },
+    {
+      "id": "table_all_arrived_control",
+      "case": "table",
+      "condition": "all_arrived_control",
+      "arrived_packet_ids": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        1
+      ],
+      "packets": [
+        {
+          "id": 0,
+          "capture_start": 60,
+          "capture_end": 64,
+          "frames": [
+            {
+              "path": "packets/table_0_0.png",
+              "source_time": 60.0118661750892,
+              "source_frame_index": 1797,
+              "sha256": "dfbae4cc5651409c1541107d686c08e6b4bfcfa869de85dc492dcb2429b6a881"
+            },
+            {
+              "path": "packets/table_0_1.png",
+              "source_time": 61.31429398857194,
+              "source_frame_index": 1836,
+              "sha256": "d02de80b697520078289b19e0c288129192adc534ceab8a6d38c15ff9e08b40a"
+            },
+            {
+              "path": "packets/table_0_2.png",
+              "source_time": 62.61672180205468,
+              "source_frame_index": 1875,
+              "sha256": "4c0c2e6181b9006d7e82440753fab974505420cfbff88c1b375f760126844d0b"
+            },
+            {
+              "path": "packets/table_0_3.png",
+              "source_time": 63.919149615537414,
+              "source_frame_index": 1914,
+              "sha256": "84dcb5ac6f3f8b69d3ea325df0bddb9323bd8d494878a7507b3918001170fd50"
+            }
+          ],
+          "source_fps": 29.944077972131634,
+          "total_source_frames": 3645
+        },
+        {
+          "id": 2,
+          "capture_start": 76,
+          "capture_end": 88,
+          "frames": [
+            {
+              "path": "packets/table_2_0.png",
+              "source_time": 76.0083513714541,
+              "source_frame_index": 2276,
+              "sha256": "b4b56e18a9ab31257acf1e6522b0583deb5180b519da43518eff8fcbb26d346c"
+            },
+            {
+              "path": "packets/table_2_1.png",
+              "source_time": 79.9824259818245,
+              "source_frame_index": 2395,
+              "sha256": "c09712fbd24de0c3155dbe7d05d49649cc127c71a4ccc4fef7daf5412743216f"
+            },
+            {
+              "path": "packets/table_2_2.png",
+              "source_time": 83.95650059219491,
+              "source_frame_index": 2514,
+              "sha256": "2dec587e41c9adaf7896a9e8582e36e867ab145c44790587ab11d1cc7055de8a"
+            },
+            {
+              "path": "packets/table_2_3.png",
+              "source_time": 87.93057520256531,
+              "source_frame_index": 2633,
+              "sha256": "2659a169fbe3cb24269e189b60c62bfc15d7551bc825168b064508e40c2af255"
+            }
+          ],
+          "source_fps": 29.944077972131634,
+          "total_source_frames": 3645
+        },
+        {
+          "id": 3,
+          "capture_start": 88,
+          "capture_end": 100,
+          "frames": [
+            {
+              "path": "packets/table_3_0.png",
+              "source_time": 88.0307619574486,
+              "source_frame_index": 2636,
+              "sha256": "1a50782a840a37b391051b32a2353898754e7c84dcc6f1157806fb5e8408f0ff"
+            },
+            {
+              "path": "packets/table_3_1.png",
+              "source_time": 91.97144098285791,
+              "source_frame_index": 2754,
+              "sha256": "bc6eedd6f3bc12276cbb3f2d83664e577d73bc700f90adc299be4739c3f30e9b"
+            },
+            {
+              "path": "packets/table_3_2.png",
+              "source_time": 95.94551559322831,
+              "source_frame_index": 2873,
+              "sha256": "c373eefcdc8ce684ef3db5fe9836fdfd8f6f345317e40cc0fc0eec408133d5dc"
+            },
+            {
+              "path": "packets/table_3_3.png",
+              "source_time": 99.91959020359872,
+              "source_frame_index": 2992,
+              "sha256": "ce46dbb03b9844b24a1e23abdf5572f289b03d162bb4a5020f381a1e889bbf69"
+            }
+          ],
+          "source_fps": 29.944077972131634,
+          "total_source_frames": 3645
+        },
+        {
+          "id": 4,
+          "capture_start": 100,
+          "capture_end": 112,
+          "frames": [
+            {
+              "path": "packets/table_4_0.png",
+              "source_time": 100.019776958482,
+              "source_frame_index": 2995,
+              "sha256": "8a4589201e6da0fbe991c518b780dc4723ade52a00856faa0b7a5275608f8b60"
+            },
+            {
+              "path": "packets/table_4_1.png",
+              "source_time": 103.9938515688524,
+              "source_frame_index": 3114,
+              "sha256": "cec61cb736cb56ed8291326eb17bd32de8670f3b231babe870adbfab16ea417c"
+            },
+            {
+              "path": "packets/table_4_2.png",
+              "source_time": 107.93453059426172,
+              "source_frame_index": 3232,
+              "sha256": "b1b3603253c41c42956fdd06c2dda99a3b98737271da94d329f8a3a6a91c488c"
+            },
+            {
+              "path": "packets/table_4_3.png",
+              "source_time": 111.90860520463211,
+              "source_frame_index": 3351,
+              "sha256": "bbc920013f2dbf80e9f569f29c502aad19fd1970f6694e6dbed39f311dbe7d3a"
+            }
+          ],
+          "source_fps": 29.944077972131634,
+          "total_source_frames": 3645
+        },
+        {
+          "id": 5,
+          "capture_start": 112,
+          "capture_end": 120,
+          "frames": [
+            {
+              "path": "packets/table_5_0.png",
+              "source_time": 112.0087919595154,
+              "source_frame_index": 3354,
+              "sha256": "904c3229d09a118095688c9d30b4ad52432ac00b5bc6c131c8d637a05943cce4"
+            },
+            {
+              "path": "packets/table_5_1.png",
+              "source_time": 114.64704317144198,
+              "source_frame_index": 3433,
+              "sha256": "f25545b209bdf80284e102a726fffcc8a2968ea2929b92ab11d5d72f019a6778"
+            },
+            {
+              "path": "packets/table_5_2.png",
+              "source_time": 117.28529438336854,
+              "source_frame_index": 3512,
+              "sha256": "206d602217ecd6c6a000b56c12f0d493519148a9a565db0c7f0aa1024c4afafe"
+            },
+            {
+              "path": "packets/table_5_3.png",
+              "source_time": 119.92354559529511,
+              "source_frame_index": 3591,
+              "sha256": "9403b3ed5dcc6f58fcf532ef00adff4d8372bee20709ea9ee14ca130f3574b8d"
+            }
+          ],
+          "source_fps": 29.944077972131634,
+          "total_source_frames": 3645
+        },
+        {
+          "id": 1,
+          "capture_start": 64,
+          "capture_end": 76,
+          "frames": [
+            {
+              "path": "packets/table_1_0.png",
+              "source_time": 64.0193363704207,
+              "source_frame_index": 1917,
+              "sha256": "ca6087b5827c8ddc12e51d8095585ef679c2fa762e68c1aa86d5208f0365b761"
+            },
+            {
+              "path": "packets/table_1_1.png",
+              "source_time": 67.9934109807911,
+              "source_frame_index": 2036,
+              "sha256": "f029cad15bb67d9917ac8a51ac9f5361c51c09d45599f5b4657d524af4d5bb3a"
+            },
+            {
+              "path": "packets/table_1_2.png",
+              "source_time": 71.9340900062004,
+              "source_frame_index": 2154,
+              "sha256": "9b588fd3e062e3f44764da090b88a0d1a13a303b6836d4029dcebf5b9a4af8bc"
+            },
+            {
+              "path": "packets/table_1_3.png",
+              "source_time": 75.90816461657082,
+              "source_frame_index": 2273,
+              "sha256": "e4f131e2a6b0818aadf28a108cc82acf2d53d6bff150e64ec31cc3c4e8f76de0"
+            }
+          ],
+          "source_fps": 29.944077972131634,
+          "total_source_frames": 3645
+        }
+      ],
+      "prompt": "You receive a video stream packet by packet. Capture time describes when something happened; arrival order may differ. A late packet is older evidence, not a new physical occurrence. Update the historical facts it supports, and preserve facts about later capture times. Base the current state on the latest CAPTURE time observed. Your earlier response may be incomplete; revise it when evidence warrants.\nLatest capture boundary received: 120 seconds.\nPrevious model-produced memory: {}\nTask: Track whether the large round tray rests on the table frame. tray_on_frame_at_72 describes the footage around capture time 72 seconds; answer unknown if footage for that time has not been received. tray_on_frame_now describes the latest capture time received, not the last packet arrival. Allowed values are yes, no, unknown. Never infer an earlier state solely from a later state.\nReturn only one JSON object with these keys: [\"tray_on_frame_at_72\", \"tray_on_frame_now\"]. Use unknown for unsupported fields. Do not give explanations.",
+      "response": "{\"tray_on_frame_at_72\": \"yes\", \"tray_on_frame_now\": \"yes\"}",
+      "parsed": {
+        "tray_on_frame_at_72": "yes",
+        "tray_on_frame_now": "yes"
+      },
+      "expected": {
+        "tray_on_frame_at_72": "no",
+        "tray_on_frame_now": "yes"
+      },
+      "seconds": 108.6636078219999,
+      "video_grids": [
+        [
+          2,
+          8,
+          14
+        ],
+        [
+          2,
+          8,
+          14
+        ],
+        [
+          2,
+          8,
+          14
+        ],
+        [
+          2,
+          8,
+          14
+        ],
+        [
+          2,
+          8,
+          14
+        ],
+        [
+          2,
+          8,
+          14
+        ]
+      ]
+    }
+  ]
+}

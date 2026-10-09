@@ -1,0 +1,11 @@
+test_actual_frame_boundary (test_protocol.ProtocolTests.test_actual_frame_boundary) ... ok
+test_exclusion_preserves_time (test_protocol.ProtocolTests.test_exclusion_preserves_time) ... ok
+test_no_future_frames (test_protocol.ProtocolTests.test_no_future_frames) ... ok
+test_no_gold_in_prompt (test_protocol.ProtocolTests.test_no_gold_in_prompt) ... ok
+test_strict_option_parser (test_protocol.ProtocolTests.test_strict_option_parser) ... ok
+test_unverified_not_promoted_to_core (test_protocol.ProtocolTests.test_unverified_not_promoted_to_core) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.126s
+
+OK

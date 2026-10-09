@@ -1,0 +1,1604 @@
+{
+  "started_utc": "2026-10-08T02:56:44.145299+00:00",
+  "protocol": "synchronous sampled-prefix; not wall-clock live evaluation",
+  "config_sha256": "10027ed781de0e63fd33e6ad567dd0830368a803bcf5d577e913a4b98ec53e76",
+  "model": "HuggingFaceTB/SmolVLM-256M-Instruct",
+  "model_revision": "7e3e67edbbed1bf9888184d9df282b700a323964",
+  "environment": {
+    "torch": "2.6.0+cpu",
+    "transformers": "4.49.0",
+    "device": "cpu",
+    "dtype": "float32",
+    "threads": 4,
+    "sampling": false,
+    "image_splitting": false,
+    "image_longest_edge": 512,
+    "attention": "eager"
+  },
+  "results": [
+    {
+      "case_id": "camera_perception",
+      "condition": "uniform_8",
+      "checkpoint": 12,
+      "frames": [
+        {
+          "time": 0.0,
+          "sha256": "1440440e0d435522c5e785242dd581508ff15b4d4a384ec65addcf1a49116fe9"
+        },
+        {
+          "time": 2.00283,
+          "sha256": "c9d0820190dc636072c9014294567771e86527de389c10708adfb6a2629d4f4c"
+        },
+        {
+          "time": 3.00425,
+          "sha256": "25f8587bfcc6555ff8bb437df0752c1c687e00829c6839a8313681ad0d1b1878"
+        },
+        {
+          "time": 5.00708,
+          "sha256": "b7fdaf4030c0454e5a2aa12ba6bb354dee76f93c915fd9724d2591ab05312d28"
+        },
+        {
+          "time": 6.00849,
+          "sha256": "56eb43853eaa3312ea6a1233ec6c11f014e91a54acbc5aab1972955a87865ad5"
+        },
+        {
+          "time": 8.01132,
+          "sha256": "3f71322141aa8863003b368193d3439df1c2469868acb450776a4b6b95e841df"
+        },
+        {
+          "time": 9.01274,
+          "sha256": "95e898da8d91e2228fb9313f10eef318f9b98ad9138bc68e5cc700bdbdb34e2e"
+        },
+        {
+          "time": 11.0156,
+          "sha256": "78ef0834f58061ff85580082a65ac85fa61f41fac2c6ac46bccf30dfcde787f6"
+        }
+      ],
+      "prompt": "The images are chronological observations from one continuous video. Use only the shown evidence.\nWhat main object is the person handling?\nA: A DSLR camera\nB: A printer\nC: A cooking pot\nU: Insufficient visual evidence\nReturn only the letter of the best answer. Choose the insufficient-evidence option when the shown frames do not establish the answer.",
+      "request_sha256": "db4b7139f36b7195b9d3699dee3b961931343aef45adbbc287307c80c2c611f9",
+      "response": " C",
+      "latency_seconds": 11.475196864999987,
+      "status": "model_returned",
+      "score": {
+        "parsed_choice": "C",
+        "expected": "A",
+        "correct": false,
+        "protocol_failure": false,
+        "annotation_status": "assistant_screened",
+        "core_revision_eligible": false
+      }
+    },
+    {
+      "case_id": "camera_history_early",
+      "condition": "uniform_8",
+      "checkpoint": 20,
+      "frames": [
+        {
+          "time": 0.0,
+          "sha256": "1440440e0d435522c5e785242dd581508ff15b4d4a384ec65addcf1a49116fe9"
+        },
+        {
+          "time": 3.00425,
+          "sha256": "25f8587bfcc6555ff8bb437df0752c1c687e00829c6839a8313681ad0d1b1878"
+        },
+        {
+          "time": 5.00708,
+          "sha256": "b7fdaf4030c0454e5a2aa12ba6bb354dee76f93c915fd9724d2591ab05312d28"
+        },
+        {
+          "time": 8.01132,
+          "sha256": "3f71322141aa8863003b368193d3439df1c2469868acb450776a4b6b95e841df"
+        },
+        {
+          "time": 11.0156,
+          "sha256": "78ef0834f58061ff85580082a65ac85fa61f41fac2c6ac46bccf30dfcde787f6"
+        },
+        {
+          "time": 14.0198,
+          "sha256": "c0462e67ae2627f244da002eb6567df52d7831f8a4e68bf08ca5502e51e34ba4"
+        },
+        {
+          "time": 16.0226,
+          "sha256": "366b28bcbfbad4b11b3160994a094894e3b8b819828ae52f6b14d762d6700216"
+        },
+        {
+          "time": 19.0269,
+          "sha256": "d5e3eb360f4cefe1cea9019892afadf9f0f95c2fcf7fae5674c45bde0ccc0df8"
+        }
+      ],
+      "prompt": "The images are chronological observations from one continuous video. Use only the shown evidence.\nIn the first detachment from the camera, around 8-10 seconds, which part was removed: the cylindrical lens assembly or just its flat front cap?\nA: Only the flat front lens cap\nB: The cylindrical lens assembly\nC: The battery\nU: Insufficient visual evidence\nReturn only the letter of the best answer. Choose the insufficient-evidence option when the shown frames do not establish the answer.",
+      "request_sha256": "06643f290d6725172666ffef843a7b3aa9986ad9fe8348c7fc0f809d942a9edf",
+      "response": " C.",
+      "latency_seconds": 11.190148857999986,
+      "status": "model_returned",
+      "score": {
+        "parsed_choice": "C",
+        "expected": "B",
+        "correct": false,
+        "protocol_failure": false,
+        "annotation_status": "assistant_screened",
+        "core_revision_eligible": false
+      }
+    },
+    {
+      "case_id": "camera_history_late",
+      "condition": "uniform_8",
+      "checkpoint": 60,
+      "frames": [
+        {
+          "time": 0.0,
+          "sha256": "1440440e0d435522c5e785242dd581508ff15b4d4a384ec65addcf1a49116fe9"
+        },
+        {
+          "time": 8.01132,
+          "sha256": "3f71322141aa8863003b368193d3439df1c2469868acb450776a4b6b95e841df"
+        },
+        {
+          "time": 17.0241,
+          "sha256": "1c083d02bbd1972577be92bf952386cac258d815feea713b72d82284a8fcbec0"
+        },
+        {
+          "time": 25.0354,
+          "sha256": "72df3f19169b1bc981a2ff4a9d88e7a7cef14f195cb47bd1d695b2b7791b7551"
+        },
+        {
+          "time": 34.0481,
+          "sha256": "eeb27b39dc89e7bec0d89add269ffa79a81090202c55115e94bb3467c43ff32e"
+        },
+        {
+          "time": 42.0595,
+          "sha256": "05abf6450b717a23ffa3a1e75e65f048cadd0814b1548e661cdd10681219122c"
+        },
+        {
+          "time": 51.0722,
+          "sha256": "d187fe20613d2bfabe4c9e92020d3720eb8ce5ab8f3df9e05a7862ccfb8605ea"
+        },
+        {
+          "time": 59.0835,
+          "sha256": "1bacd36f809312836c4276709bcd6a01d702164cf323b667eb9db592fcfca462"
+        }
+      ],
+      "prompt": "The images are chronological observations from one continuous video. Use only the shown evidence.\nIn the first detachment from the camera, around 8-10 seconds, which part was removed: the cylindrical lens assembly or just its flat front cap?\nA: Only the flat front lens cap\nB: The cylindrical lens assembly\nC: The battery\nU: Insufficient visual evidence\nReturn only the letter of the best answer. Choose the insufficient-evidence option when the shown frames do not establish the answer.",
+      "request_sha256": "0bf17b9b93a7155d63c0e8980e9efdecb978dc33bed313c236f652e7c30bf988",
+      "response": " C.",
+      "latency_seconds": 11.980805474000022,
+      "status": "model_returned",
+      "score": {
+        "parsed_choice": "C",
+        "expected": "B",
+        "correct": false,
+        "protocol_failure": false,
+        "annotation_status": "assistant_screened",
+        "core_revision_eligible": false
+      }
+    },
+    {
+      "case_id": "printer_screen_early",
+      "condition": "uniform_8",
+      "checkpoint": 22,
+      "frames": [
+        {
+          "time": 0.0,
+          "sha256": "a05d80d8dc146bb56daff7329a52e0c7b035eba709df64889847fb6a267a2dd3"
+        },
+        {
+          "time": 3.04522,
+          "sha256": "a9834345187b19a6bc327ea56b853e5e3c0c7d74f79a3825a580d0ba531c01eb"
+        },
+        {
+          "time": 6.09044,
+          "sha256": "4fe3973668403040aef16423c477da1ca9709b64f9c357cbebe84578cc765146"
+        },
+        {
+          "time": 9.13566,
+          "sha256": "9209029092b9278a81087af20ddce17b7e83bfabade278d883839bafa0b7d825"
+        },
+        {
+          "time": 12.1809,
+          "sha256": "2da5052749e16d8f85297635147d89255cc6df274c562153bc9aa8fe8353a94b"
+        },
+        {
+          "time": 15.2261,
+          "sha256": "6107e9b5440b925ebefefb90eeb38f6dc282cc569095b679a660d40fe24559d5"
+        },
+        {
+          "time": 18.2713,
+          "sha256": "35ff6babed9b18dd26b95262a22031bc80517b8283230baec8a06605666ad6c1"
+        },
+        {
+          "time": 21.3165,
+          "sha256": "e6d9ff7d793bbe538a89b6492f3ca336925a03a6cb76abd65b4703d906c28c95"
+        }
+      ],
+      "prompt": "The images are chronological observations from one continuous video. Use only the shown evidence.\nIn the most recent visible view, is the printer's central rectangular display illuminated?\nA: Yes, it is illuminated\nB: No, it appears dark\nU: Insufficient visual evidence\nReturn only the letter of the best answer. Choose the insufficient-evidence option when the shown frames do not establish the answer.",
+      "request_sha256": "62555f9e292cb919537650d95f1979054d1ce84446356be14ae31de395f02d4e",
+      "response": " B.",
+      "latency_seconds": 12.887869458000011,
+      "status": "model_returned",
+      "score": {
+        "parsed_choice": "B",
+        "expected": "A",
+        "correct": false,
+        "protocol_failure": false,
+        "annotation_status": "assistant_screened",
+        "core_revision_eligible": false
+      }
+    },
+    {
+      "case_id": "printer_screen_late",
+      "condition": "uniform_8",
+      "checkpoint": 43,
+      "frames": [
+        {
+          "time": 0.0,
+          "sha256": "a05d80d8dc146bb56daff7329a52e0c7b035eba709df64889847fb6a267a2dd3"
+        },
+        {
+          "time": 6.09044,
+          "sha256": "4fe3973668403040aef16423c477da1ca9709b64f9c357cbebe84578cc765146"
+        },
+        {
+          "time": 12.1809,
+          "sha256": "2da5052749e16d8f85297635147d89255cc6df274c562153bc9aa8fe8353a94b"
+        },
+        {
+          "time": 18.2713,
+          "sha256": "35ff6babed9b18dd26b95262a22031bc80517b8283230baec8a06605666ad6c1"
+        },
+        {
+          "time": 24.3618,
+          "sha256": "36f35654c782430a335e827bf9791daf98b00ad6defd27c46a84a3958586b089"
+        },
+        {
+          "time": 30.4522,
+          "sha256": "3e5e10e9c9144b8ef3e3dfabc2b8ba604a59a9bb0bb9821706a55e86ed05ed3b"
+        },
+        {
+          "time": 36.5427,
+          "sha256": "c37e9378712e3a6922f6703d42e7324b56f7e9580de38b6d278494c843e6bcd5"
+        },
+        {
+          "time": 42.6331,
+          "sha256": "72ac1689baed5e41c1181e60d9e854c354287b6f988a8e22e69cd5367be2987d"
+        }
+      ],
+      "prompt": "The images are chronological observations from one continuous video. Use only the shown evidence.\nIn the most recent visible view, is the printer's central rectangular display illuminated?\nA: Yes, it is illuminated\nB: No, it appears dark\nU: Insufficient visual evidence\nReturn only the letter of the best answer. Choose the insufficient-evidence option when the shown frames do not establish the answer.",
+      "request_sha256": "5b8e8f3d8781f6b5ad71117a3d92a0f7922dd1787c64434bbcab110ed61f0865",
+      "response": " B.",
+      "latency_seconds": 11.92029387399998,
+      "status": "model_returned",
+      "score": {
+        "parsed_choice": "B",
+        "expected": "B",
+        "correct": true,
+        "protocol_failure": false,
+        "annotation_status": "assistant_screened",
+        "core_revision_eligible": false
+      }
+    },
+    {
+      "case_id": "printer_history",
+      "condition": "uniform_8",
+      "checkpoint": 73,
+      "frames": [
+        {
+          "time": 0.0,
+          "sha256": "a05d80d8dc146bb56daff7329a52e0c7b035eba709df64889847fb6a267a2dd3"
+        },
+        {
+          "time": 10.1507,
+          "sha256": "80a604ea962b7c54f8f5eb53100935611d3895582a94037aa89d7f0a32d99531"
+        },
+        {
+          "time": 20.3015,
+          "sha256": "c0de994a506980bd24469fe89721b59870376fdb901211d34d7b79c11c360cf7"
+        },
+        {
+          "time": 30.4522,
+          "sha256": "3e5e10e9c9144b8ef3e3dfabc2b8ba604a59a9bb0bb9821706a55e86ed05ed3b"
+        },
+        {
+          "time": 41.618,
+          "sha256": "38a3e244f73d117ca6765215cd94eeb6a0f648ed3177a7bc28498d5527cfa10b"
+        },
+        {
+          "time": 51.7688,
+          "sha256": "a9bcf50fe4b5100b464e93a102b5c56dbb168fe9766c46c3cb5b4e72a43eec47"
+        },
+        {
+          "time": 61.9195,
+          "sha256": "edb0f2405976bf2fd4a88bdc9736890d270e0e334d7404b2477326b9a105afa8"
+        },
+        {
+          "time": 72.0702,
+          "sha256": "941dbf15aa53b08046e45ca750f05c4e9fd08eec5c5f9e7bef3f04cdc5f5d127"
+        }
+      ],
+      "prompt": "The images are chronological observations from one continuous video. Use only the shown evidence.\nLooking back at approximately 17-21 seconds, was the printer's central display illuminated at that earlier time?\nA: Yes, it was illuminated then\nB: No, it was dark then\nU: Insufficient visual evidence\nReturn only the letter of the best answer. Choose the insufficient-evidence option when the shown frames do not establish the answer.",
+      "request_sha256": "1c6ae7b71525eb1658013cbcc1297a5b6b180416fc0c8638743dbc1c49f81843",
+      "response": " B.",
+      "latency_seconds": 11.582458492,
+      "status": "model_returned",
+      "score": {
+        "parsed_choice": "B",
+        "expected": "A",
+        "correct": false,
+        "protocol_failure": false,
+        "annotation_status": "assistant_screened",
+        "core_revision_eligible": false
+      }
+    },
+    {
+      "case_id": "table_before_tray",
+      "condition": "uniform_8",
+      "checkpoint": 74,
+      "frames": [
+        {
+          "time": 0.0,
+          "sha256": "123f67b6ca23df6967787cee5da11942bb1b7df02224607cb2c4c33c50781921"
+        },
+        {
+          "time": 10.0187,
+          "sha256": "555a3831542a6876d7666976b1ab10dd31a0292568733fa412bd303ac2f5f465"
+        },
+        {
+          "time": 21.0392,
+          "sha256": "2beab56cc5d473f91e09b7db3e3d46c4bb457380589cee93d46f0961be5334aa"
+        },
+        {
+          "time": 31.0579,
+          "sha256": "89cf6f59a499ca55cc162ad26365925e238c530dcac771ead7432d72f4c80723"
+        },
+        {
+          "time": 42.0784,
+          "sha256": "1daaaafdc8731e7cc77df31aba8968748a081a1422aa62346c28d5d89ef6390f"
+        },
+        {
+          "time": 52.0971,
+          "sha256": "006311e1c3051a144615eae5b74b4d465d1d01abca6cc462f9bb4291b0745cd8"
+        },
+        {
+          "time": 63.1177,
+          "sha256": "de0e4a8e99499d3df89b361a1cf90b862d91784bef3df060eb2c1c68ecb3e16a"
+        },
+        {
+          "time": 73.1363,
+          "sha256": "10405e416005ac05bd6f49b9b4c785217496d4e0d885b38e353556430e9f8b63"
+        }
+      ],
+      "prompt": "The images are chronological observations from one continuous video. Use only the shown evidence.\nIn the most recent visible view, is the large round tray already resting on top of the assembled table frame?\nA: Yes, the tray rests on the frame\nB: No, the tray is still separate\nU: Insufficient visual evidence\nReturn only the letter of the best answer. Choose the insufficient-evidence option when the shown frames do not establish the answer.",
+      "request_sha256": "8e6adadc22987ff793708118b7b804705a76db31291b8e1275e9d21824b24e23",
+      "response": " B.",
+      "latency_seconds": 13.279238941000017,
+      "status": "model_returned",
+      "score": {
+        "parsed_choice": "B",
+        "expected": "B",
+        "correct": true,
+        "protocol_failure": false,
+        "annotation_status": "assistant_screened",
+        "core_revision_eligible": false
+      }
+    },
+    {
+      "case_id": "table_after_tray",
+      "condition": "uniform_8",
+      "checkpoint": 119,
+      "frames": [
+        {
+          "time": 0.0,
+          "sha256": "123f67b6ca23df6967787cee5da11942bb1b7df02224607cb2c4c33c50781921"
+        },
+        {
+          "time": 17.0317,
+          "sha256": "3810ee53e86f8313853b6d41b485a4bce2ca0718d9360ccaf1cae64415bcc5ba"
+        },
+        {
+          "time": 34.0635,
+          "sha256": "0a17fb3fd175d524937b75ad5b50e36d54d50cc9f332adcf4fc5b83738c6d383"
+        },
+        {
+          "time": 51.0952,
+          "sha256": "e7a307f7679d3411cbdf8f3dad5c54130fa4874c3335a24f0b18f9850f2ed7fa"
+        },
+        {
+          "time": 67.1251,
+          "sha256": "b1b859bbcc5c9d2d5b8456218d84baa26ad22005781068381c55107a9c02892c"
+        },
+        {
+          "time": 84.1569,
+          "sha256": "12ced225421a2e470c076570efd1b3d5c1e33cf420f9e76e93a33c1e73c0e33b"
+        },
+        {
+          "time": 101.189,
+          "sha256": "252a1a9e9d91a198a48838071ddef33cb43f17e988c55f1fa95693b64a38f3a7"
+        },
+        {
+          "time": 118.22,
+          "sha256": "4934db6d24fe89362351c5a13da5823eac10204a47206a481d36c4d2a66b92f9"
+        }
+      ],
+      "prompt": "The images are chronological observations from one continuous video. Use only the shown evidence.\nIn the most recent visible view, is the large round tray already resting on top of the assembled table frame?\nA: Yes, the tray rests on the frame\nB: No, the tray is still separate\nU: Insufficient visual evidence\nReturn only the letter of the best answer. Choose the insufficient-evidence option when the shown frames do not establish the answer.",
+      "request_sha256": "28f6f36085705477b15581fcb2d9444db4ce885b8387f24e66fe8d0c21b49ca6",
+      "response": " B.",
+      "latency_seconds": 11.04018057099995,
+      "status": "model_returned",
+      "score": {
+        "parsed_choice": "B",
+        "expected": "A",
+        "correct": false,
+        "protocol_failure": false,
+        "annotation_status": "assistant_screened",
+        "core_revision_eligible": false
+      }
+    },
+    {
+      "case_id": "table_screw_exploratory",
+      "condition": "uniform_8",
+      "checkpoint": 53,
+      "frames": [
+        {
+          "time": 0.0,
+          "sha256": "123f67b6ca23df6967787cee5da11942bb1b7df02224607cb2c4c33c50781921"
+        },
+        {
+          "time": 7.01307,
+          "sha256": "7fd5a2e761a5cea14c2d0372487c63c730a31072e20bc3289b332b41cf4898f1"
+        },
+        {
+          "time": 15.028,
+          "sha256": "411066f279c4b47df7c8d97885996998497322a6e2f744d3b4d4c23b40657b35"
+        },
+        {
+          "time": 22.0411,
+          "sha256": "9ab41bfd17b7bf6c2b384ab077d33a56df3684f557b8ced02c0ac1752564fe22"
+        },
+        {
+          "time": 30.056,
+          "sha256": "e9c0dfb37c5a017b294ba0a51d514bdb92737eb96a52e609c21f1eb33974ebe8"
+        },
+        {
+          "time": 37.0691,
+          "sha256": "c691588d550e16d14e0c1999c978c756adbe1e74a14ef99ba24cc12fe93d5c80"
+        },
+        {
+          "time": 45.084,
+          "sha256": "494bc24635266b41bd82bd86c81829defeeded2b86c34d476cfe2d681bb5c4b0"
+        },
+        {
+          "time": 52.0971,
+          "sha256": "006311e1c3051a144615eae5b74b4d465d1d01abca6cc462f9bb4291b0745cd8"
+        }
+      ],
+      "prompt": "The images are chronological observations from one continuous video. Use only the shown evidence.\nConsidering only visual evidence, did the screw attempted around 37-39 seconds have the required length for that joint?\nA: Yes, the correct length is established visually\nB: No, the incorrect length is established visually\nU: The shown visual evidence does not establish the required length\nReturn only the letter of the best answer. Choose the insufficient-evidence option when the shown frames do not establish the answer.",
+      "request_sha256": "92e9351eda977aa8c5f553aaa687a292d1fde0614fea58b35fe5e3e189bdf3f0",
+      "response": " B",
+      "latency_seconds": 11.751480275999995,
+      "status": "model_returned",
+      "score": {
+        "parsed_choice": "B",
+        "expected": null,
+        "correct": null,
+        "protocol_failure": false,
+        "annotation_status": "unresolved_requires_independent_review",
+        "core_revision_eligible": false
+      }
+    },
+    {
+      "case_id": "camera_perception",
+      "condition": "recent_8",
+      "checkpoint": 12,
+      "frames": [
+        {
+          "time": 4.00566,
+          "sha256": "128f1ae77ac8d2cbdc232ce035f58862b4fabbedb884c3b790f3a3379dcf3faf"
+        },
+        {
+          "time": 5.00708,
+          "sha256": "b7fdaf4030c0454e5a2aa12ba6bb354dee76f93c915fd9724d2591ab05312d28"
+        },
+        {
+          "time": 6.00849,
+          "sha256": "56eb43853eaa3312ea6a1233ec6c11f014e91a54acbc5aab1972955a87865ad5"
+        },
+        {
+          "time": 7.00991,
+          "sha256": "d9f699ff44e3b1c86914f3dea53a46baee7c97d47314115430fe25906e04b77a"
+        },
+        {
+          "time": 8.01132,
+          "sha256": "3f71322141aa8863003b368193d3439df1c2469868acb450776a4b6b95e841df"
+        },
+        {
+          "time": 9.01274,
+          "sha256": "95e898da8d91e2228fb9313f10eef318f9b98ad9138bc68e5cc700bdbdb34e2e"
+        },
+        {
+          "time": 10.0142,
+          "sha256": "102cac74f630c3b486220679f5a6b8fc15fde1e41926533b82bfef5270e29882"
+        },
+        {
+          "time": 11.0156,
+          "sha256": "78ef0834f58061ff85580082a65ac85fa61f41fac2c6ac46bccf30dfcde787f6"
+        }
+      ],
+      "prompt": "The images are chronological observations from one continuous video. Use only the shown evidence.\nWhat main object is the person handling?\nA: A DSLR camera\nB: A printer\nC: A cooking pot\nU: Insufficient visual evidence\nReturn only the letter of the best answer. Choose the insufficient-evidence option when the shown frames do not establish the answer.",
+      "request_sha256": "86f5feb97a39f8191a3d8eb83243eae714dcc2fafbd04d7d447cd25e5ae95ccf",
+      "response": " C",
+      "latency_seconds": 10.811166422999975,
+      "status": "model_returned",
+      "score": {
+        "parsed_choice": "C",
+        "expected": "A",
+        "correct": false,
+        "protocol_failure": false,
+        "annotation_status": "assistant_screened",
+        "core_revision_eligible": false
+      }
+    },
+    {
+      "case_id": "camera_history_early",
+      "condition": "recent_8",
+      "checkpoint": 20,
+      "frames": [
+        {
+          "time": 12.017,
+          "sha256": "9766eb91c9bf2db3fc04f26aafaaaa0dfa0115684e919bb1fe0a1b99c8082c99"
+        },
+        {
+          "time": 13.0184,
+          "sha256": "8fe7d764721de8d211a97fa9c118c1d9d7884cb74dcc6531f2d585df0399ff3a"
+        },
+        {
+          "time": 14.0198,
+          "sha256": "c0462e67ae2627f244da002eb6567df52d7831f8a4e68bf08ca5502e51e34ba4"
+        },
+        {
+          "time": 15.0212,
+          "sha256": "f5dc0e5d78016bd62edbb5e95a3dbae91a03091d8ec602dea79ca3be23d3a5b9"
+        },
+        {
+          "time": 16.0226,
+          "sha256": "366b28bcbfbad4b11b3160994a094894e3b8b819828ae52f6b14d762d6700216"
+        },
+        {
+          "time": 17.0241,
+          "sha256": "1c083d02bbd1972577be92bf952386cac258d815feea713b72d82284a8fcbec0"
+        },
+        {
+          "time": 18.0255,
+          "sha256": "33d16c8b3bd17aa4a6001d534287e98048d3ca14378c2ad0da05163d81e9ecc3"
+        },
+        {
+          "time": 19.0269,
+          "sha256": "d5e3eb360f4cefe1cea9019892afadf9f0f95c2fcf7fae5674c45bde0ccc0df8"
+        }
+      ],
+      "prompt": "The images are chronological observations from one continuous video. Use only the shown evidence.\nIn the first detachment from the camera, around 8-10 seconds, which part was removed: the cylindrical lens assembly or just its flat front cap?\nA: Only the flat front lens cap\nB: The cylindrical lens assembly\nC: The battery\nU: Insufficient visual evidence\nReturn only the letter of the best answer. Choose the insufficient-evidence option when the shown frames do not establish the answer.",
+      "request_sha256": "f06c29b92235da58b21ddf13fe030aa70d54e0720a3c87d754b3f65ade1f4a07",
+      "response": " C.",
+      "latency_seconds": 11.035001529999988,
+      "status": "model_returned",
+      "score": {
+        "parsed_choice": "C",
+        "expected": "B",
+        "correct": false,
+        "protocol_failure": false,
+        "annotation_status": "assistant_screened",
+        "core_revision_eligible": false
+      }
+    },
+    {
+      "case_id": "camera_history_late",
+      "condition": "recent_8",
+      "checkpoint": 60,
+      "frames": [
+        {
+          "time": 52.0736,
+          "sha256": "c3c7ebb6faa9a99fd3977f6d8e5f191168a32358d1a1b47aebb65476b2a8bc6c"
+        },
+        {
+          "time": 53.075,
+          "sha256": "2b50cfc7f42df52c0201ef25051ce150392b8a80639d23b892d7c270a3b995d8"
+        },
+        {
+          "time": 54.0764,
+          "sha256": "4860b36e445606f8d42cfcd9c395bd620b7a0bf038b2bdd152d308a7a5f3168c"
+        },
+        {
+          "time": 55.0779,
+          "sha256": "575d2d25fe467c2f7c4b3d5a55a2ff76251821b04e15475c1704be0c472d2ed0"
+        },
+        {
+          "time": 56.0793,
+          "sha256": "27043727448ecb0028cadd41a1db8cb49f1e62cf9efe6f602c2a3e8872fbc034"
+        },
+        {
+          "time": 57.0807,
+          "sha256": "5f116731673130998df89b2e302763693d437f2c9e67fd04bac8b37023e22122"
+        },
+        {
+          "time": 58.0821,
+          "sha256": "5c2de61b1bde9298fa2909aadd066dfcdaf009c42f9009043af4dfeaeb75044b"
+        },
+        {
+          "time": 59.0835,
+          "sha256": "1bacd36f809312836c4276709bcd6a01d702164cf323b667eb9db592fcfca462"
+        }
+      ],
+      "prompt": "The images are chronological observations from one continuous video. Use only the shown evidence.\nIn the first detachment from the camera, around 8-10 seconds, which part was removed: the cylindrical lens assembly or just its flat front cap?\nA: Only the flat front lens cap\nB: The cylindrical lens assembly\nC: The battery\nU: Insufficient visual evidence\nReturn only the letter of the best answer. Choose the insufficient-evidence option when the shown frames do not establish the answer.",
+      "request_sha256": "70d988ba07d4bf525e1a53c95a02784f7b153064755d49e722033670c4dd660c",
+      "response": " C.",
+      "latency_seconds": 11.203708619999986,
+      "status": "model_returned",
+      "score": {
+        "parsed_choice": "C",
+        "expected": "B",
+        "correct": false,
+        "protocol_failure": false,
+        "annotation_status": "assistant_screened",
+        "core_revision_eligible": false
+      }
+    },
+    {
+      "case_id": "printer_screen_early",
+      "condition": "recent_8",
+      "checkpoint": 22,
+      "frames": [
+        {
+          "time": 14.211,
+          "sha256": "e1767ceeb6311c20e039d49f601686c8e6eee05670bdd3b89dfdba92480f58d7"
+        },
+        {
+          "time": 15.2261,
+          "sha256": "6107e9b5440b925ebefefb90eeb38f6dc282cc569095b679a660d40fe24559d5"
+        },
+        {
+          "time": 16.2412,
+          "sha256": "9ab366be6689fa5c1fc5607474763f399f14dc9c8b775197e1b31261e7bb893c"
+        },
+        {
+          "time": 17.2563,
+          "sha256": "5db787bfd3e8fd6082f19fd1a411e0190887ee9db94b1848f6388b6e9d493f24"
+        },
+        {
+          "time": 18.2713,
+          "sha256": "35ff6babed9b18dd26b95262a22031bc80517b8283230baec8a06605666ad6c1"
+        },
+        {
+          "time": 19.2864,
+          "sha256": "949d51366e03071df3ebcc8e96e48193ecd70dfbe82ac0e6c8bab3fe0ca3d9aa"
+        },
+        {
+          "time": 20.3015,
+          "sha256": "c0de994a506980bd24469fe89721b59870376fdb901211d34d7b79c11c360cf7"
+        },
+        {
+          "time": 21.3165,
+          "sha256": "e6d9ff7d793bbe538a89b6492f3ca336925a03a6cb76abd65b4703d906c28c95"
+        }
+      ],
+      "prompt": "The images are chronological observations from one continuous video. Use only the shown evidence.\nIn the most recent visible view, is the printer's central rectangular display illuminated?\nA: Yes, it is illuminated\nB: No, it appears dark\nU: Insufficient visual evidence\nReturn only the letter of the best answer. Choose the insufficient-evidence option when the shown frames do not establish the answer.",
+      "request_sha256": "a8ced009928ee00d3f7d351a0f5e6b92bc058877cfe994323623e9ca09a96a86",
+      "response": " B.",
+      "latency_seconds": 11.185341903999984,
+      "status": "model_returned",
+      "score": {
+        "parsed_choice": "B",
+        "expected": "A",
+        "correct": false,
+        "protocol_failure": false,
+        "annotation_status": "assistant_screened",
+        "core_revision_eligible": false
+      }
+    },
+    {
+      "case_id": "printer_screen_late",
+      "condition": "recent_8",
+      "checkpoint": 43,
+      "frames": [
+        {
+          "time": 35.5276,
+          "sha256": "c97ea53fabab9fc74282389bff6c5b9d2abac0e75c96ebbddeb206c1a4176c10"
+        },
+        {
+          "time": 36.5427,
+          "sha256": "c37e9378712e3a6922f6703d42e7324b56f7e9580de38b6d278494c843e6bcd5"
+        },
+        {
+          "time": 37.5577,
+          "sha256": "d233f521b105a4588265263e2f804510ec92e1cbb37a44d8b0fcfb41f51ef679"
+        },
+        {
+          "time": 38.5728,
+          "sha256": "72247188b6a46be7728685f81c604e6ac21109c13f67ad2d6f8c4f50b4ca9fde"
+        },
+        {
+          "time": 39.5879,
+          "sha256": "d8903c2f844bb58f2f82adf699b6fab2a0275462ef6708286b858dd2902bcf37"
+        },
+        {
+          "time": 40.603,
+          "sha256": "1c4f0edd2b01fdc1f30ef39d5cdad6d25c8af80fc1a337f9f708d355368755f0"
+        },
+        {
+          "time": 41.618,
+          "sha256": "38a3e244f73d117ca6765215cd94eeb6a0f648ed3177a7bc28498d5527cfa10b"
+        },
+        {
+          "time": 42.6331,
+          "sha256": "72ac1689baed5e41c1181e60d9e854c354287b6f988a8e22e69cd5367be2987d"
+        }
+      ],
+      "prompt": "The images are chronological observations from one continuous video. Use only the shown evidence.\nIn the most recent visible view, is the printer's central rectangular display illuminated?\nA: Yes, it is illuminated\nB: No, it appears dark\nU: Insufficient visual evidence\nReturn only the letter of the best answer. Choose the insufficient-evidence option when the shown frames do not establish the answer.",
+      "request_sha256": "1bd56a698ffba3460e6a4be8f35b2582934628e8d07eccf1451654a7a3f6a634",
+      "response": " B.",
+      "latency_seconds": 10.594883713000002,
+      "status": "model_returned",
+      "score": {
+        "parsed_choice": "B",
+        "expected": "B",
+        "correct": true,
+        "protocol_failure": false,
+        "annotation_status": "assistant_screened",
+        "core_revision_eligible": false
+      }
+    },
+    {
+      "case_id": "printer_history",
+      "condition": "recent_8",
+      "checkpoint": 73,
+      "frames": [
+        {
+          "time": 64.9647,
+          "sha256": "761905f949d61e4b18c64beb93783f3a4089dffc8b89e6d47f283b0828dd6bc6"
+        },
+        {
+          "time": 65.9798,
+          "sha256": "3f3341dc268f12548c901a12abccf33dedd638228993163d863470713cbf8150"
+        },
+        {
+          "time": 66.9949,
+          "sha256": "8192ec3b5e2a9197cbb6d0422db7867a7e73a4f6f49d6edc6262f939da74b343"
+        },
+        {
+          "time": 68.0099,
+          "sha256": "6070c74fdc598045c070005ddf895fa3bcf1d89d82b7791474a78cb89f4dc1de"
+        },
+        {
+          "time": 69.025,
+          "sha256": "54e7261f1128c2e3b339ef2b47628f08c23aebf980a607833a8be6ed860a851e"
+        },
+        {
+          "time": 70.0401,
+          "sha256": "e29c90c25c1a1070ecc6b95065207503ba7f709ff9ea6533ee3639482733cf13"
+        },
+        {
+          "time": 71.0552,
+          "sha256": "9b6e769085d1487b2510277329610edb6225d70f77d1dc04a50423496cf690fa"
+        },
+        {
+          "time": 72.0702,
+          "sha256": "941dbf15aa53b08046e45ca750f05c4e9fd08eec5c5f9e7bef3f04cdc5f5d127"
+        }
+      ],
+      "prompt": "The images are chronological observations from one continuous video. Use only the shown evidence.\nLooking back at approximately 17-21 seconds, was the printer's central display illuminated at that earlier time?\nA: Yes, it was illuminated then\nB: No, it was dark then\nU: Insufficient visual evidence\nReturn only the letter of the best answer. Choose the insufficient-evidence option when the shown frames do not establish the answer.",
+      "request_sha256": "0e6ce0ceb2db274b2ca387b8bed5a8b43f058abe5797913bbed821d90650ba71",
+      "response": " B.",
+      "latency_seconds": 11.808337068000014,
+      "status": "model_returned",
+      "score": {
+        "parsed_choice": "B",
+        "expected": "A",
+        "correct": false,
+        "protocol_failure": false,
+        "annotation_status": "assistant_screened",
+        "core_revision_eligible": false
+      }
+    },
+    {
+      "case_id": "table_before_tray",
+      "condition": "recent_8",
+      "checkpoint": 74,
+      "frames": [
+        {
+          "time": 66.1233,
+          "sha256": "2c3a6e0cccc6fdb60cac51bab74b082a6257a42128e6bd551708d7150bc4f510"
+        },
+        {
+          "time": 67.1251,
+          "sha256": "b1b859bbcc5c9d2d5b8456218d84baa26ad22005781068381c55107a9c02892c"
+        },
+        {
+          "time": 68.127,
+          "sha256": "56991ff363b23b1ff22c0c1005b7da61198c29a990d8793ce583c5911bae39d9"
+        },
+        {
+          "time": 69.1289,
+          "sha256": "24e22c97811236f3e9a60cee0a3c6ce966cf216a59f7c2107c21ed8b61f38fdf"
+        },
+        {
+          "time": 70.1307,
+          "sha256": "a13ba795a41ee01768f755ee7535bf56758e279e634f9ee9d7f288f78f24cc34"
+        },
+        {
+          "time": 71.1326,
+          "sha256": "cdb7aef08750763f8281bf35d48ff26d509bbae7777b481bf8ed937b17de1790"
+        },
+        {
+          "time": 72.1345,
+          "sha256": "251783a0af9073522a558e8814906370325a021b3056bfd679f553625cee2a76"
+        },
+        {
+          "time": 73.1363,
+          "sha256": "10405e416005ac05bd6f49b9b4c785217496d4e0d885b38e353556430e9f8b63"
+        }
+      ],
+      "prompt": "The images are chronological observations from one continuous video. Use only the shown evidence.\nIn the most recent visible view, is the large round tray already resting on top of the assembled table frame?\nA: Yes, the tray rests on the frame\nB: No, the tray is still separate\nU: Insufficient visual evidence\nReturn only the letter of the best answer. Choose the insufficient-evidence option when the shown frames do not establish the answer.",
+      "request_sha256": "ad4e9f88f7661fc40642a5980b53fcdf78ce422e41733ed0bae49a03e4ca6437",
+      "response": " B.",
+      "latency_seconds": 11.53144251099991,
+      "status": "model_returned",
+      "score": {
+        "parsed_choice": "B",
+        "expected": "B",
+        "correct": true,
+        "protocol_failure": false,
+        "annotation_status": "assistant_screened",
+        "core_revision_eligible": false
+      }
+    },
+    {
+      "case_id": "table_after_tray",
+      "condition": "recent_8",
+      "checkpoint": 119,
+      "frames": [
+        {
+          "time": 111.207,
+          "sha256": "2c8804eb9821cb3647036d13dfa900ab78ba4d5eb39c768b66833706e035e685"
+        },
+        {
+          "time": 112.209,
+          "sha256": "6b8be87801f6f06c7e678a99f977adc2247c75ec3b4fc779dc252bd6468c06df"
+        },
+        {
+          "time": 113.211,
+          "sha256": "3467c17f3848012ee36ee89bf0983d75cf6d179cc6785fa3f995f39d2d66d5fd"
+        },
+        {
+          "time": 114.213,
+          "sha256": "8118b958d1b03ccaebe785d9fb35d5bc12419643eca2ed4b3d475f8ace43c0ff"
+        },
+        {
+          "time": 115.215,
+          "sha256": "06784d875d4ef01f001bd3ee91888f972572aba656582178cf2ce05455e0a13b"
+        },
+        {
+          "time": 116.217,
+          "sha256": "221c3d20d94fdf5f7b26f1dba6defe08d0bf1ca4213a3cf8a28e93426cf36219"
+        },
+        {
+          "time": 117.219,
+          "sha256": "fda09b6cb2fe7ef0a53a9b2b58c7331395d353a19f3a7abf97f93eede96b2aff"
+        },
+        {
+          "time": 118.22,
+          "sha256": "4934db6d24fe89362351c5a13da5823eac10204a47206a481d36c4d2a66b92f9"
+        }
+      ],
+      "prompt": "The images are chronological observations from one continuous video. Use only the shown evidence.\nIn the most recent visible view, is the large round tray already resting on top of the assembled table frame?\nA: Yes, the tray rests on the frame\nB: No, the tray is still separate\nU: Insufficient visual evidence\nReturn only the letter of the best answer. Choose the insufficient-evidence option when the shown frames do not establish the answer.",
+      "request_sha256": "d978c91c5aa52a577b77c85fb0b4cb824380ba9d0ac54cf810dbf317504a1da2",
+      "response": " B.",
+      "latency_seconds": 12.270609300000046,
+      "status": "model_returned",
+      "score": {
+        "parsed_choice": "B",
+        "expected": "A",
+        "correct": false,
+        "protocol_failure": false,
+        "annotation_status": "assistant_screened",
+        "core_revision_eligible": false
+      }
+    },
+    {
+      "case_id": "table_screw_exploratory",
+      "condition": "recent_8",
+      "checkpoint": 53,
+      "frames": [
+        {
+          "time": 45.084,
+          "sha256": "494bc24635266b41bd82bd86c81829defeeded2b86c34d476cfe2d681bb5c4b0"
+        },
+        {
+          "time": 46.0859,
+          "sha256": "200538aea81d7a6a0521063e373eb604ed596307736b0a082e60a4d12e6961c8"
+        },
+        {
+          "time": 47.0878,
+          "sha256": "f036d437edbb924d5f88f2857b2df334dfeca73baef32bffa0706d0e442ef390"
+        },
+        {
+          "time": 48.0896,
+          "sha256": "4ccc2ddf1c831a7542a0dbd6c2ffb1c0e29acad933204f2b07b142ed027e71fe"
+        },
+        {
+          "time": 49.0915,
+          "sha256": "b75b6dcfe30135653108607b6ce15097d69b45232b088b2aaf69673f61b8e5e2"
+        },
+        {
+          "time": 50.0934,
+          "sha256": "c1a75517f180e76b3a749172e24940e31995769431a31f04aeb271252064232c"
+        },
+        {
+          "time": 51.0952,
+          "sha256": "e7a307f7679d3411cbdf8f3dad5c54130fa4874c3335a24f0b18f9850f2ed7fa"
+        },
+        {
+          "time": 52.0971,
+          "sha256": "006311e1c3051a144615eae5b74b4d465d1d01abca6cc462f9bb4291b0745cd8"
+        }
+      ],
+      "prompt": "The images are chronological observations from one continuous video. Use only the shown evidence.\nConsidering only visual evidence, did the screw attempted around 37-39 seconds have the required length for that joint?\nA: Yes, the correct length is established visually\nB: No, the incorrect length is established visually\nU: The shown visual evidence does not establish the required length\nReturn only the letter of the best answer. Choose the insufficient-evidence option when the shown frames do not establish the answer.",
+      "request_sha256": "28ad98b17a35a6aa50bb1f8daada32e0e8ea171877ff625ab3782d3b52e20de7",
+      "response": " B.",
+      "latency_seconds": 14.041692323999996,
+      "status": "model_returned",
+      "score": {
+        "parsed_choice": "B",
+        "expected": null,
+        "correct": null,
+        "protocol_failure": false,
+        "annotation_status": "unresolved_requires_independent_review",
+        "core_revision_eligible": false
+      }
+    },
+    {
+      "case_id": "camera_perception",
+      "condition": "uniform_8_with_answer_history",
+      "checkpoint": 12,
+      "frames": [
+        {
+          "time": 0.0,
+          "sha256": "1440440e0d435522c5e785242dd581508ff15b4d4a384ec65addcf1a49116fe9"
+        },
+        {
+          "time": 2.00283,
+          "sha256": "c9d0820190dc636072c9014294567771e86527de389c10708adfb6a2629d4f4c"
+        },
+        {
+          "time": 3.00425,
+          "sha256": "25f8587bfcc6555ff8bb437df0752c1c687e00829c6839a8313681ad0d1b1878"
+        },
+        {
+          "time": 5.00708,
+          "sha256": "b7fdaf4030c0454e5a2aa12ba6bb354dee76f93c915fd9724d2591ab05312d28"
+        },
+        {
+          "time": 6.00849,
+          "sha256": "56eb43853eaa3312ea6a1233ec6c11f014e91a54acbc5aab1972955a87865ad5"
+        },
+        {
+          "time": 8.01132,
+          "sha256": "3f71322141aa8863003b368193d3439df1c2469868acb450776a4b6b95e841df"
+        },
+        {
+          "time": 9.01274,
+          "sha256": "95e898da8d91e2228fb9313f10eef318f9b98ad9138bc68e5cc700bdbdb34e2e"
+        },
+        {
+          "time": 11.0156,
+          "sha256": "78ef0834f58061ff85580082a65ac85fa61f41fac2c6ac46bccf30dfcde787f6"
+        }
+      ],
+      "prompt": "The images are chronological observations from one continuous video. Use only the shown evidence.\nWhat main object is the person handling?\nA: A DSLR camera\nB: A printer\nC: A cooking pot\nU: Insufficient visual evidence\nReturn only the letter of the best answer. Choose the insufficient-evidence option when the shown frames do not establish the answer.",
+      "request_sha256": "3103d9481a4d4df6eb95c7af832f22eb956cb63b3114225745e7fa4a6978c697",
+      "response": " C",
+      "latency_seconds": 11.574920432999988,
+      "status": "model_returned",
+      "score": {
+        "parsed_choice": "C",
+        "expected": "A",
+        "correct": false,
+        "protocol_failure": false,
+        "annotation_status": "assistant_screened",
+        "core_revision_eligible": false
+      }
+    },
+    {
+      "case_id": "camera_history_early",
+      "condition": "uniform_8_with_answer_history",
+      "checkpoint": 20,
+      "frames": [
+        {
+          "time": 0.0,
+          "sha256": "1440440e0d435522c5e785242dd581508ff15b4d4a384ec65addcf1a49116fe9"
+        },
+        {
+          "time": 3.00425,
+          "sha256": "25f8587bfcc6555ff8bb437df0752c1c687e00829c6839a8313681ad0d1b1878"
+        },
+        {
+          "time": 5.00708,
+          "sha256": "b7fdaf4030c0454e5a2aa12ba6bb354dee76f93c915fd9724d2591ab05312d28"
+        },
+        {
+          "time": 8.01132,
+          "sha256": "3f71322141aa8863003b368193d3439df1c2469868acb450776a4b6b95e841df"
+        },
+        {
+          "time": 11.0156,
+          "sha256": "78ef0834f58061ff85580082a65ac85fa61f41fac2c6ac46bccf30dfcde787f6"
+        },
+        {
+          "time": 14.0198,
+          "sha256": "c0462e67ae2627f244da002eb6567df52d7831f8a4e68bf08ca5502e51e34ba4"
+        },
+        {
+          "time": 16.0226,
+          "sha256": "366b28bcbfbad4b11b3160994a094894e3b8b819828ae52f6b14d762d6700216"
+        },
+        {
+          "time": 19.0269,
+          "sha256": "d5e3eb360f4cefe1cea9019892afadf9f0f95c2fcf7fae5674c45bde0ccc0df8"
+        }
+      ],
+      "prompt": "The images are chronological observations from one continuous video. Use only the shown evidence.\nIn the first detachment from the camera, around 8-10 seconds, which part was removed: the cylindrical lens assembly or just its flat front cap?\nA: Only the flat front lens cap\nB: The cylindrical lens assembly\nC: The battery\nU: Insufficient visual evidence\nReturn only the letter of the best answer. Choose the insufficient-evidence option when the shown frames do not establish the answer.",
+      "request_sha256": "cc7723d7fcb795cea8e6bbcb3f2f593d4fbe615eecc16f75564411863d5fa394",
+      "response": " C.",
+      "latency_seconds": 11.416075796000086,
+      "status": "model_returned",
+      "score": {
+        "parsed_choice": "C",
+        "expected": "B",
+        "correct": false,
+        "protocol_failure": false,
+        "annotation_status": "assistant_screened",
+        "core_revision_eligible": false
+      }
+    },
+    {
+      "case_id": "camera_history_late",
+      "condition": "uniform_8_with_answer_history",
+      "checkpoint": 60,
+      "frames": [
+        {
+          "time": 0.0,
+          "sha256": "1440440e0d435522c5e785242dd581508ff15b4d4a384ec65addcf1a49116fe9"
+        },
+        {
+          "time": 8.01132,
+          "sha256": "3f71322141aa8863003b368193d3439df1c2469868acb450776a4b6b95e841df"
+        },
+        {
+          "time": 17.0241,
+          "sha256": "1c083d02bbd1972577be92bf952386cac258d815feea713b72d82284a8fcbec0"
+        },
+        {
+          "time": 25.0354,
+          "sha256": "72df3f19169b1bc981a2ff4a9d88e7a7cef14f195cb47bd1d695b2b7791b7551"
+        },
+        {
+          "time": 34.0481,
+          "sha256": "eeb27b39dc89e7bec0d89add269ffa79a81090202c55115e94bb3467c43ff32e"
+        },
+        {
+          "time": 42.0595,
+          "sha256": "05abf6450b717a23ffa3a1e75e65f048cadd0814b1548e661cdd10681219122c"
+        },
+        {
+          "time": 51.0722,
+          "sha256": "d187fe20613d2bfabe4c9e92020d3720eb8ce5ab8f3df9e05a7862ccfb8605ea"
+        },
+        {
+          "time": 59.0835,
+          "sha256": "1bacd36f809312836c4276709bcd6a01d702164cf323b667eb9db592fcfca462"
+        }
+      ],
+      "prompt": "The images are chronological observations from one continuous video. Use only the shown evidence.\nIn the first detachment from the camera, around 8-10 seconds, which part was removed: the cylindrical lens assembly or just its flat front cap?\nA: Only the flat front lens cap\nB: The cylindrical lens assembly\nC: The battery\nU: Insufficient visual evidence\nReturn only the letter of the best answer. Choose the insufficient-evidence option when the shown frames do not establish the answer.\nYour earlier answers (may be wrong):\n[{\"checkpoint\": 20, \"answer\": \" C.\"}]",
+      "request_sha256": "8e325d8901ef288e2bfa1a54d6cc8cfbac6de439ac9de9042f88d6e8f7d10714",
+      "response": " [{\"checkpoint\": 20, \"answer\": \" B. A. C.\"}]",
+      "latency_seconds": 13.303417558000092,
+      "status": "model_returned",
+      "score": {
+        "parsed_choice": null,
+        "expected": "B",
+        "correct": false,
+        "protocol_failure": true,
+        "annotation_status": "assistant_screened",
+        "core_revision_eligible": false
+      }
+    },
+    {
+      "case_id": "printer_screen_early",
+      "condition": "uniform_8_with_answer_history",
+      "checkpoint": 22,
+      "frames": [
+        {
+          "time": 0.0,
+          "sha256": "a05d80d8dc146bb56daff7329a52e0c7b035eba709df64889847fb6a267a2dd3"
+        },
+        {
+          "time": 3.04522,
+          "sha256": "a9834345187b19a6bc327ea56b853e5e3c0c7d74f79a3825a580d0ba531c01eb"
+        },
+        {
+          "time": 6.09044,
+          "sha256": "4fe3973668403040aef16423c477da1ca9709b64f9c357cbebe84578cc765146"
+        },
+        {
+          "time": 9.13566,
+          "sha256": "9209029092b9278a81087af20ddce17b7e83bfabade278d883839bafa0b7d825"
+        },
+        {
+          "time": 12.1809,
+          "sha256": "2da5052749e16d8f85297635147d89255cc6df274c562153bc9aa8fe8353a94b"
+        },
+        {
+          "time": 15.2261,
+          "sha256": "6107e9b5440b925ebefefb90eeb38f6dc282cc569095b679a660d40fe24559d5"
+        },
+        {
+          "time": 18.2713,
+          "sha256": "35ff6babed9b18dd26b95262a22031bc80517b8283230baec8a06605666ad6c1"
+        },
+        {
+          "time": 21.3165,
+          "sha256": "e6d9ff7d793bbe538a89b6492f3ca336925a03a6cb76abd65b4703d906c28c95"
+        }
+      ],
+      "prompt": "The images are chronological observations from one continuous video. Use only the shown evidence.\nIn the most recent visible view, is the printer's central rectangular display illuminated?\nA: Yes, it is illuminated\nB: No, it appears dark\nU: Insufficient visual evidence\nReturn only the letter of the best answer. Choose the insufficient-evidence option when the shown frames do not establish the answer.",
+      "request_sha256": "c5131d9ed56874316005ad2c5f081ac9c2abeabc27a02bce33f5e9b3b98b5d63",
+      "response": " B.",
+      "latency_seconds": 11.651547408000056,
+      "status": "model_returned",
+      "score": {
+        "parsed_choice": "B",
+        "expected": "A",
+        "correct": false,
+        "protocol_failure": false,
+        "annotation_status": "assistant_screened",
+        "core_revision_eligible": false
+      }
+    },
+    {
+      "case_id": "printer_screen_late",
+      "condition": "uniform_8_with_answer_history",
+      "checkpoint": 43,
+      "frames": [
+        {
+          "time": 0.0,
+          "sha256": "a05d80d8dc146bb56daff7329a52e0c7b035eba709df64889847fb6a267a2dd3"
+        },
+        {
+          "time": 6.09044,
+          "sha256": "4fe3973668403040aef16423c477da1ca9709b64f9c357cbebe84578cc765146"
+        },
+        {
+          "time": 12.1809,
+          "sha256": "2da5052749e16d8f85297635147d89255cc6df274c562153bc9aa8fe8353a94b"
+        },
+        {
+          "time": 18.2713,
+          "sha256": "35ff6babed9b18dd26b95262a22031bc80517b8283230baec8a06605666ad6c1"
+        },
+        {
+          "time": 24.3618,
+          "sha256": "36f35654c782430a335e827bf9791daf98b00ad6defd27c46a84a3958586b089"
+        },
+        {
+          "time": 30.4522,
+          "sha256": "3e5e10e9c9144b8ef3e3dfabc2b8ba604a59a9bb0bb9821706a55e86ed05ed3b"
+        },
+        {
+          "time": 36.5427,
+          "sha256": "c37e9378712e3a6922f6703d42e7324b56f7e9580de38b6d278494c843e6bcd5"
+        },
+        {
+          "time": 42.6331,
+          "sha256": "72ac1689baed5e41c1181e60d9e854c354287b6f988a8e22e69cd5367be2987d"
+        }
+      ],
+      "prompt": "The images are chronological observations from one continuous video. Use only the shown evidence.\nIn the most recent visible view, is the printer's central rectangular display illuminated?\nA: Yes, it is illuminated\nB: No, it appears dark\nU: Insufficient visual evidence\nReturn only the letter of the best answer. Choose the insufficient-evidence option when the shown frames do not establish the answer.\nYour earlier answers (may be wrong):\n[{\"checkpoint\": 22, \"answer\": \" B.\"}]",
+      "request_sha256": "2d735a45fc5704966be826f17f880218aa5c9ebedb4d645e44c4978cf604aeff",
+      "response": " [{\"checkpoint\": 22, \"answer\": \" B.\"], \"answer\": \" B.\"}]}",
+      "latency_seconds": 12.890334333999931,
+      "status": "model_returned",
+      "score": {
+        "parsed_choice": null,
+        "expected": "B",
+        "correct": false,
+        "protocol_failure": true,
+        "annotation_status": "assistant_screened",
+        "core_revision_eligible": false
+      }
+    },
+    {
+      "case_id": "printer_history",
+      "condition": "uniform_8_with_answer_history",
+      "checkpoint": 73,
+      "frames": [
+        {
+          "time": 0.0,
+          "sha256": "a05d80d8dc146bb56daff7329a52e0c7b035eba709df64889847fb6a267a2dd3"
+        },
+        {
+          "time": 10.1507,
+          "sha256": "80a604ea962b7c54f8f5eb53100935611d3895582a94037aa89d7f0a32d99531"
+        },
+        {
+          "time": 20.3015,
+          "sha256": "c0de994a506980bd24469fe89721b59870376fdb901211d34d7b79c11c360cf7"
+        },
+        {
+          "time": 30.4522,
+          "sha256": "3e5e10e9c9144b8ef3e3dfabc2b8ba604a59a9bb0bb9821706a55e86ed05ed3b"
+        },
+        {
+          "time": 41.618,
+          "sha256": "38a3e244f73d117ca6765215cd94eeb6a0f648ed3177a7bc28498d5527cfa10b"
+        },
+        {
+          "time": 51.7688,
+          "sha256": "a9bcf50fe4b5100b464e93a102b5c56dbb168fe9766c46c3cb5b4e72a43eec47"
+        },
+        {
+          "time": 61.9195,
+          "sha256": "edb0f2405976bf2fd4a88bdc9736890d270e0e334d7404b2477326b9a105afa8"
+        },
+        {
+          "time": 72.0702,
+          "sha256": "941dbf15aa53b08046e45ca750f05c4e9fd08eec5c5f9e7bef3f04cdc5f5d127"
+        }
+      ],
+      "prompt": "The images are chronological observations from one continuous video. Use only the shown evidence.\nLooking back at approximately 17-21 seconds, was the printer's central display illuminated at that earlier time?\nA: Yes, it was illuminated then\nB: No, it was dark then\nU: Insufficient visual evidence\nReturn only the letter of the best answer. Choose the insufficient-evidence option when the shown frames do not establish the answer.",
+      "request_sha256": "9d2a3c167626e04126466988cc2f36c4418a3b133c85d204043f12f0fb81c089",
+      "response": " B.",
+      "latency_seconds": 11.560619908000035,
+      "status": "model_returned",
+      "score": {
+        "parsed_choice": "B",
+        "expected": "A",
+        "correct": false,
+        "protocol_failure": false,
+        "annotation_status": "assistant_screened",
+        "core_revision_eligible": false
+      }
+    },
+    {
+      "case_id": "table_before_tray",
+      "condition": "uniform_8_with_answer_history",
+      "checkpoint": 74,
+      "frames": [
+        {
+          "time": 0.0,
+          "sha256": "123f67b6ca23df6967787cee5da11942bb1b7df02224607cb2c4c33c50781921"
+        },
+        {
+          "time": 10.0187,
+          "sha256": "555a3831542a6876d7666976b1ab10dd31a0292568733fa412bd303ac2f5f465"
+        },
+        {
+          "time": 21.0392,
+          "sha256": "2beab56cc5d473f91e09b7db3e3d46c4bb457380589cee93d46f0961be5334aa"
+        },
+        {
+          "time": 31.0579,
+          "sha256": "89cf6f59a499ca55cc162ad26365925e238c530dcac771ead7432d72f4c80723"
+        },
+        {
+          "time": 42.0784,
+          "sha256": "1daaaafdc8731e7cc77df31aba8968748a081a1422aa62346c28d5d89ef6390f"
+        },
+        {
+          "time": 52.0971,
+          "sha256": "006311e1c3051a144615eae5b74b4d465d1d01abca6cc462f9bb4291b0745cd8"
+        },
+        {
+          "time": 63.1177,
+          "sha256": "de0e4a8e99499d3df89b361a1cf90b862d91784bef3df060eb2c1c68ecb3e16a"
+        },
+        {
+          "time": 73.1363,
+          "sha256": "10405e416005ac05bd6f49b9b4c785217496d4e0d885b38e353556430e9f8b63"
+        }
+      ],
+      "prompt": "The images are chronological observations from one continuous video. Use only the shown evidence.\nIn the most recent visible view, is the large round tray already resting on top of the assembled table frame?\nA: Yes, the tray rests on the frame\nB: No, the tray is still separate\nU: Insufficient visual evidence\nReturn only the letter of the best answer. Choose the insufficient-evidence option when the shown frames do not establish the answer.",
+      "request_sha256": "70e11649d6c48862eba395f3ba73ff1ef5f816f41dffae8426586736b61fdde1",
+      "response": " B.",
+      "latency_seconds": 10.847758490999922,
+      "status": "model_returned",
+      "score": {
+        "parsed_choice": "B",
+        "expected": "B",
+        "correct": true,
+        "protocol_failure": false,
+        "annotation_status": "assistant_screened",
+        "core_revision_eligible": false
+      }
+    },
+    {
+      "case_id": "table_after_tray",
+      "condition": "uniform_8_with_answer_history",
+      "checkpoint": 119,
+      "frames": [
+        {
+          "time": 0.0,
+          "sha256": "123f67b6ca23df6967787cee5da11942bb1b7df02224607cb2c4c33c50781921"
+        },
+        {
+          "time": 17.0317,
+          "sha256": "3810ee53e86f8313853b6d41b485a4bce2ca0718d9360ccaf1cae64415bcc5ba"
+        },
+        {
+          "time": 34.0635,
+          "sha256": "0a17fb3fd175d524937b75ad5b50e36d54d50cc9f332adcf4fc5b83738c6d383"
+        },
+        {
+          "time": 51.0952,
+          "sha256": "e7a307f7679d3411cbdf8f3dad5c54130fa4874c3335a24f0b18f9850f2ed7fa"
+        },
+        {
+          "time": 67.1251,
+          "sha256": "b1b859bbcc5c9d2d5b8456218d84baa26ad22005781068381c55107a9c02892c"
+        },
+        {
+          "time": 84.1569,
+          "sha256": "12ced225421a2e470c076570efd1b3d5c1e33cf420f9e76e93a33c1e73c0e33b"
+        },
+        {
+          "time": 101.189,
+          "sha256": "252a1a9e9d91a198a48838071ddef33cb43f17e988c55f1fa95693b64a38f3a7"
+        },
+        {
+          "time": 118.22,
+          "sha256": "4934db6d24fe89362351c5a13da5823eac10204a47206a481d36c4d2a66b92f9"
+        }
+      ],
+      "prompt": "The images are chronological observations from one continuous video. Use only the shown evidence.\nIn the most recent visible view, is the large round tray already resting on top of the assembled table frame?\nA: Yes, the tray rests on the frame\nB: No, the tray is still separate\nU: Insufficient visual evidence\nReturn only the letter of the best answer. Choose the insufficient-evidence option when the shown frames do not establish the answer.\nYour earlier answers (may be wrong):\n[{\"checkpoint\": 74, \"answer\": \" B.\"}]",
+      "request_sha256": "1b69abc3809819595369f5f24fd4cfb647fe2089ad2169245338f24e0ff1b01f",
+      "response": " [{\"checkpoint\": 74, \"answer\": \" B. \"}, {\"checkpoint\": 74, \"answer\": \" B. \"}, {\"",
+      "latency_seconds": 13.809032882999986,
+      "status": "model_returned",
+      "score": {
+        "parsed_choice": null,
+        "expected": "A",
+        "correct": false,
+        "protocol_failure": true,
+        "annotation_status": "assistant_screened",
+        "core_revision_eligible": false
+      }
+    },
+    {
+      "case_id": "table_screw_exploratory",
+      "condition": "uniform_8_with_answer_history",
+      "checkpoint": 53,
+      "frames": [
+        {
+          "time": 0.0,
+          "sha256": "123f67b6ca23df6967787cee5da11942bb1b7df02224607cb2c4c33c50781921"
+        },
+        {
+          "time": 7.01307,
+          "sha256": "7fd5a2e761a5cea14c2d0372487c63c730a31072e20bc3289b332b41cf4898f1"
+        },
+        {
+          "time": 15.028,
+          "sha256": "411066f279c4b47df7c8d97885996998497322a6e2f744d3b4d4c23b40657b35"
+        },
+        {
+          "time": 22.0411,
+          "sha256": "9ab41bfd17b7bf6c2b384ab077d33a56df3684f557b8ced02c0ac1752564fe22"
+        },
+        {
+          "time": 30.056,
+          "sha256": "e9c0dfb37c5a017b294ba0a51d514bdb92737eb96a52e609c21f1eb33974ebe8"
+        },
+        {
+          "time": 37.0691,
+          "sha256": "c691588d550e16d14e0c1999c978c756adbe1e74a14ef99ba24cc12fe93d5c80"
+        },
+        {
+          "time": 45.084,
+          "sha256": "494bc24635266b41bd82bd86c81829defeeded2b86c34d476cfe2d681bb5c4b0"
+        },
+        {
+          "time": 52.0971,
+          "sha256": "006311e1c3051a144615eae5b74b4d465d1d01abca6cc462f9bb4291b0745cd8"
+        }
+      ],
+      "prompt": "The images are chronological observations from one continuous video. Use only the shown evidence.\nConsidering only visual evidence, did the screw attempted around 37-39 seconds have the required length for that joint?\nA: Yes, the correct length is established visually\nB: No, the incorrect length is established visually\nU: The shown visual evidence does not establish the required length\nReturn only the letter of the best answer. Choose the insufficient-evidence option when the shown frames do not establish the answer.",
+      "request_sha256": "e8c0e8559863236c954f8b3ebf11eb7411614cb996da62ea158826512da4c6c5",
+      "response": " B",
+      "latency_seconds": 12.727033557000027,
+      "status": "model_returned",
+      "score": {
+        "parsed_choice": "B",
+        "expected": null,
+        "correct": null,
+        "protocol_failure": false,
+        "annotation_status": "unresolved_requires_independent_review",
+        "core_revision_eligible": false
+      }
+    },
+    {
+      "case_id": "camera_perception",
+      "condition": "text_only",
+      "checkpoint": 12,
+      "frames": [],
+      "prompt": "The images are chronological observations from one continuous video. Use only the shown evidence.\nWhat main object is the person handling?\nA: A DSLR camera\nB: A printer\nC: A cooking pot\nU: Insufficient visual evidence\nReturn only the letter of the best answer. Choose the insufficient-evidence option when the shown frames do not establish the answer.",
+      "request_sha256": "0119d45f91e3ee319c46723a92cd810714c0c57f91308bf68fffc581e1ac0cd4",
+      "response": " C",
+      "latency_seconds": 0.2585317989999112,
+      "status": "model_returned",
+      "score": {
+        "parsed_choice": "C",
+        "expected": "A",
+        "correct": false,
+        "protocol_failure": false,
+        "annotation_status": "assistant_screened",
+        "core_revision_eligible": false
+      }
+    },
+    {
+      "case_id": "camera_history_early",
+      "condition": "text_only",
+      "checkpoint": 20,
+      "frames": [],
+      "prompt": "The images are chronological observations from one continuous video. Use only the shown evidence.\nIn the first detachment from the camera, around 8-10 seconds, which part was removed: the cylindrical lens assembly or just its flat front cap?\nA: Only the flat front lens cap\nB: The cylindrical lens assembly\nC: The battery\nU: Insufficient visual evidence\nReturn only the letter of the best answer. Choose the insufficient-evidence option when the shown frames do not establish the answer.",
+      "request_sha256": "05a6de7c6ca3808ebabc3ce5ffd96bfa45800690b9ef99749ab87bf084a784db",
+      "response": " C: The cylindrical lens assembly\n\nThe correct answer is C: The cylindrical lens assembly. The other options are incorrect because:\n\n- The first detachment",
+      "latency_seconds": 2.1218494499998997,
+      "status": "model_returned",
+      "score": {
+        "parsed_choice": "C",
+        "expected": "B",
+        "correct": false,
+        "protocol_failure": false,
+        "annotation_status": "assistant_screened",
+        "core_revision_eligible": false
+      }
+    },
+    {
+      "case_id": "camera_history_late",
+      "condition": "text_only",
+      "checkpoint": 60,
+      "frames": [],
+      "prompt": "The images are chronological observations from one continuous video. Use only the shown evidence.\nIn the first detachment from the camera, around 8-10 seconds, which part was removed: the cylindrical lens assembly or just its flat front cap?\nA: Only the flat front lens cap\nB: The cylindrical lens assembly\nC: The battery\nU: Insufficient visual evidence\nReturn only the letter of the best answer. Choose the insufficient-evidence option when the shown frames do not establish the answer.",
+      "request_sha256": "d67176f555db36f7d0e630191831fa5a19514e0686212fdba48e5f1d20e53e1c",
+      "response": " C: The cylindrical lens assembly\n\nThe correct answer is C: The cylindrical lens assembly. The other options are incorrect because:\n\n- The first detachment",
+      "latency_seconds": 2.132480787000077,
+      "status": "model_returned",
+      "score": {
+        "parsed_choice": "C",
+        "expected": "B",
+        "correct": false,
+        "protocol_failure": false,
+        "annotation_status": "assistant_screened",
+        "core_revision_eligible": false
+      }
+    },
+    {
+      "case_id": "printer_screen_early",
+      "condition": "text_only",
+      "checkpoint": 22,
+      "frames": [],
+      "prompt": "The images are chronological observations from one continuous video. Use only the shown evidence.\nIn the most recent visible view, is the printer's central rectangular display illuminated?\nA: Yes, it is illuminated\nB: No, it appears dark\nU: Insufficient visual evidence\nReturn only the letter of the best answer. Choose the insufficient-evidence option when the shown frames do not establish the answer.",
+      "request_sha256": "b702c42960878d9524d819065a67e4aec0dae81ed1005bb849ef3499fdab6ace",
+      "response": " B: No, it appears dark.",
+      "latency_seconds": 0.7776374349999742,
+      "status": "model_returned",
+      "score": {
+        "parsed_choice": "B",
+        "expected": "A",
+        "correct": false,
+        "protocol_failure": false,
+        "annotation_status": "assistant_screened",
+        "core_revision_eligible": false
+      }
+    },
+    {
+      "case_id": "printer_screen_late",
+      "condition": "text_only",
+      "checkpoint": 43,
+      "frames": [],
+      "prompt": "The images are chronological observations from one continuous video. Use only the shown evidence.\nIn the most recent visible view, is the printer's central rectangular display illuminated?\nA: Yes, it is illuminated\nB: No, it appears dark\nU: Insufficient visual evidence\nReturn only the letter of the best answer. Choose the insufficient-evidence option when the shown frames do not establish the answer.",
+      "request_sha256": "d522a7baa3ef355c3e926458656da1f492e71dfdd2f18009c12fd77641e14771",
+      "response": " B: No, it appears dark.",
+      "latency_seconds": 0.7473047659999565,
+      "status": "model_returned",
+      "score": {
+        "parsed_choice": "B",
+        "expected": "B",
+        "correct": true,
+        "protocol_failure": false,
+        "annotation_status": "assistant_screened",
+        "core_revision_eligible": false
+      }
+    },
+    {
+      "case_id": "printer_history",
+      "condition": "text_only",
+      "checkpoint": 73,
+      "frames": [],
+      "prompt": "The images are chronological observations from one continuous video. Use only the shown evidence.\nLooking back at approximately 17-21 seconds, was the printer's central display illuminated at that earlier time?\nA: Yes, it was illuminated then\nB: No, it was dark then\nU: Insufficient visual evidence\nReturn only the letter of the best answer. Choose the insufficient-evidence option when the shown frames do not establish the answer.",
+      "request_sha256": "e1894f050acd1750519d3ffabe483999a9418b12cfebc22eaf7fe929446eb78f",
+      "response": " B: No, it was dark then.",
+      "latency_seconds": 0.85064313700002,
+      "status": "model_returned",
+      "score": {
+        "parsed_choice": "B",
+        "expected": "A",
+        "correct": false,
+        "protocol_failure": false,
+        "annotation_status": "assistant_screened",
+        "core_revision_eligible": false
+      }
+    },
+    {
+      "case_id": "table_before_tray",
+      "condition": "text_only",
+      "checkpoint": 74,
+      "frames": [],
+      "prompt": "The images are chronological observations from one continuous video. Use only the shown evidence.\nIn the most recent visible view, is the large round tray already resting on top of the assembled table frame?\nA: Yes, the tray rests on the frame\nB: No, the tray is still separate\nU: Insufficient visual evidence\nReturn only the letter of the best answer. Choose the insufficient-evidence option when the shown frames do not establish the answer.",
+      "request_sha256": "46520abcc180c705c6def3f6bfc53e7b0328d45c5fb818eea44517bef7fdaf42",
+      "response": " B: No, the tray rests on the frame.",
+      "latency_seconds": 0.8851552029999539,
+      "status": "model_returned",
+      "score": {
+        "parsed_choice": "B",
+        "expected": "B",
+        "correct": true,
+        "protocol_failure": false,
+        "annotation_status": "assistant_screened",
+        "core_revision_eligible": false
+      }
+    },
+    {
+      "case_id": "table_after_tray",
+      "condition": "text_only",
+      "checkpoint": 119,
+      "frames": [],
+      "prompt": "The images are chronological observations from one continuous video. Use only the shown evidence.\nIn the most recent visible view, is the large round tray already resting on top of the assembled table frame?\nA: Yes, the tray rests on the frame\nB: No, the tray is still separate\nU: Insufficient visual evidence\nReturn only the letter of the best answer. Choose the insufficient-evidence option when the shown frames do not establish the answer.",
+      "request_sha256": "5acbeea6c4ceedd0d4df680ccdef35efe80d8a85bb8c67912c5723c3c2cd070f",
+      "response": " B: No, the tray rests on the frame.",
+      "latency_seconds": 0.8531464400000459,
+      "status": "model_returned",
+      "score": {
+        "parsed_choice": "B",
+        "expected": "A",
+        "correct": false,
+        "protocol_failure": false,
+        "annotation_status": "assistant_screened",
+        "core_revision_eligible": false
+      }
+    },
+    {
+      "case_id": "table_screw_exploratory",
+      "condition": "text_only",
+      "checkpoint": 53,
+      "frames": [],
+      "prompt": "The images are chronological observations from one continuous video. Use only the shown evidence.\nConsidering only visual evidence, did the screw attempted around 37-39 seconds have the required length for that joint?\nA: Yes, the correct length is established visually\nB: No, the incorrect length is established visually\nU: The shown visual evidence does not establish the required length\nReturn only the letter of the best answer. Choose the insufficient-evidence option when the shown frames do not establish the answer.",
+      "request_sha256": "5d825972939615665a5dec59f86b5bca48b644e3d3bb791c35aa31bbdd0f819c",
+      "response": " B: No, the incorrect length is established visually.",
+      "latency_seconds": 0.8610401920000186,
+      "status": "model_returned",
+      "score": {
+        "parsed_choice": "B",
+        "expected": null,
+        "correct": null,
+        "protocol_failure": false,
+        "annotation_status": "unresolved_requires_independent_review",
+        "core_revision_eligible": false
+      }
+    }
+  ],
+  "summary": {
+    "completed_calls": 36,
+    "provisional_scored_calls": 32,
+    "provisional_correct": 7,
+    "protocol_failures": 3,
+    "verified_core_revision_calls": 0,
+    "verified_core_revision_accuracy": null,
+    "conclusion": "No verified core episode: central hypothesis remains untested."
+  }
+}

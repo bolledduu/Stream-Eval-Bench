@@ -1,0 +1,1 @@
+{"reason":"CPU vision encoding takes about 50 seconds per image. Reuse deterministic per-image vision features across paired conditions.","unchanged":["source images","resolution bounds","prompts","ground truth","greedy decoding"],"prior_completed_calls":7,"timing_warning":"Do not compare cached and uncached latencies as streaming performance."}

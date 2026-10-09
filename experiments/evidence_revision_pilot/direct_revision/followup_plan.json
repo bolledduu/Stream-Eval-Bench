@@ -1,0 +1,64 @@
+[
+  {
+    "id": "table_0_context_recognition",
+    "frames": [
+      {
+        "label": "Earlier partial view for record E1",
+        "path": "inputs/table_E1_partial.png",
+        "sha256": "0f6e185bbb80c6fe0879431232f452b8b8d41f8b0b8294c5afd0cbff6ee6127a"
+      },
+      {
+        "label": "Earlier partial view for record E2",
+        "path": "inputs/table_E2_partial.png",
+        "sha256": "d42e990c81df20f4d2c3d16c58b797f1a42bb8c4e011cd257f471d06b57e87fa"
+      },
+      {
+        "label": "Later delivered image",
+        "path": "inputs/table_E1_full.png",
+        "sha256": "28608f88da4dc524224ac362ad132399f4144ec5a072c6ea3343de82a211c956"
+      }
+    ],
+    "prompt": "Consider ONLY the THIRD image, the later delivered complete view. Is the large round tray resting on top of the table frame? yes means resting on the frame; no means not resting on the frame. Return only JSON with key \"value\"; use unknown if not established.",
+    "expected": {
+      "value": "no"
+    }
+  },
+  {
+    "id": "table_0_plain_oracle_update",
+    "frames": [
+      {
+        "label": "Earlier partial view for record E1",
+        "path": "inputs/table_E1_partial.png",
+        "sha256": "0f6e185bbb80c6fe0879431232f452b8b8d41f8b0b8294c5afd0cbff6ee6127a"
+      },
+      {
+        "label": "Earlier partial view for record E2",
+        "path": "inputs/table_E2_partial.png",
+        "sha256": "d42e990c81df20f4d2c3d16c58b797f1a42bb8c4e011cd257f471d06b57e87fa"
+      },
+      {
+        "label": "Later delivered image",
+        "path": "inputs/table_E1_full.png",
+        "sha256": "28608f88da4dc524224ac362ad132399f4144ec5a072c6ea3343de82a211c956"
+      }
+    ],
+    "prompt": "The third image is a complete view from earlier record E1. The first two are covered reference views. The stored question for each record is: Is the large round tray resting on top of the table frame? yes means resting on the frame; no means not resting on the frame.\nExisting records: {\"E1\": \"unknown\", \"E2\": \"unknown\", \"event_count\": 2, \"device\": \"table\"}\nRead the answer from the third image and replace ONLY E1 with that answer. Keep all other values unchanged. Return only JSON with keys E1, E2, event_count and device.",
+    "expected": {
+      "E1": "no",
+      "E2": "unknown",
+      "event_count": 2,
+      "device": "table"
+    }
+  },
+  {
+    "id": "table_0_text_oracle_update",
+    "frames": [],
+    "prompt": "Existing records: {\"E1\": \"unknown\", \"E2\": \"unknown\", \"event_count\": 2, \"device\": \"table\"}\nTrusted verified evidence establishes E1 = \"no\". Replace ONLY that record value with this verified value and preserve every other value. Return only JSON with keys E1, E2, event_count and device.",
+    "expected": {
+      "E1": "no",
+      "E2": "unknown",
+      "event_count": 2,
+      "device": "table"
+    }
+  }
+]

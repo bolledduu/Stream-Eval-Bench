@@ -1,0 +1,85 @@
+{
+  "status": "post-hoc unscored capability checks; not part of frozen comparison",
+  "results": [
+    {
+      "diagnostic": "camera_single_frame",
+      "source_id": "holo_1",
+      "checkpoint": 12,
+      "frames": [
+        {
+          "time": 11.0156,
+          "file": "000012.jpg",
+          "sha256": "78ef0834f58061ff85580082a65ac85fa61f41fac2c6ac46bccf30dfcde787f6"
+        }
+      ],
+      "prompt": "Describe the main object the person is holding in this image.",
+      "response": " The person is holding a camera. They are wearing a black shirt. The camera is black and has a lens. The person is holding the camera with their left hand. The camera is placed on a white table. There is a keyboard and",
+      "latency_seconds": 4.1322080260000575
+    },
+    {
+      "diagnostic": "printer_single_frame",
+      "source_id": "holo_2",
+      "checkpoint": 22,
+      "frames": [
+        {
+          "time": 21.3165,
+          "file": "000022.jpg",
+          "sha256": "e6d9ff7d793bbe538a89b6492f3ca336925a03a6cb76abd65b4703d906c28c95"
+        }
+      ],
+      "prompt": "Describe the main device visible in this image.",
+      "response": " The image shows a vintage electronic device, specifically a type of computer or electronic device known as a \"computer\" or \"computer terminal.\" The device appears to be a type of computer or electronic device that has a rectangular shape with a flat surface",
+      "latency_seconds": 4.081313891000036
+    },
+    {
+      "diagnostic": "camera_eight_frames",
+      "source_id": "holo_1",
+      "checkpoint": 12,
+      "frames": [
+        {
+          "time": 0.0,
+          "file": "000001.jpg",
+          "sha256": "1440440e0d435522c5e785242dd581508ff15b4d4a384ec65addcf1a49116fe9"
+        },
+        {
+          "time": 2.00283,
+          "file": "000003.jpg",
+          "sha256": "c9d0820190dc636072c9014294567771e86527de389c10708adfb6a2629d4f4c"
+        },
+        {
+          "time": 3.00425,
+          "file": "000004.jpg",
+          "sha256": "25f8587bfcc6555ff8bb437df0752c1c687e00829c6839a8313681ad0d1b1878"
+        },
+        {
+          "time": 5.00708,
+          "file": "000006.jpg",
+          "sha256": "b7fdaf4030c0454e5a2aa12ba6bb354dee76f93c915fd9724d2591ab05312d28"
+        },
+        {
+          "time": 6.00849,
+          "file": "000007.jpg",
+          "sha256": "56eb43853eaa3312ea6a1233ec6c11f014e91a54acbc5aab1972955a87865ad5"
+        },
+        {
+          "time": 8.01132,
+          "file": "000009.jpg",
+          "sha256": "3f71322141aa8863003b368193d3439df1c2469868acb450776a4b6b95e841df"
+        },
+        {
+          "time": 9.01274,
+          "file": "000010.jpg",
+          "sha256": "95e898da8d91e2228fb9313f10eef318f9b98ad9138bc68e5cc700bdbdb34e2e"
+        },
+        {
+          "time": 11.0156,
+          "file": "000012.jpg",
+          "sha256": "78ef0834f58061ff85580082a65ac85fa61f41fac2c6ac46bccf30dfcde787f6"
+        }
+      ],
+      "prompt": "Describe the main object the person is handling in these chronological images.",
+      "response": " The person is holding a camera.",
+      "latency_seconds": 11.57774709499995
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+table_all_arrived_control '{"tray_on_frame_at_72": "yes", "tray_on_frame_now": "yes"}' 108.6636078219999

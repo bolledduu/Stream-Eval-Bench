@@ -1,0 +1,23 @@
+{
+  "main_calls": 30,
+  "diagnostic_calls": 8,
+  "main_unique_requests": 27,
+  "source_sessions": 3,
+  "corrected_execution": "unmodified joint-image forward",
+  "diagnostics": {
+    "followups.json": {
+      "calls": 3,
+      "pass": 2
+    },
+    "camera_followups.json": {
+      "calls": 3,
+      "pass": 1
+    },
+    "simple_baselines.json": {
+      "calls": 2,
+      "pass": 0
+    }
+  },
+  "all_corrected_calls": 38,
+  "status": "Passed prompt, image-hash, scoring and uncached-execution checks."
+}

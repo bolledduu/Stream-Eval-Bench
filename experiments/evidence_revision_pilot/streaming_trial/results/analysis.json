@@ -1,0 +1,49 @@
+{
+  "completed_calls": 9,
+  "planned_calls": 32,
+  "cases": [
+    {
+      "case": "camera",
+      "matched_checkpoint_step": 3,
+      "expected": {
+        "first_detached": "lens",
+        "second_detached": "cap",
+        "detachments": 2,
+        "lens_attached_now": "yes"
+      },
+      "chronological": {
+        "first_detached": "lens",
+        "second_detached": "cap",
+        "detachments": 2,
+        "lens_attached_now": "unknown"
+      },
+      "delayed": null,
+      "all_arrived_control": null,
+      "chronological_correct": false,
+      "delayed_correct": null,
+      "all_arrived_correct": null,
+      "candidate_arrival_order_failure": false,
+      "continuation_chronological_correct": null,
+      "continuation_delayed_correct": null
+    },
+    {
+      "case": "table",
+      "matched_checkpoint_step": 5,
+      "expected": {
+        "tray_on_frame_at_72": "no",
+        "tray_on_frame_now": "yes"
+      },
+      "chronological": null,
+      "delayed": null,
+      "all_arrived_control": null,
+      "chronological_correct": null,
+      "delayed_correct": null,
+      "all_arrived_correct": null,
+      "candidate_arrival_order_failure": false,
+      "continuation_chronological_correct": null,
+      "continuation_delayed_correct": null
+    }
+  ],
+  "audit": "Exact packet pixels, no future capture frames, matched packet sets at checkpoints, and model-produced memory transitions verified.",
+  "claim_limit": "Only a controlled arrival-order intervention in one small VLM with external text memory. No autonomous replay detection, real-time speed, natural-stream prevalence, or literature novelty established."
+}
